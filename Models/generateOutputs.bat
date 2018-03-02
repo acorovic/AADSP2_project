@@ -1,10 +1,24 @@
+: ECHO OFF
 
-: Execute Model 0, Model 1, Model 2 and Model 3
-cd ProcessWavFile/Debug
-"model0.exe" "../../../TestStreams/Tone_L1k_R3k.wav" "../../OutStreams/out.wav" "0" 
+SET /A i=0
 
+setlocal ENABLEDELAYEDEXPANSION
 
+cd "../TestStreams/"
 
-:: TO DO: Compare output of model1 and model2 and store the result in OutCmp//whiteNoise_Model1_vs_Model2.txt
+FOR %%A IN (*) DO (
+    for %%K IN (0 1 2) DO (
+        SET file_name="../Models/OutStreams/%%A_%%K.wav"
+        "../Models/ProcessWavFile/Debug/ProcessWavFile.exe" %%A !file_name! %%K
+    )
+)
+    : SET /a i=i+1
+    : SET file_name="../Models/OutStreams/out_!i!.wav"
+    : echo !i!
+    : echo !file_name!
+    : "../Models/ProcessWavFile/Debug/ProcessWavFile.exe" %%A !file_name! 1
+:)
+
+endlocal
 
 

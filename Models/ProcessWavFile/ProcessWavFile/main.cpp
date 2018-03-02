@@ -114,9 +114,30 @@ int main(int argc, char* argv[])
 	char WavInputName[256];
 	char WavOutputName[256];
 	WAV_HEADER inputWAVhdr,outputWAVhdr;
-	/*
+	
 	int option = atoi(argv[3]);
+	
 
+	// Init channel buffers
+	for(int i=0; i<MAX_NUM_CHANNEL; i++)
+		memset(&sampleBuffer[i],0,BLOCK_SIZE);
+
+	// Open input and output wav files
+	//-------------------------------------------------
+	strcpy(WavInputName, argv[1]);
+	wav_in = OpenWavFileForRead (WavInputName,"rb");
+	strcpy(WavOutputName, argv[2]);
+	wav_out = OpenWavFileForRead (WavOutputName,"wb");
+	//-------------------------------------------------
+
+	// Read input wav header
+	//-------------------------------------------------
+	ReadWavHeader(wav_in,inputWAVhdr);
+	//-------------------------------------------------
+	
+	// Set up output WAV header
+	//-------------------------------------------------	
+	outputWAVhdr = inputWAVhdr;
 	switch (option)
 	{
 	case 0:
@@ -132,29 +153,7 @@ int main(int argc, char* argv[])
 		outputMode = MODE_2;
 		break;
 	}
-	*/
-
-	// Init channel buffers
-	for(int i=0; i<MAX_NUM_CHANNEL; i++)
-		memset(&sampleBuffer[i],0,BLOCK_SIZE);
-
-	// Open input and output wav files
-	//-------------------------------------------------
-	strcpy(WavInputName, "../../../TestStreams/Tone_L1k_R3k.wav");
-	wav_in = OpenWavFileForRead (WavInputName,"rb");
-	strcpy(WavOutputName, "../../OutStreams/out.wav");
-	wav_out = OpenWavFileForRead (WavOutputName,"wb");
-	//-------------------------------------------------
-
-	// Read input wav header
-	//-------------------------------------------------
-	ReadWavHeader(wav_in,inputWAVhdr);
-	//-------------------------------------------------
-	
-	// Set up output WAV header
-	//-------------------------------------------------	
-	outputWAVhdr = inputWAVhdr;
-	outputWAVhdr.fmt.NumChannels = 6; // inputWAVhdr.fmt.NumChannels; // change number of channels
+	//outputWAVhdr.fmt.NumChannels = 6; // inputWAVhdr.fmt.NumChannels; // change number of channels
 
 	int oneChannelSubChunk2Size = inputWAVhdr.data.SubChunk2Size/inputWAVhdr.fmt.NumChannels;
 	int oneChannelByteRate = inputWAVhdr.fmt.ByteRate/inputWAVhdr.fmt.NumChannels;

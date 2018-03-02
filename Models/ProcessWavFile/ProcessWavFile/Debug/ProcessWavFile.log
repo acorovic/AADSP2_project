@@ -1,21 +1,7 @@
-﻿Build started 2.3.2018 15:40:15.
-     1>Project "C:\Users\student\Desktop\aadsp2_projekat\Models\ProcessWavFile\ProcessWavFile\ProcessWavFile.vcxproj" on node 2 (build target(s)).
-     1>InitializeBuildStatus:
-         Creating "Debug\ProcessWavFile.unsuccessfulbuild" because "AlwaysCreate" was specified.
-       ClCompile:
-         All outputs are up-to-date.
-       ManifestResourceCompile:
-         All outputs are up-to-date.
-       Link:
-         All outputs are up-to-date.
-       Manifest:
-         All outputs are up-to-date.
-         All outputs are up-to-date.
-       FinalizeBuildStatus:
-         Deleting file "Debug\ProcessWavFile.unsuccessfulbuild".
-         Touching "Debug\ProcessWavFile.lastbuildstate".
-     1>Done Building Project "C:\Users\student\Desktop\aadsp2_projekat\Models\ProcessWavFile\ProcessWavFile\ProcessWavFile.vcxproj" (build target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:00.04
+﻿  main.cpp
+c:\aadsp2_projekat\models\processwavfile\processwavfile\main.cpp(199): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\aadsp2_projekat\models\processwavfile\processwavfile\main.cpp(127): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(132): note: see declaration of 'strcpy'
+c:\aadsp2_projekat\models\processwavfile\processwavfile\main.cpp(129): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(132): note: see declaration of 'strcpy'
+  ProcessWavFile.vcxproj -> C:\aadsp2_projekat\Models\ProcessWavFile\Debug\ProcessWavFile.exe
