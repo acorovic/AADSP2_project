@@ -32,8 +32,8 @@ void processing()
 	dist_state.numChannels = 1;
 	dist_state.numSamples = BLOCK_SIZE;
 	dist_state.sampleRate = 48000;
-	dist_state.type = SOFT_CLIPPING;
-	dist_state.gain = 1;
+	dist_state.type = HARD_CLIPPING;
+	dist_state.gain = 2;
 
 	switch(outputMode)
 	{
