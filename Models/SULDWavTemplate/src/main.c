@@ -14,7 +14,7 @@ __memX DSPfract sampleBuffer[MAX_NUM_CHANNEL][BLOCK_SIZE];
 
 __memX DSPint enable = 1;
 __memX user_control outputMode = MODE_0;
-__memX clipping_type_t type = HARD_CLIPPING;
+__memX clipping_type_t type = SOFT_CLIPPING;
 
 // Linear gain
 __memY DSPfract numGain = FRACT_NUM(0.63095734448019324943436013662234);
@@ -37,10 +37,15 @@ __memX const DSPfract hard_clip_threshold = FRACT_NUM(0.125);
 __memX const DSPfract n_hard_clip_threshold = FRACT_NUM(-0.125);
 __memX const DSPfract soft_clip_threshold1 = FRACT_NUM(0.08333333333333333);
 __memX const DSPfract soft_clip_threshold2 = FRACT_NUM(0.16666666666666667);
+__memX const DSPfract n_soft_clip_threshold1 = FRACT_NUM(-0.08333333333333333);
+__memX const DSPfract n_soft_clip_threshold2 = FRACT_NUM(-0.16666666666666667);
 
 // Half wave recifier accum var
-__memX DSPaccum x;
-
+DSPaccum x;
+// Used to calculate input^2
+DSPaccum soft_pow;
+// Used to calculate input << 2
+DSPaccum soft_mul;
 
 void distortion(__memX DSPfract* input, __memX DSPfract* output)
 {
@@ -79,21 +84,28 @@ void distortion(__memX DSPfract* input, __memX DSPfract* output)
 				}
 				else // soft knee (positive)
 				{
+					soft_pow = ((DSPaccum)*output) * ((DSPaccum)*output);
+					soft_pow = soft_pow * 12;
+					soft_mul = ((DSPaccum)*output) << 2;
+					*output = FRACT_NUM(0.25) - FRACT_NUM(0.333333333333333) + soft_mul - soft_pow;
 					//*output = (3.0f - (2.0f - 3.0f* (*output)) * (2.0f - 3.0f* (*output))) / 3.0f;
-					//*output = FRACT_NUM((FRACT_NUM(-0.333333333333333) + *output) * (2 - 3 * *output));
 				}
 			}
 			else
 			{
-				if (*output < -soft_clip_threshold1)
+				if (*output < n_soft_clip_threshold1)
 				{
-					if (*output < -soft_clip_threshold2) // negative clipping
+					if (*output < n_soft_clip_threshold2) // negative clipping
 					{
 						// divided by 4
 						*output = FRACT_NUM(-0.125);
 					}
 					else // soft knee (negative)
 					{
+						soft_pow =((DSPaccum)*output) * ((DSPaccum)*output);
+						soft_pow = soft_pow * 12;
+						soft_mul = ((DSPaccum)*output) << 2;
+						*output = FRACT_NUM(-0.25) + FRACT_NUM(0.333333333333333) + soft_mul + soft_pow;
 						//*output = -(3.0f - (2.0f + 3.0f* (*output))*(2.0f + 3.0f* (*output))) / 3.0f;
 					}
 				}
@@ -115,6 +127,10 @@ void distortion(__memX DSPfract* input, __memX DSPfract* output)
 		for (i = 0; i < BLOCK_SIZE; i++)
 		{
 			*output = *input * distortion_gain;
+			if (*output < 0)
+			{
+				*output = - *output;
+			}
 			//*output = (*output).abs();
 			*output = *output << 2;
 			output++;
@@ -127,6 +143,9 @@ void distortion(__memX DSPfract* input, __memX DSPfract* output)
 		for (i = 0; i < BLOCK_SIZE; i++)
 		{
 			*output = *input * distortion_gain;
+			if (x < 0) {
+				x = -x;
+			}
 			//x = (*output).abs();
 			x += *output;
 			*output = x;
@@ -230,7 +249,7 @@ int main(int argc, char *argv[])
     int iNumSamples;
     int i;
     int my_channels;
-    char option = '1';
+    char option = '2';
 
 	// Init channel buffers
 	for(i=0; i<MAX_NUM_CHANNEL; i++)
@@ -238,7 +257,7 @@ int main(int argc, char *argv[])
     
 	// Open input wav file
 	//-------------------------------------------------
-	strcpy(WavInputName, "../../TestStreams/Tone_L1k_R3k.wav");
+	strcpy(WavInputName, "../../TestStreams/Tone_L1k_R3kshort.wav");
 	wav_in = cl_wavread_open(WavInputName);
 	 if(wav_in == NULL)
     {
@@ -306,7 +325,7 @@ int main(int argc, char *argv[])
 
 			for(j=0; j<BLOCK_SIZE; j++)
 			{
-				for(k=0; k<nChannels; k++)
+				for(k=0; k<my_channels; k++)
 				{	
 					sample = bitsr(sampleBuffer[k][j]);
 					cl_wavwrite_sendsample(wav_out, sample);

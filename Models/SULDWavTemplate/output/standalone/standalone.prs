@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<settings built="true" last_build_time="1520344707542">
+<settings built="true" last_build_time="1520353506030">
 	<dependencies>
-		<source_file last_build_time="1520344705467" path="src/main.c">
+		<source_file last_build_time="1520353504532" path="src/main.c">
 			<dependency>../../../../../CirrusDSP/include/stdio.h</dependency>
 			<dependency>../../../../../CirrusDSP/include/dsplib/wavefile.h</dependency>
 			<dependency>../../../../../CirrusDSP/include/stdfix.h</dependency>
