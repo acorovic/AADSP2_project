@@ -29,14 +29,17 @@ DSPfract* lsOutput;
 DSPfract* rsOutput;
 DSPfract* lfeOutput;
 
-// Global distortion vars
+// Global distortion vars divided by 4
 DSPfract hard_clip_threshold = FRACT_NUM(0.125);
 DSPfract n_hard_clip_threshold = FRACT_NUM(-0.125);
-DSPfract soft_clip_threshold1 = FRACT_NUM(0.33333333333333333);
-DSPfract soft_clip_threshold2 = FRACT_NUM(0.66666666666666667);
-
-clipping_type_t type = HARD_CLIPPING;
+DSPfract soft_clip_threshold1 = FRACT_NUM(0.08333333333333333);
+DSPfract soft_clip_threshold2 = FRACT_NUM(0.16666666666666667);
+										  
 DSPfract distortion_gain = FRACT_NUM(0.5);
+// Half wave recifier accum var
+DSPaccum x;
+
+clipping_type_t type = SOFT_CLIPPING;
 
 
 void distortion(DSPfract* input, DSPfract* output)
@@ -48,7 +51,6 @@ void distortion(DSPfract* input, DSPfract* output)
 		for (i = 0; i < BLOCK_SIZE; i++)
 		{
 			*output = *input * distortion_gain;
-			//*output = *output << 2;
 			if (*output  > hard_clip_threshold) // positive hard clipping
 			{
 				*output = hard_clip_threshold;
@@ -67,16 +69,18 @@ void distortion(DSPfract* input, DSPfract* output)
 	{
 		for (i = 0; i < BLOCK_SIZE; i++)
 		{
-			//*output = *input * distortion_gain;
+			*output = *input * distortion_gain;
 			if (*output  > soft_clip_threshold1)
 			{
 				if (*output > soft_clip_threshold2) // positive clipping
 				{
-					*output = FRACT_NUM(1.0);
+					// divided by 4
+					*output = FRACT_NUM(0.125);
 				}
 				else // soft knee (positive)
 				{
-					*output = (FRACT_NUM(3.0) - (FRACT_NUM(2.0) - FRACT_NUM(3.0) * (*output))*(FRACT_NUM(2.0) - FRACT_NUM(3.0)* (*output))) / FRACT_NUM(3.0);
+					//*output = (3.0f - (2.0f - 3.0f* (*output)) * (2.0f - 3.0f* (*output))) / 3.0f;
+					*output = FRACT_NUM((FRACT_NUM(-0.333333333333333) + *output) * (2 - 3 * *output));
 				}
 			}
 			else
@@ -85,11 +89,12 @@ void distortion(DSPfract* input, DSPfract* output)
 				{
 					if (*output < -soft_clip_threshold2) // negative clipping
 					{
-						*output = FRACT_NUM(-1.0);
+						// divided by 4
+						*output = FRACT_NUM(-0.125);
 					}
 					else // soft knee (negative)
 					{
-						*output = FRACT_NUM(-(FRACT_NUM(3.0) - (FRACT_NUM(2.0) + FRACT_NUM(3.0)* (*output))*(FRACT_NUM(2.0) + FRACT_NUM(3.0)* (*output))) / FRACT_NUM(3.0));
+						//*output = -(3.0f - (2.0f + 3.0f* (*output))*(2.0f + 3.0f* (*output))) / 3.0f;
 					}
 				}
 				else // linear region (-1/3..1/3)
@@ -98,6 +103,8 @@ void distortion(DSPfract* input, DSPfract* output)
 				}
 			}
 			*output >>= 1; // divide all by 2 to compensate for extra 6 dB gain boost
+			// return to original
+			*output <<= 2;
 			output++;
 			input++;
 		}
@@ -107,8 +114,9 @@ void distortion(DSPfract* input, DSPfract* output)
 	{
 		for (i = 0; i < BLOCK_SIZE; i++)
 		{
-			//*output = *input * distortion_gain;
-			*output = DSPfract(abs(*output));
+			*output = *input * distortion_gain;
+			*output = (*output).abs();
+			*output = *output << 2;
 			output++;
 			input++;
 		}
@@ -118,9 +126,12 @@ void distortion(DSPfract* input, DSPfract* output)
 	{
 		for (i = 0; i < BLOCK_SIZE; i++)
 		{
-			//*output = *input * distortion_gain;
-			*output = DSPfract(abs(*output) + *output);
-			*output >>= 1;
+			*output = *input * distortion_gain;
+			x = (*output).abs();
+			x += *output;
+			*output = x;
+			*output = *output << 1;
+		
 			output++;
 			input++;
 		}

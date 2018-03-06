@@ -32,7 +32,7 @@ DSPfract hard_clip_threshold = 0.5f;
 DSPfract soft_clip_threshold1 = 1.0f / 3.0f;
 DSPfract soft_clip_threshold2 = 2.0f / 3.0f;
 
-clipping_type_t type = HARD_CLIPPING;
+clipping_type_t type = SOFT_CLIPPING;
 DSPfract distortion_gain = 2.0f;
 
 void distortion(DSPfract* input, DSPfract* output)
