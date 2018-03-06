@@ -2,6 +2,8 @@
   Project: WavTemplate
 ===========================================
 Compiling .c files...
+   [delete] Deleting: C:\testing\aadsp2_projekat\Models\SULDWavTemplate\output\standalone\src\main.O
+   [delete] Deleting: C:\testing\aadsp2_projekat\Models\SULDWavTemplate\output\standalone\src\main.s
 C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c
 C:/CirrusDSP/bin/ccc2 C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c
  -S
@@ -47,34 +49,57 @@ C:/CirrusDSP/bin/ccc2 C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main
      [exec]                        ^
      [exec] 
      [exec] WARNING: '-unsafe-loop-optimization' is ignored when '-g' option is used!
-     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 12: warning #4007: Pointer to unspecified memory zone.
+     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 219: warning #4007: Pointer to unspecified memory zone.
      [exec] 
-     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 14: warning #4007: Pointer to unspecified memory zone.
+     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 221: warning #4007: Pointer to unspecified memory zone.
      [exec] 
-     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 15: warning #4007: Pointer to unspecified memory zone.
+     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 222: warning #4007: Pointer to unspecified memory zone.
      [exec] 
-     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 73: info: Hardware loop is not emitted due to: 
+     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 298: info: Hardware loop is not emitted due to: 
      [exec] Upper bound and initial loop index value are not constant.
      [exec] Make them constant or try using -funsafe-loop-optimizations option.
      [exec] 
-     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 84: info: Hardware loop is not emitted due to: 
+     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 309: info: Hardware loop is not emitted due to: 
      [exec] Upper bound and initial loop index value are not constant.
      [exec] Make them constant or try using -funsafe-loop-optimizations option.
      [exec] 
-     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 69: info: Hardware loop is not emitted due to: 
+     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 294: info: Hardware loop is not emitted due to: 
      [exec] Upper bound and initial loop index value are not constant.
      [exec] Make them constant or try using -funsafe-loop-optimizations option.
      [exec] 
-     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 28: info: SRS is used at this line.
+     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 53: info: SRS is used at this line.
      [exec] 
-     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 69: info: Call to runtime function __div. Look at the separate document for information how to avoid this call.
+     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 72: info: SRS is used at this line.
      [exec] 
-     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 76: info: SRS is used at this line.
+     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 117: info: SRS is used at this line.
      [exec] 
-     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 86: info: SRS is used at this line.
+     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 129: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 132: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 155: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 156: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 168: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 169: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 190: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 191: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 237: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 294: info: Call to runtime function __div. Look at the separate document for information how to avoid this call.
+     [exec] 
+     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 301: info: SRS is use
+     [exec] d at this line.
+     [exec] 
+     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 311: info: SRS is used at this line.
      [exec] 
      [exec] FRONT END TIME: 0 seconds
-     [exec] BACK  END TIME: 1 seconds
+     [exec] BACK  END TIME: 0 seconds
      [exec] 
 Assembling .a and .s files...
 C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main.s
@@ -125,10 +150,10 @@ C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main.O
      [exec] C:\CirrusDSP\lib\udiv.o
      [exec] C:\CirrusDSP\lib\dsplib\crystal32\cl_wavread_bits_per_sample.o
      [exec] C:\CirrusDSP\lib\dsplib\crystal32\cl_wavread_close.o
-     [exec] C:\CirrusDSP\lib\dsplib\crystal32\
-     [exec] cl_wavread_frame_rate.o
+     [exec] C:\CirrusDSP\lib\dsplib\crystal32\cl_wavread_frame_rate.o
      [exec] C:\CirrusDSP\lib\dsplib\crystal32\cl_wavread_getnchannels.o
-     [exec] C:\CirrusDSP\lib\dsplib\crystal32\cl_wavread_number_of_frames.o
+     [exec] C:\CirrusDSP\lib\dsplib\crystal32\cl_wavre
+     [exec] ad_number_of_frames.o
      [exec] C:\CirrusDSP\lib\dsplib\crystal32\cl_wavread_open.o
      [exec] C:\CirrusDSP\lib\dsplib\crystal32\cl_wavread_recvsample.o
      [exec] C:\CirrusDSP\lib\dsplib\crystal32\cl_wavwrite_close.o
@@ -142,7 +167,7 @@ C:/CirrusDSP/bin/lnkuld
  C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/WavTemplate.uld
      [exec] 
      [exec] Reading file: C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/WavTemplate.img ...
-     [exec] 	Processed 642 line(s).
+     [exec] 	Processed 787 line(s).
      [exec] 
      [exec] Writing output to file: C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/WavTemplate.uld ...
      [exec] 

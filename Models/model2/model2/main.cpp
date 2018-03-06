@@ -34,6 +34,8 @@ DSPfract hard_clip_threshold = FRACT_NUM(0.125);
 DSPfract n_hard_clip_threshold = FRACT_NUM(-0.125);
 DSPfract soft_clip_threshold1 = FRACT_NUM(0.08333333333333333);
 DSPfract soft_clip_threshold2 = FRACT_NUM(0.16666666666666667);
+DSPfract n_soft_clip_threshold1 = FRACT_NUM(-0.08333333333333333);
+DSPfract n_soft_clip_threshold2 = FRACT_NUM(-0.16666666666666667);
 										  
 DSPfract distortion_gain = FRACT_NUM(0.5);
 // Half wave recifier accum var
@@ -79,21 +81,29 @@ void distortion(DSPfract* input, DSPfract* output)
 				}
 				else // soft knee (positive)
 				{
+					DSPaccum soft_pow =DSPaccum(*output) * DSPaccum(*output);
+					soft_pow = soft_pow * 12;
+					DSPaccum soft_mul = DSPaccum(*output << 2);
+					*output = FRACT_NUM(0.25) - FRACT_NUM(0.333333333333333) + DSPfract(soft_mul) - DSPfract(soft_pow); 
 					//*output = (3.0f - (2.0f - 3.0f* (*output)) * (2.0f - 3.0f* (*output))) / 3.0f;
-					*output = FRACT_NUM((FRACT_NUM(-0.333333333333333) + *output) * (2 - 3 * *output));
+					//*output = FRACT_NUM((FRACT_NUM(-0.333333333333333) + *output) * (2 - 3 * *output));
 				}
 			}
 			else
 			{
-				if (*output < -soft_clip_threshold1)
+				if (*output < n_soft_clip_threshold1)
 				{
-					if (*output < -soft_clip_threshold2) // negative clipping
+					if (*output < n_soft_clip_threshold2) // negative clipping
 					{
 						// divided by 4
 						*output = FRACT_NUM(-0.125);
 					}
 					else // soft knee (negative)
 					{
+						DSPaccum soft_pow =DSPaccum(*output) * DSPaccum(*output);
+						soft_pow = soft_pow * 12;
+						DSPaccum soft_mul = DSPaccum(*output << 2);
+						*output = FRACT_NUM(-0.25) + FRACT_NUM(0.333333333333333) + DSPfract(soft_mul) + DSPfract(soft_pow); 
 						//*output = -(3.0f - (2.0f + 3.0f* (*output))*(2.0f + 3.0f* (*output))) / 3.0f;
 					}
 				}
