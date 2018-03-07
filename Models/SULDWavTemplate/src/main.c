@@ -3,6 +3,7 @@
 #include <stdfix.h>
 #include <string.h>
 #include "common.h"
+#include <circbuff.h>
 
 #define BLOCK_SIZE 16
 #define MAX_NUM_CHANNEL 8
@@ -10,27 +11,25 @@
 typedef enum {MODE_0, MODE_1, MODE_2} user_control;
 typedef enum { HARD_CLIPPING, SOFT_CLIPPING, FULL_WAVE_RECTIFIER, HALF_WAVE_RECTIFIER} clipping_type_t;
 
-__memX DSPfract sampleBuffer[MAX_NUM_CHANNEL][BLOCK_SIZE];
+__memX DSPfract __attribute__((__aligned__(16)) ) sampleBuffer[MAX_NUM_CHANNEL][BLOCK_SIZE];
 
 __memX DSPint enable = 1;
 __memX user_control outputMode = MODE_0;
-__memX clipping_type_t type = SOFT_CLIPPING;
+__memX clipping_type_t type = HARD_CLIPPING;
 
 // Linear gain
 __memY DSPfract numGain = FRACT_NUM(0.63095734448019324943436013662234);
 // Distortion gain
 __memX DSPfract distortion_gain = FRACT_NUM(0.5);
 
-// Processing global vars
-__memX DSPint i;
 
 // Channels
-__memX DSPfract* leftInput;
-__memX DSPfract* rightInput;
-__memX DSPfract* centralOutput;
-__memX DSPfract* lsOutput;
-__memX DSPfract* rsOutput;
-__memX DSPfract* lfeOutput;
+__memX DSPfract* leftInput = sampleBuffer[0];
+__memX DSPfract* rightInput = sampleBuffer[1];
+__memX DSPfract* centralOutput = sampleBuffer[4];
+__memX DSPfract* lsOutput = sampleBuffer[2];
+__memX DSPfract* rsOutput = sampleBuffer[3];
+__memX DSPfract* lfeOutput = sampleBuffer[5];
 
 // Global distortion vars divided by 4
 __memX const DSPfract hard_clip_threshold = FRACT_NUM(0.125);
@@ -40,6 +39,9 @@ __memX const DSPfract soft_clip_threshold2 = FRACT_NUM(0.16666666666666667);
 __memX const DSPfract n_soft_clip_threshold1 = FRACT_NUM(-0.08333333333333333);
 __memX const DSPfract n_soft_clip_threshold2 = FRACT_NUM(-0.16666666666666667);
 
+__memX DSPfract* input_distortion;
+__memX DSPfract* output_distortion;
+
 // Half wave recifier accum var
 DSPaccum x;
 // Used to calculate input^2
@@ -47,26 +49,27 @@ DSPaccum soft_pow;
 // Used to calculate input << 2
 DSPaccum soft_mul;
 
-void distortion(__memX DSPfract* input, __memX DSPfract* output)
+void distortion()
 {
+	int i;
 	// Apply distortion (sample per sample)
 	switch (type) {
 	case HARD_CLIPPING:
 	{
 		for (i = 0; i < BLOCK_SIZE; i++)
 		{
-			*output = *input * distortion_gain;
-			if (*output  > hard_clip_threshold) // positive hard clipping
+			*output_distortion = *input_distortion * distortion_gain;
+			if (*output_distortion  > hard_clip_threshold) // positive hard clipping
 			{
-				*output = hard_clip_threshold;
+				*output_distortion = hard_clip_threshold;
 			}
-			else if (*output < n_hard_clip_threshold) // negative hard clipping
+			else if (*output_distortion < n_hard_clip_threshold) // negative hard clipping
 			{
-				*output = n_hard_clip_threshold;
+				*output_distortion = n_hard_clip_threshold;
 			}
-			*output = *output << 2;
-			output++;
-			input++;
+			*output_distortion = *output_distortion << 2;
+			output_distortion++;
+			input_distortion++;
 		}
 		break;
 	}
@@ -74,51 +77,51 @@ void distortion(__memX DSPfract* input, __memX DSPfract* output)
 	{
 		for (i = 0; i < BLOCK_SIZE; i++)
 		{
-			*output = *input * distortion_gain;
-			if (*output  > soft_clip_threshold1)
+			*output_distortion = *input_distortion * distortion_gain;
+			if (*output_distortion  > soft_clip_threshold1)
 			{
-				if (*output > soft_clip_threshold2) // positive clipping
+				if (*output_distortion > soft_clip_threshold2) // positive clipping
 				{
 					// divided by 4
-					*output = FRACT_NUM(0.125);
+					*output_distortion = FRACT_NUM(0.125);
 				}
 				else // soft knee (positive)
 				{
-					soft_pow = ((DSPaccum)*output) * ((DSPaccum)*output);
+					soft_pow = ((DSPaccum)*output_distortion) * ((DSPaccum)*output_distortion);
 					soft_pow = soft_pow * 12;
-					soft_mul = ((DSPaccum)*output) << 2;
-					*output = FRACT_NUM(0.25) - FRACT_NUM(0.333333333333333) + soft_mul - soft_pow;
+					soft_mul = ((DSPaccum)*output_distortion) << 2;
+					*output_distortion = FRACT_NUM(0.25) - FRACT_NUM(0.333333333333333) + soft_mul - soft_pow;
 					//*output = (3.0f - (2.0f - 3.0f* (*output)) * (2.0f - 3.0f* (*output))) / 3.0f;
 				}
 			}
 			else
 			{
-				if (*output < n_soft_clip_threshold1)
+				if (*output_distortion < n_soft_clip_threshold1)
 				{
-					if (*output < n_soft_clip_threshold2) // negative clipping
+					if (*output_distortion < n_soft_clip_threshold2) // negative clipping
 					{
 						// divided by 4
-						*output = FRACT_NUM(-0.125);
+						*output_distortion = FRACT_NUM(-0.125);
 					}
 					else // soft knee (negative)
 					{
-						soft_pow =((DSPaccum)*output) * ((DSPaccum)*output);
+						soft_pow =((DSPaccum)*output_distortion) * ((DSPaccum)*output_distortion);
 						soft_pow = soft_pow * 12;
-						soft_mul = ((DSPaccum)*output) << 2;
-						*output = FRACT_NUM(-0.25) + FRACT_NUM(0.333333333333333) + soft_mul + soft_pow;
+						soft_mul = ((DSPaccum)*output_distortion) << 2;
+						*output_distortion = FRACT_NUM(-0.25) + FRACT_NUM(0.333333333333333) + soft_mul + soft_pow;
 						//*output = -(3.0f - (2.0f + 3.0f* (*output))*(2.0f + 3.0f* (*output))) / 3.0f;
 					}
 				}
 				else // linear region (-1/3..1/3)
 				{
-					*output <<= 1;
+					*output_distortion <<= 1;
 				}
 			}
-			*output >>= 1; // divide all by 2 to compensate for extra 6 dB gain boost
+			*output_distortion >>= 1; // divide all by 2 to compensate for extra 6 dB gain boost
 			// return to original
-			*output <<= 2;
-			output++;
-			input++;
+			*output_distortion <<= 2;
+			output_distortion++;
+			input_distortion++;
 		}
 		break;
 	}
@@ -126,15 +129,15 @@ void distortion(__memX DSPfract* input, __memX DSPfract* output)
 	{
 		for (i = 0; i < BLOCK_SIZE; i++)
 		{
-			*output = *input * distortion_gain;
-			if (*output < 0)
+			*output_distortion = *input_distortion * distortion_gain;
+			if (*output_distortion < 0)
 			{
-				*output = - *output;
+				*output_distortion = - *output_distortion;
 			}
 			//*output = (*output).abs();
-			*output = *output << 2;
-			output++;
-			input++;
+			*output_distortion = *output_distortion << 2;
+			output_distortion++;
+			input_distortion++;
 		}
 		break;
 	}
@@ -142,17 +145,17 @@ void distortion(__memX DSPfract* input, __memX DSPfract* output)
 	{
 		for (i = 0; i < BLOCK_SIZE; i++)
 		{
-			*output = *input * distortion_gain;
+			*output_distortion = *input_distortion * distortion_gain;
 			if (x < 0) {
 				x = -x;
 			}
 			//x = (*output).abs();
-			x += *output;
-			*output = x;
-			*output = *output << 1;
+			x += *output_distortion;
+			*output_distortion = x;
+			*output_distortion = *output_distortion << 1;
 
-			output++;
-			input++;
+			output_distortion++;
+			input_distortion++;
 		}
 		break;
 	}
@@ -163,8 +166,10 @@ void distortion(__memX DSPfract* input, __memX DSPfract* output)
 
 void processing()
 {
-	leftInput = sampleBuffer[0];
-	rightInput = sampleBuffer[1];
+	int i;
+
+	//leftInput = sampleBuffer[0];
+	//rightInput = sampleBuffer[1];
 
 	switch(outputMode)
 	{
@@ -173,8 +178,8 @@ void processing()
 		{
 			*leftInput = (*leftInput) * numGain;
 			*rightInput = (*rightInput) * numGain;
-			leftInput++;
-			rightInput++;
+			leftInput = CIRC_INC(leftInput, MOD_16 + 1); //++;
+			rightInput = CIRC_INC(rightInput, MOD_16 + 1);
 		}
 		break;
 	case MODE_1:
@@ -193,8 +198,14 @@ void processing()
 			leftInput = sampleBuffer[0];
 			rightInput = sampleBuffer[1];
 
-			distortion(leftInput, lsOutput);
-			distortion(rightInput, rsOutput);
+			input_distortion = leftInput;
+			output_distortion = lsOutput;
+			distortion();
+			input_distortion = rightInput;
+			output_distortion = rsOutput;
+			distortion();
+			//distortion(leftInput, lsOutput);
+			//distortion(rightInput, rsOutput);
 		}
 		break;
 	case MODE_2:
@@ -209,22 +220,34 @@ void processing()
 				*leftInput = (*leftInput) * numGain;
 				*rightInput = (*rightInput) * numGain;
 				*centralOutput = *rightInput + *leftInput;
+				//centralOutput = CIRC_INC(centralOutput, MOD_16 + 1);
 				centralOutput++;
+				//leftInput = CIRC_INC(leftInput, MOD_16 + 1);
 				leftInput++;
+				//rightInput = CIRC_INC(rightInput, MOD_16 + 1);
 				rightInput++;
 			}
 
 			leftInput = sampleBuffer[0];
 			rightInput = sampleBuffer[1];
 
-			distortion(leftInput, lsOutput);
-			distortion(rightInput, rsOutput);
+			input_distortion = leftInput;
+			output_distortion = lsOutput;
+			distortion();
+			input_distortion = rightInput;
+			output_distortion = rsOutput;
+			distortion();
+			//distortion(leftInput, lsOutput);
+			//distortion(rightInput, rsOutput);
 
 			for (i = 0; i < BLOCK_SIZE; i++)
 			{
 				*lfeOutput = *lsOutput + *rsOutput;
+				//lfeOutput = CIRC_INC(lfeOutput, MOD_16 + 1);
 				lfeOutput++;
+				//lsOutput = CIRC_INC(lsOutput, MOD_16 + 1);
 				lsOutput++;
+				//rsOutput = CIRC_INC(rsOutput, MOD_16 + 1);
 				rsOutput++;
 			}
 		}
