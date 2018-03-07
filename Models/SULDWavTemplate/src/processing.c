@@ -90,7 +90,7 @@ void processing()
 
 			for (i = 0; i < BLOCK_SIZE; i++)
 			{
-				*lfeOutput = *lsOutput + *rsOutput;
+				*lfeOutput = ((DSPaccum)*lsOutput) + ((DSPaccum)*rsOutput);
 				lfeOutput++;
 				lsOutput++;
 				rsOutput++;

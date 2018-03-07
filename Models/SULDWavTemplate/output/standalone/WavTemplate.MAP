@@ -43,27 +43,27 @@ Address class X	Address:[0000...FFFF], length 10000
 	Address:[000E...000E], length 0001, <RESERVED for main_GEN_0005, class X_OVLY>
 	Address:[000F...000F], length 0001, <RESERVED for main_GEN_0006, class X_OVLY>
 	Address:[0010...008F], length 0080, <RESERVED for main_GEN_0012, class X_OVLY>
-	Address:[0090...00B7], length 0028, <RESERVED for main_GEN_0013, class X_OVLY>
-	Address:[00B8...00D8], length 0021, <RESERVED for main_GEN_0014, class X_OVLY>
-	Address:[00D9...00F9], length 0021, <RESERVED for main_GEN_0016, class X_OVLY>
-	Address:[00FA...0111], length 0018, <RESERVED for main_GEN_0015, class X_OVLY>
-	Address:[0112...0112], length 0001, <RESERVED for main_GEN_0008, class X_OVLY>
-	Address:[0113...0113], length 0001, <RESERVED for main_GEN_0009, class X_OVLY>
-	Address:[0114...0114], length 0001, <RESERVED for main_GEN_0010, class X_OVLY>
-	Address:[0115...0115], length 0001, <RESERVED for main_GEN_0011, class X_OVLY>
-	Address:[0116...0116], length 0001, <RESERVED for main_GEN_0017, class X_OVLY>
-	Address:[0117...0117], length 0001, <RESERVED for distortion_GEN_0000, class X_OVLY>
-	Address:[0118...0118], length 0001, <RESERVED for distortion_GEN_0001, class X_OVLY>
-	Address:[0119...0119], length 0001, <RESERVED for distortion_GEN_0002, class X_OVLY>
-	Address:[011A...011A], length 0001, <RESERVED for distortion_GEN_0003, class X_OVLY>
-	Address:[011B...011B], length 0001, <RESERVED for distortion_GEN_0004, class X_OVLY>
-	Address:[011C...011C], length 0001, <RESERVED for distortion_GEN_0005, class X_OVLY>
-	Address:[011D...011D], length 0001, <RESERVED for distortion_GEN_0006, class X_OVLY>
-	Address:[011E...011E], length 0001, <RESERVED for distortion_GEN_0007, class X_OVLY>
-	Address:[011F...011F], length 0001, <RESERVED for distortion_GEN_0008, class X_OVLY>
-	Address:[0120...0120], length 0001, <RESERVED for distortion_GEN_0009, class X_OVLY>
-	Address:[0121...0920], length 0800, <RESERVED for simulator_stack_GEN_0000, class X>
-	Address:[0921...FFFF], length F6DF, <FREE>
+	Address:[0090...00BE], length 002F, <RESERVED for main_GEN_0013, class X_OVLY>
+	Address:[00BF...00DF], length 0021, <RESERVED for main_GEN_0014, class X_OVLY>
+	Address:[00E0...0100], length 0021, <RESERVED for main_GEN_0016, class X_OVLY>
+	Address:[0101...0118], length 0018, <RESERVED for main_GEN_0015, class X_OVLY>
+	Address:[0119...0119], length 0001, <RESERVED for main_GEN_0008, class X_OVLY>
+	Address:[011A...011A], length 0001, <RESERVED for main_GEN_0009, class X_OVLY>
+	Address:[011B...011B], length 0001, <RESERVED for main_GEN_0010, class X_OVLY>
+	Address:[011C...011C], length 0001, <RESERVED for main_GEN_0011, class X_OVLY>
+	Address:[011D...011D], length 0001, <RESERVED for main_GEN_0017, class X_OVLY>
+	Address:[011E...011E], length 0001, <RESERVED for distortion_GEN_0000, class X_OVLY>
+	Address:[011F...011F], length 0001, <RESERVED for distortion_GEN_0001, class X_OVLY>
+	Address:[0120...0120], length 0001, <RESERVED for distortion_GEN_0002, class X_OVLY>
+	Address:[0121...0121], length 0001, <RESERVED for distortion_GEN_0003, class X_OVLY>
+	Address:[0122...0122], length 0001, <RESERVED for distortion_GEN_0004, class X_OVLY>
+	Address:[0123...0123], length 0001, <RESERVED for distortion_GEN_0005, class X_OVLY>
+	Address:[0124...0124], length 0001, <RESERVED for distortion_GEN_0006, class X_OVLY>
+	Address:[0125...0125], length 0001, <RESERVED for distortion_GEN_0007, class X_OVLY>
+	Address:[0126...0126], length 0001, <RESERVED for distortion_GEN_0008, class X_OVLY>
+	Address:[0127...0127], length 0001, <RESERVED for distortion_GEN_0009, class X_OVLY>
+	Address:[0128...0927], length 0800, <RESERVED for simulator_stack_GEN_0000, class X>
+	Address:[0928...FFFF], length F6D8, <FREE>
 
 Address class X_AVAIL	Address:[0000...FBFF], length FC00, subclass of X
 	Address:[0001...0003], length 0003, <RESERVED for distortion_GEN_0010, class X_OVLY>
@@ -76,26 +76,26 @@ Address class X_AVAIL	Address:[0000...FBFF], length FC00, subclass of X
 	Address:[000E...000E], length 0001, <RESERVED for main_GEN_0005, class X_OVLY>
 	Address:[000F...000F], length 0001, <RESERVED for main_GEN_0006, class X_OVLY>
 	Address:[0010...008F], length 0080, <RESERVED for main_GEN_0012, class X_OVLY>
-	Address:[0090...00B7], length 0028, <RESERVED for main_GEN_0013, class X_OVLY>
-	Address:[00B8...00D8], length 0021, <RESERVED for main_GEN_0014, class X_OVLY>
-	Address:[00D9...00F9], length 0021, <RESERVED for main_GEN_0016, class X_OVLY>
-	Address:[00FA...0111], length 0018, <RESERVED for main_GEN_0015, class X_OVLY>
-	Address:[0112...0112], length 0001, <RESERVED for main_GEN_0008, class X_OVLY>
-	Address:[0113...0113], length 0001, <RESERVED for main_GEN_0009, class X_OVLY>
-	Address:[0114...0114], length 0001, <RESERVED for main_GEN_0010, class X_OVLY>
-	Address:[0115...0115], length 0001, <RESERVED for main_GEN_0011, class X_OVLY>
-	Address:[0116...0116], length 0001, <RESERVED for main_GEN_0017, class X_OVLY>
-	Address:[0117...0117], length 0001, <RESERVED for distortion_GEN_0000, class X_OVLY>
-	Address:[0118...0118], length 0001, <RESERVED for distortion_GEN_0001, class X_OVLY>
-	Address:[0119...0119], length 0001, <RESERVED for distortion_GEN_0002, class X_OVLY>
-	Address:[011A...011A], length 0001, <RESERVED for distortion_GEN_0003, class X_OVLY>
-	Address:[011B...011B], length 0001, <RESERVED for distortion_GEN_0004, class X_OVLY>
-	Address:[011C...011C], length 0001, <RESERVED for distortion_GEN_0005, class X_OVLY>
-	Address:[011D...011D], length 0001, <RESERVED for distortion_GEN_0006, class X_OVLY>
-	Address:[011E...011E], length 0001, <RESERVED for distortion_GEN_0007, class X_OVLY>
-	Address:[011F...011F], length 0001, <RESERVED for distortion_GEN_0008, class X_OVLY>
-	Address:[0120...0120], length 0001, <RESERVED for distortion_GEN_0009, class X_OVLY>
-	Address:[0921...FBFF], length F2DF, <FREE>
+	Address:[0090...00BE], length 002F, <RESERVED for main_GEN_0013, class X_OVLY>
+	Address:[00BF...00DF], length 0021, <RESERVED for main_GEN_0014, class X_OVLY>
+	Address:[00E0...0100], length 0021, <RESERVED for main_GEN_0016, class X_OVLY>
+	Address:[0101...0118], length 0018, <RESERVED for main_GEN_0015, class X_OVLY>
+	Address:[0119...0119], length 0001, <RESERVED for main_GEN_0008, class X_OVLY>
+	Address:[011A...011A], length 0001, <RESERVED for main_GEN_0009, class X_OVLY>
+	Address:[011B...011B], length 0001, <RESERVED for main_GEN_0010, class X_OVLY>
+	Address:[011C...011C], length 0001, <RESERVED for main_GEN_0011, class X_OVLY>
+	Address:[011D...011D], length 0001, <RESERVED for main_GEN_0017, class X_OVLY>
+	Address:[011E...011E], length 0001, <RESERVED for distortion_GEN_0000, class X_OVLY>
+	Address:[011F...011F], length 0001, <RESERVED for distortion_GEN_0001, class X_OVLY>
+	Address:[0120...0120], length 0001, <RESERVED for distortion_GEN_0002, class X_OVLY>
+	Address:[0121...0121], length 0001, <RESERVED for distortion_GEN_0003, class X_OVLY>
+	Address:[0122...0122], length 0001, <RESERVED for distortion_GEN_0004, class X_OVLY>
+	Address:[0123...0123], length 0001, <RESERVED for distortion_GEN_0005, class X_OVLY>
+	Address:[0124...0124], length 0001, <RESERVED for distortion_GEN_0006, class X_OVLY>
+	Address:[0125...0125], length 0001, <RESERVED for distortion_GEN_0007, class X_OVLY>
+	Address:[0126...0126], length 0001, <RESERVED for distortion_GEN_0008, class X_OVLY>
+	Address:[0127...0127], length 0001, <RESERVED for distortion_GEN_0009, class X_OVLY>
+	Address:[0928...FBFF], length F2D8, <FREE>
 
 Address class Y	Address:[0000...FFFF], length 10000
 	Address:[0000...0000], length 0001, <RESERVED for crt0_GEN_0001, class Y>
@@ -112,29 +112,29 @@ Address class Y	Address:[0000...FFFF], length 10000
                       main_GEN_0005, address 000E ,length 0001, class     X_OVLY
                       main_GEN_0006, address 000F ,length 0001, class     X_OVLY
                       main_GEN_0007, address 0002 ,length 0001, class     Y_OVLY
-                      main_GEN_0008, address 0112 ,length 0001, class     X_OVLY
-                      main_GEN_0009, address 0113 ,length 0001, class     X_OVLY
-                      main_GEN_0010, address 0114 ,length 0001, class     X_OVLY
-                      main_GEN_0011, address 0115 ,length 0001, class     X_OVLY
+                      main_GEN_0008, address 0119 ,length 0001, class     X_OVLY
+                      main_GEN_0009, address 011A ,length 0001, class     X_OVLY
+                      main_GEN_0010, address 011B ,length 0001, class     X_OVLY
+                      main_GEN_0011, address 011C ,length 0001, class     X_OVLY
                       main_GEN_0012, address 0010 ,length 0080, class     X_OVLY, aligned 0010
-                      main_GEN_0013, address 0090 ,length 0028, class     X_OVLY
-                      main_GEN_0014, address 00B8 ,length 0021, class     X_OVLY
-                      main_GEN_0015, address 00FA ,length 0018, class     X_OVLY
-                      main_GEN_0016, address 00D9 ,length 0021, class     X_OVLY
-                      main_GEN_0017, address 0116 ,length 0001, class     X_OVLY
+                      main_GEN_0013, address 0090 ,length 002F, class     X_OVLY
+                      main_GEN_0014, address 00BF ,length 0021, class     X_OVLY
+                      main_GEN_0015, address 0101 ,length 0018, class     X_OVLY
+                      main_GEN_0016, address 00E0 ,length 0021, class     X_OVLY
+                      main_GEN_0017, address 011D ,length 0001, class     X_OVLY
                       main_GEN_0018, address 0186 ,length 0083, class  CODE_OVLY
 
 -----------------Module:  distortion(Segment name)
-                distortion_GEN_0000, address 0117 ,length 0001, class     X_OVLY
-                distortion_GEN_0001, address 0118 ,length 0001, class     X_OVLY
-                distortion_GEN_0002, address 0119 ,length 0001, class     X_OVLY
-                distortion_GEN_0003, address 011A ,length 0001, class     X_OVLY
-                distortion_GEN_0004, address 011B ,length 0001, class     X_OVLY
-                distortion_GEN_0005, address 011C ,length 0001, class     X_OVLY
-                distortion_GEN_0006, address 011D ,length 0001, class     X_OVLY
-                distortion_GEN_0007, address 011E ,length 0001, class     X_OVLY
-                distortion_GEN_0008, address 011F ,length 0001, class     X_OVLY
-                distortion_GEN_0009, address 0120 ,length 0001, class     X_OVLY
+                distortion_GEN_0000, address 011E ,length 0001, class     X_OVLY
+                distortion_GEN_0001, address 011F ,length 0001, class     X_OVLY
+                distortion_GEN_0002, address 0120 ,length 0001, class     X_OVLY
+                distortion_GEN_0003, address 0121 ,length 0001, class     X_OVLY
+                distortion_GEN_0004, address 0122 ,length 0001, class     X_OVLY
+                distortion_GEN_0005, address 0123 ,length 0001, class     X_OVLY
+                distortion_GEN_0006, address 0124 ,length 0001, class     X_OVLY
+                distortion_GEN_0007, address 0125 ,length 0001, class     X_OVLY
+                distortion_GEN_0008, address 0126 ,length 0001, class     X_OVLY
+                distortion_GEN_0009, address 0127 ,length 0001, class     X_OVLY
                 distortion_GEN_0010, address 0001 ,length 0003, class     X_OVLY
                 distortion_GEN_0011, address 0004 ,length 0003, class     X_OVLY
                 distortion_GEN_0012, address 0007 ,length 0003, class     X_OVLY
@@ -168,7 +168,7 @@ Address class Y	Address:[0000...FFFF], length 10000
            mul_sat_ulaccum_GEN_0000, address 0283 ,length 0064, class  CODE_OVLY
 
 -----------------Module:  simulator_stack(Segment name)
-           simulator_stack_GEN_0000, address 0121 ,length 0800, class          X
+           simulator_stack_GEN_0000, address 0128 ,length 0800, class          X
 
 -----------------Module:  strcpy_x2x(Segment name)
                 strcpy_x2x_GEN_0000, address 0361 ,length 0007, class  CODE_OVLY
@@ -402,9 +402,9 @@ X_VX_SRC_4_11_Coef_Phase_Tbl_End_P_1	C:\CirrusDSP\lib\dsplib\cl_src_tables_asm	 
                    __CLASS_F_Y_OVLY	                      CLINK RESERVED	                -----------			   -----------			0000
                      __CLASS_L_CODE	                      CLINK RESERVED	                -----------			   -----------			0390
                 __CLASS_L_CODE_OVLY	                      CLINK RESERVED	                -----------			   -----------			0390
-                        __CLASS_L_X	                      CLINK RESERVED	                -----------			   -----------			0920
-                  __CLASS_L_X_AVAIL	                      CLINK RESERVED	                -----------			   -----------			0120
-                   __CLASS_L_X_OVLY	                      CLINK RESERVED	                -----------			   -----------			0120
+                        __CLASS_L_X	                      CLINK RESERVED	                -----------			   -----------			0927
+                  __CLASS_L_X_AVAIL	                      CLINK RESERVED	                -----------			   -----------			0127
+                   __CLASS_L_X_OVLY	                      CLINK RESERVED	                -----------			   -----------			0127
                         __CLASS_L_Y	                      CLINK RESERVED	                -----------			   -----------			0002
                    __CLASS_L_Y_OVLY	                      CLINK RESERVED	                -----------			   -----------			0002
                      __CLASS_S_ARGV	                      CLINK RESERVED	                -----------			   -----------			FC00
@@ -596,7 +596,7 @@ __CL_OS_REGISTER_GPI_HANDLER_ASM_CODE	C:\CirrusDSP\lib\dsplib\cl_os_register_gpi
                              _bitsr	              C:\CirrusDSP\lib\bitsr	                bitsr_GEN_0000		        CODE_OVLY		FFFFFFFF
                            _bitsuhr	            C:\CirrusDSP\lib\bitsuhr	              bitsuhr_GEN_0000		        CODE_OVLY		FFFFFFFF
                             _bitsur	             C:\CirrusDSP\lib\bitsur	               bitsur_GEN_0000		        CODE_OVLY		FFFFFFFF
-                           _c_stack	    C:\CirrusDSP\lib\simulator_stack	      simulator_stack_GEN_0000		                X		0121
+                           _c_stack	    C:\CirrusDSP\lib\simulator_stack	      simulator_stack_GEN_0000		                X		0128
                      _centralOutput	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0000		           X_OVLY		000A
               _cl_I2C_Abort_Message	C:\CirrusDSP\lib\dsplib\cl_i2c_routines	          CL_I2C_ROUTINES_CODE		        CODE_OVLY		00B2
                _cl_I2C_Command_Word	C:\CirrusDSP\lib\dsplib\cl_i2c_routines	          CL_I2C_ROUTINES_CODE		        CODE_OVLY		00AD
@@ -758,7 +758,7 @@ _cl_input_window_overlap_50_percent	   C:\CirrusDSP\lib\dsplib\cl_window	       
                           _get_mr_s	           C:\CirrusDSP\lib\get_mr_s	             get_mr_s_GEN_0000		        CODE_OVLY		FFFFFFFF
                          _get_mr_sr	          C:\CirrusDSP\lib\get_mr_sr	            get_mr_sr_GEN_0000		        CODE_OVLY		FFFFFFFF
                               _getc	C:\CirrusDSP\lib\dsplib\crystal32\fgetc	                fgetc_GEN_0000		        CODE_OVLY		FFFFFFFF
-               _hard_clip_threshold	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0004		           X_OVLY		011B
+               _hard_clip_threshold	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0004		           X_OVLY		0122
                             _hrbits	             C:\CirrusDSP\lib\hrbits	               hrbits_GEN_0000		        CODE_OVLY		FFFFFFFF
                   _input_distortion	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0003		           X_OVLY		000C
                               _itoa	               C:\CirrusDSP\lib\itoa	                 itoa_GEN_0001		        CODE_OVLY		FFFFFFFF
@@ -777,12 +777,12 @@ _cl_input_window_overlap_50_percent	   C:\CirrusDSP\lib\dsplib\cl_window	       
                             _memset	           C:\CirrusDSP\lib\memset_x	             memset_x_GEN_0000		        CODE_OVLY		035A
                           _memset_x	           C:\CirrusDSP\lib\memset_x	             memset_x_GEN_0000		        CODE_OVLY		035A
                           _memset_y	           C:\CirrusDSP\lib\memset_y	             memset_y_GEN_0000		        CODE_OVLY		FFFFFFFF
-             _n_hard_clip_threshold	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0005		           X_OVLY		011C
-            _n_soft_clip_threshold1	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0006		           X_OVLY		011D
-            _n_soft_clip_threshold2	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0007		           X_OVLY		011E
+             _n_hard_clip_threshold	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0005		           X_OVLY		0123
+            _n_soft_clip_threshold1	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0006		           X_OVLY		0124
+            _n_soft_clip_threshold2	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0007		           X_OVLY		0125
                            _numGain	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0007		           Y_OVLY		0002
-                        _outputMode	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0008		           X_OVLY		0112
-                 _output_distortion	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0009		           X_OVLY		0113
+                        _outputMode	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0008		           X_OVLY		0119
+                 _output_distortion	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0009		           X_OVLY		011A
                             _printf	C:\CirrusDSP\lib\dsplib\crystal32\printf	               printf_GEN_0000		        CODE_OVLY		038E
                         _processing	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/processing	           processing_GEN_0000		        CODE_OVLY		00E5
                               _putc	C:\CirrusDSP\lib\dsplib\crystal32\fputc	                fputc_GEN_0000		        CODE_OVLY		FFFFFFFF
@@ -794,14 +794,14 @@ _cl_input_window_overlap_50_percent	   C:\CirrusDSP\lib\dsplib\cl_window	       
                              _rgetg	              C:\CirrusDSP\lib\rgetg	                rgetg_GEN_0000		        CODE_OVLY		FFFFFFFF
                             _rgethi	             C:\CirrusDSP\lib\rgethi	               rgethi_GEN_0000		        CODE_OVLY		FFFFFFFF
                             _rgetlo	             C:\CirrusDSP\lib\rgetlo	               rgetlo_GEN_0000		        CODE_OVLY		FFFFFFFF
-                        _rightInput	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0010		           X_OVLY		0114
-                          _rsOutput	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0011		           X_OVLY		0115
+                        _rightInput	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0010		           X_OVLY		011B
+                          _rsOutput	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0011		           X_OVLY		011C
                       _sampleBuffer	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0012		           X_OVLY		0010
                           _set_mr_r	           C:\CirrusDSP\lib\set_mr_r	             set_mr_r_GEN_0000		        CODE_OVLY		FFFFFFFF
                           _set_mr_s	           C:\CirrusDSP\lib\set_mr_s	             set_mr_s_GEN_0000		        CODE_OVLY		FFFFFFFF
                          _set_mr_sr	          C:\CirrusDSP\lib\set_mr_sr	            set_mr_sr_GEN_0000		        CODE_OVLY		FFFFFFFF
-              _soft_clip_threshold1	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0008		           X_OVLY		011F
-              _soft_clip_threshold2	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0009		           X_OVLY		0120
+              _soft_clip_threshold1	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0008		           X_OVLY		0126
+              _soft_clip_threshold2	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0009		           X_OVLY		0127
                           _soft_mul	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0010		           X_OVLY		0001
                           _soft_pow	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0011		           X_OVLY		0004
                            _sprintf	C:\CirrusDSP\lib\dsplib\crystal32\sprintf	              sprintf_GEN_0000		        CODE_OVLY		FFFFFFFF
@@ -814,7 +814,7 @@ _cl_input_window_overlap_50_percent	   C:\CirrusDSP\lib\dsplib\cl_window	       
                             _strlen	           C:\CirrusDSP\lib\strlen_x	             strlen_x_GEN_0000		        CODE_OVLY		FFFFFFFF
                           _strlen_x	           C:\CirrusDSP\lib\strlen_x	             strlen_x_GEN_0000		        CODE_OVLY		FFFFFFFF
                           _strlen_y	           C:\CirrusDSP\lib\strlen_y	             strlen_y_GEN_0000		        CODE_OVLY		FFFFFFFF
-                              _type	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0017		           X_OVLY		0116
+                              _type	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0017		           X_OVLY		011D
                            _uhrbits	            C:\CirrusDSP\lib\uhrbits	              uhrbits_GEN_0000		        CODE_OVLY		FFFFFFFF
                             _ungetc	C:\CirrusDSP\lib\dsplib\crystal32\ungetc	               ungetc_GEN_0000		        CODE_OVLY		FFFFFFFF
                             _urbits	             C:\CirrusDSP\lib\urbits	               urbits_GEN_0000		        CODE_OVLY		FFFFFFFF
@@ -976,16 +976,16 @@ cl_wavread_number_of_frames_GEN_0000	C:\CirrusDSP\lib\dsplib\crystal32\cl_wavrea
                       crt0_GEN_0001	               C:\CirrusDSP\lib\crt0	                 crt0_GEN_0001		                Y		0000
                       crt0_GEN_0002	               C:\CirrusDSP\lib\crt0	                 crt0_GEN_0002		             CODE		0000
                       crt0_GEN_0003	               C:\CirrusDSP\lib\crt0	                 crt0_GEN_0003		        CODE_OVLY		0368
-                distortion_GEN_0000	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0000		           X_OVLY		0117
-                distortion_GEN_0001	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0001		           X_OVLY		0118
-                distortion_GEN_0002	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0002		           X_OVLY		0119
-                distortion_GEN_0003	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0003		           X_OVLY		011A
-                distortion_GEN_0004	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0004		           X_OVLY		011B
-                distortion_GEN_0005	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0005		           X_OVLY		011C
-                distortion_GEN_0006	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0006		           X_OVLY		011D
-                distortion_GEN_0007	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0007		           X_OVLY		011E
-                distortion_GEN_0008	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0008		           X_OVLY		011F
-                distortion_GEN_0009	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0009		           X_OVLY		0120
+                distortion_GEN_0000	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0000		           X_OVLY		011E
+                distortion_GEN_0001	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0001		           X_OVLY		011F
+                distortion_GEN_0002	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0002		           X_OVLY		0120
+                distortion_GEN_0003	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0003		           X_OVLY		0121
+                distortion_GEN_0004	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0004		           X_OVLY		0122
+                distortion_GEN_0005	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0005		           X_OVLY		0123
+                distortion_GEN_0006	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0006		           X_OVLY		0124
+                distortion_GEN_0007	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0007		           X_OVLY		0125
+                distortion_GEN_0008	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0008		           X_OVLY		0126
+                distortion_GEN_0009	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0009		           X_OVLY		0127
                 distortion_GEN_0010	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0010		           X_OVLY		0001
                 distortion_GEN_0011	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0011		           X_OVLY		0004
                 distortion_GEN_0012	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0012		           X_OVLY		0007
@@ -1060,16 +1060,16 @@ cl_wavread_number_of_frames_GEN_0000	C:\CirrusDSP\lib\dsplib\crystal32\cl_wavrea
                       main_GEN_0005	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0005		           X_OVLY		000E
                       main_GEN_0006	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0006		           X_OVLY		000F
                       main_GEN_0007	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0007		           Y_OVLY		0002
-                      main_GEN_0008	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0008		           X_OVLY		0112
-                      main_GEN_0009	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0009		           X_OVLY		0113
-                      main_GEN_0010	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0010		           X_OVLY		0114
-                      main_GEN_0011	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0011		           X_OVLY		0115
+                      main_GEN_0008	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0008		           X_OVLY		0119
+                      main_GEN_0009	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0009		           X_OVLY		011A
+                      main_GEN_0010	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0010		           X_OVLY		011B
+                      main_GEN_0011	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0011		           X_OVLY		011C
                       main_GEN_0012	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0012		           X_OVLY		0010
                       main_GEN_0013	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0013		           X_OVLY		0090
-                      main_GEN_0014	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0014		           X_OVLY		00B8
-                      main_GEN_0015	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0015		           X_OVLY		00FA
-                      main_GEN_0016	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0016		           X_OVLY		00D9
-                      main_GEN_0017	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0017		           X_OVLY		0116
+                      main_GEN_0014	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0014		           X_OVLY		00BF
+                      main_GEN_0015	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0015		           X_OVLY		0101
+                      main_GEN_0016	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0016		           X_OVLY		00E0
+                      main_GEN_0017	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0017		           X_OVLY		011D
                       main_GEN_0018	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0018		        CODE_OVLY		0186
                 memcpy_x2x_GEN_0000	         C:\CirrusDSP\lib\memcpy_x2x	           memcpy_x2x_GEN_0000		        CODE_OVLY		FFFFFFFF
                 memcpy_x2y_GEN_0000	         C:\CirrusDSP\lib\memcpy_x2y	           memcpy_x2y_GEN_0000		        CODE_OVLY		FFFFFFFF
@@ -1102,7 +1102,7 @@ cl_wavread_number_of_frames_GEN_0000	C:\CirrusDSP\lib\dsplib\crystal32\cl_wavrea
                  set_mr_sr_GEN_0000	          C:\CirrusDSP\lib\set_mr_sr	            set_mr_sr_GEN_0000		        CODE_OVLY		FFFFFFFF
       shift_left_constants_GEN_0000	C:\CirrusDSP\lib\shift_left_constants	 shift_left_constants_GEN_0000		           X_OVLY		FFFFFFFF
      shift_right_constants_GEN_0000	C:\CirrusDSP\lib\shift_right_constants	shift_right_constants_GEN_0000		           X_OVLY		FFFFFFFF
-           simulator_stack_GEN_0000	    C:\CirrusDSP\lib\simulator_stack	      simulator_stack_GEN_0000		                X		0121
+           simulator_stack_GEN_0000	    C:\CirrusDSP\lib\simulator_stack	      simulator_stack_GEN_0000		                X		0128
                    sprintf_GEN_0000	C:\CirrusDSP\lib\dsplib\crystal32\sprintf	              sprintf_GEN_0000		        CODE_OVLY		FFFFFFFF
                      src_buf_y_Base	C:\CirrusDSP\lib\dsplib\cl_src_data_vars_asm	                src_buf_y_Base		           Y_OVLY		FFFFFFFF
                      src_tbl_x_Base	C:\CirrusDSP\lib\dsplib\cl_src_tables_asm	                src_tbl_x_Base		           X_OVLY		FFFFFFFF
@@ -1168,16 +1168,16 @@ y_TDF_FG_temp_td_blocksize2_plus_extra	C:\CirrusDSP\lib\dsplib\crystal32\cl_td_f
                           _lsOutput	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0006		           X_OVLY		000F
                               _main	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0018		        CODE_OVLY		0186
                            _numGain	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0007		           Y_OVLY		0002
-                        _outputMode	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0008		           X_OVLY		0112
-                 _output_distortion	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0009		           X_OVLY		0113
-                        _rightInput	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0010		           X_OVLY		0114
-                          _rsOutput	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0011		           X_OVLY		0115
+                        _outputMode	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0008		           X_OVLY		0119
+                 _output_distortion	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0009		           X_OVLY		011A
+                        _rightInput	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0010		           X_OVLY		011B
+                          _rsOutput	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0011		           X_OVLY		011C
                       _sampleBuffer	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0012		           X_OVLY		0010
                     _string_const_0	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0013		           X_OVLY		0090
-                    _string_const_1	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0014		           X_OVLY		00B8
-                    _string_const_2	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0015		           X_OVLY		00FA
-                    _string_const_3	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0016		           X_OVLY		00D9
-                              _type	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0017		           X_OVLY		0116
+                    _string_const_1	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0014		           X_OVLY		00BF
+                    _string_const_2	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0015		           X_OVLY		0101
+                    _string_const_3	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0016		           X_OVLY		00E0
+                              _type	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0017		           X_OVLY		011D
                              else_0	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0018		        CODE_OVLY		01A9
                              else_1	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0018		        CODE_OVLY		01C7
                             endif_0	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0018		        CODE_OVLY		01A9
@@ -1204,17 +1204,17 @@ y_TDF_FG_temp_td_blocksize2_plus_extra	C:\CirrusDSP\lib\dsplib\crystal32\cl_td_f
                        label_end_96	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0018		        CODE_OVLY		01F4
                        label_end_97	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main	                 main_GEN_0018		        CODE_OVLY		01F5
                      __epilogue_104	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0013		        CODE_OVLY		00E4
-               __extractedConst_0_1	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0000		           X_OVLY		0117
-               __extractedConst_1_0	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0001		           X_OVLY		0118
-               __extractedConst_2_1	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0002		           X_OVLY		0119
-               __extractedConst_3_0	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0003		           X_OVLY		011A
+               __extractedConst_0_1	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0000		           X_OVLY		011E
+               __extractedConst_1_0	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0001		           X_OVLY		011F
+               __extractedConst_2_1	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0002		           X_OVLY		0120
+               __extractedConst_3_0	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0003		           X_OVLY		0121
                         _distortion	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0013		        CODE_OVLY		0001
-               _hard_clip_threshold	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0004		           X_OVLY		011B
-             _n_hard_clip_threshold	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0005		           X_OVLY		011C
-            _n_soft_clip_threshold1	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0006		           X_OVLY		011D
-            _n_soft_clip_threshold2	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0007		           X_OVLY		011E
-              _soft_clip_threshold1	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0008		           X_OVLY		011F
-              _soft_clip_threshold2	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0009		           X_OVLY		0120
+               _hard_clip_threshold	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0004		           X_OVLY		0122
+             _n_hard_clip_threshold	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0005		           X_OVLY		0123
+            _n_soft_clip_threshold1	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0006		           X_OVLY		0124
+            _n_soft_clip_threshold2	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0007		           X_OVLY		0125
+              _soft_clip_threshold1	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0008		           X_OVLY		0126
+              _soft_clip_threshold2	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0009		           X_OVLY		0127
                           _soft_mul	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0010		           X_OVLY		0001
                           _soft_pow	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0011		           X_OVLY		0004
                                  _x	C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion	           distortion_GEN_0012		           X_OVLY		0007
@@ -1285,8 +1285,8 @@ y_TDF_FG_temp_td_blocksize2_plus_extra	C:\CirrusDSP\lib\dsplib\crystal32\cl_td_f
                           _memset_x	           C:\CirrusDSP\lib\memset_x	             memset_x_GEN_0000		        CODE_OVLY		035A
                    __mul_sat_laccum	     C:\CirrusDSP\lib\mul_sat_laccum	       mul_sat_laccum_GEN_0000		        CODE_OVLY		0321
                   __mul_sat_ulaccum	    C:\CirrusDSP\lib\mul_sat_ulaccum	      mul_sat_ulaccum_GEN_0000		        CODE_OVLY		0283
-                              _argv	    C:\CirrusDSP\lib\simulator_stack	      simulator_stack_GEN_0000		                X		0921
-                           _c_stack	    C:\CirrusDSP\lib\simulator_stack	      simulator_stack_GEN_0000		                X		0121
+                              _argv	    C:\CirrusDSP\lib\simulator_stack	      simulator_stack_GEN_0000		                X		0928
+                           _c_stack	    C:\CirrusDSP\lib\simulator_stack	      simulator_stack_GEN_0000		                X		0128
                             _strcpy	         C:\CirrusDSP\lib\strcpy_x2x	           strcpy_x2x_GEN_0000		        CODE_OVLY		0361
                         _strcpy_x2x	         C:\CirrusDSP\lib\strcpy_x2x	           strcpy_x2x_GEN_0000		        CODE_OVLY		0361
                              __udiv	               C:\CirrusDSP\lib\udiv	                 udiv_GEN_0000		        CODE_OVLY		0209
@@ -1341,16 +1341,16 @@ LOCAL SYMBOL								TYPE		VALUE
                           _lsOutput		RELOCATABLE		000F
                               _main		RELOCATABLE		0186
                            _numGain		RELOCATABLE		0002
-                        _outputMode		RELOCATABLE		0112
-                 _output_distortion		RELOCATABLE		0113
-                        _rightInput		RELOCATABLE		0114
-                          _rsOutput		RELOCATABLE		0115
+                        _outputMode		RELOCATABLE		0119
+                 _output_distortion		RELOCATABLE		011A
+                        _rightInput		RELOCATABLE		011B
+                          _rsOutput		RELOCATABLE		011C
                       _sampleBuffer		RELOCATABLE		0010
                     _string_const_0		RELOCATABLE		0090
-                    _string_const_1		RELOCATABLE		00B8
-                    _string_const_2		RELOCATABLE		00FA
-                    _string_const_3		RELOCATABLE		00D9
-                              _type		RELOCATABLE		0116
+                    _string_const_1		RELOCATABLE		00BF
+                    _string_const_2		RELOCATABLE		0101
+                    _string_const_3		RELOCATABLE		00E0
+                              _type		RELOCATABLE		011D
                               dummy		ABSOLUTE		0368
                              else_0		RELOCATABLE		01A9
                              else_1		RELOCATABLE		01C7
@@ -1383,17 +1383,17 @@ LOCAL SYMBOL								TYPE		VALUE
 LOCAL SYMBOL								TYPE		VALUE
 
                      __epilogue_104		RELOCATABLE		00E4
-               __extractedConst_0_1		RELOCATABLE		0117
-               __extractedConst_1_0		RELOCATABLE		0118
-               __extractedConst_2_1		RELOCATABLE		0119
-               __extractedConst_3_0		RELOCATABLE		011A
+               __extractedConst_0_1		RELOCATABLE		011E
+               __extractedConst_1_0		RELOCATABLE		011F
+               __extractedConst_2_1		RELOCATABLE		0120
+               __extractedConst_3_0		RELOCATABLE		0121
                         _distortion		RELOCATABLE		0001
-               _hard_clip_threshold		RELOCATABLE		011B
-             _n_hard_clip_threshold		RELOCATABLE		011C
-            _n_soft_clip_threshold1		RELOCATABLE		011D
-            _n_soft_clip_threshold2		RELOCATABLE		011E
-              _soft_clip_threshold1		RELOCATABLE		011F
-              _soft_clip_threshold2		RELOCATABLE		0120
+               _hard_clip_threshold		RELOCATABLE		0122
+             _n_hard_clip_threshold		RELOCATABLE		0123
+            _n_soft_clip_threshold1		RELOCATABLE		0124
+            _n_soft_clip_threshold2		RELOCATABLE		0125
+              _soft_clip_threshold1		RELOCATABLE		0126
+              _soft_clip_threshold2		RELOCATABLE		0127
                           _soft_mul		RELOCATABLE		0001
                           _soft_pow		RELOCATABLE		0004
                                  _x		RELOCATABLE		0007
@@ -1509,8 +1509,8 @@ LOCAL SYMBOL								TYPE		VALUE
 
 LOCAL SYMBOL								TYPE		VALUE
 
-                              _argv		RELOCATABLE		0921
-                           _c_stack		RELOCATABLE		0121
+                              _argv		RELOCATABLE		0928
+                           _c_stack		RELOCATABLE		0128
 
 ----------- module strcpy_x2x -----------
 

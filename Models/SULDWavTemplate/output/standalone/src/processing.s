@@ -176,7 +176,7 @@ label_begin_95:			/* LN: 91 | CYCLE: 0 | RULES: () */
 	i0 = (0) + (_lfeOutput)			# LN: 93 | 
 	i0 = xmem[i0]			# LN: 93 | 
 	a0 = a0 + a1			# LN: 93 | 
-	xmem[i0] = a0h			# LN: 93 | 
+	xmem[i0] = a0			# LN: 93 | 
 	i0 = xmem[_lfeOutput + 0]			# LN: 94 | 
 	nop #empty cycle
 	i0 += 1			# LN: 94 | 

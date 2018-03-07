@@ -1,4 +1,4 @@
-﻿Build started 6.3.2018 17:05:16.
+﻿Build started 7.3.2018 17:57:46.
      1>Project "C:\testing\aadsp2_projekat\Models\model2\model2\model2.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\model2.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -30,4 +30,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.23
+Time Elapsed 00:00:00.84

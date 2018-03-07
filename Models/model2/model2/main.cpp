@@ -46,7 +46,7 @@ DSPaccum soft_pow;
 DSPaccum soft_mul;
 
 
-clipping_type_t type = HARD_CLIPPING;
+clipping_type_t type = HALF_WAVE_RECTIFIER;
 
 
 void distortion(DSPfract* input, DSPfract* output)
@@ -217,7 +217,7 @@ void processing()
 
 			for (i = 0; i < BLOCK_SIZE; i++)
 			{
-				*lfeOutput = *lsOutput + *rsOutput;
+				*lfeOutput = DSPaccum(*lsOutput) + DSPaccum(*rsOutput);
 				lfeOutput++;
 				lsOutput++;
 				rsOutput++;

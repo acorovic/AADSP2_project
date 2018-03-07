@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
     
 	// Open input wav file
 	//-------------------------------------------------
-	strcpy(WavInputName, "../../TestStreams/Tone_L1k_R3kshort.wav");
+	strcpy(WavInputName, "../../TestStreams/2ch_contour_ne40_24b_48k.wav");
 	wav_in = cl_wavread_open(WavInputName);
 	 if(wav_in == NULL)
     {
