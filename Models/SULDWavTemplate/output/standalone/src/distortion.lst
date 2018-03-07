@@ -1,0 +1,609 @@
+1     	 0000					.extern _distortion_gain
+2     	 0000					.public _hard_clip_threshold
+3     	 0000					.extern _input_distortion
+4     	 0000					.public _n_hard_clip_threshold
+5     	 0000					.public _n_soft_clip_threshold1
+6     	 0000					.public _n_soft_clip_threshold2
+7     	 0000					.extern _output_distortion
+8     	 0000					.public _soft_clip_threshold1
+9     	 0000					.public _soft_clip_threshold2
+10    	 0000					.public _soft_mul
+11    	 0000					.public _soft_pow
+12    	 0000					.extern _type
+13    	 0000					.public _x
+14    	 0000					.public _distortion
+15    	 0000					.extern __mul_sat_laccum
+16    	 0000					.extern __int_to_laccum
+17    							.xdata_ovly
+17     >> start of macro: .xdata_ovly
+1+    									seg_single , "X_OVLY", X
+1+     >> start of macro: seg_single
+1+    						  .if ( "" != "" ) & defined( ___SegStart_X_ )
+2+    						    segment
+3+    						  .else
+4+    						    segment "X_OVLY"
+5+    							.if "" != ""
+6+    						___SegStart_X_
+7+    							.endif
+8+    						  .endif
+9+    							#RememberSegmentType
+10+    >> end of macro: seg_single
+2+     >> end of macro: .xdata_ovly
+18    	 0000				__extractedConst_0_1
+19    	 0000					.dw  (0xaaaaaab)
+	 0000	 0AAAAAAB	 
+20    							.xdata_ovly
+20     >> start of macro: .xdata_ovly
+1+    									seg_single , "X_OVLY", X
+1+     >> start of macro: seg_single
+1+    						  .if ( "" != "" ) & defined( ___SegStart_X_ )
+2+    						    segment
+3+    						  .else
+4+    						    segment "X_OVLY"
+5+    							.if "" != ""
+6+    						___SegStart_X_
+7+    							.endif
+8+    						  .endif
+9+    							#RememberSegmentType
+10+    >> end of macro: seg_single
+2+     >> end of macro: .xdata_ovly
+21    	 0000				__extractedConst_1_0
+22    	 0000					.dw  (0x15555555)
+	 0000	 15555555	 
+23    							.xdata_ovly
+23     >> start of macro: .xdata_ovly
+1+    									seg_single , "X_OVLY", X
+1+     >> start of macro: seg_single
+1+    						  .if ( "" != "" ) & defined( ___SegStart_X_ )
+2+    						    segment
+3+    						  .else
+4+    						    segment "X_OVLY"
+5+    							.if "" != ""
+6+    						___SegStart_X_
+7+    							.endif
+8+    						  .endif
+9+    							#RememberSegmentType
+10+    >> end of macro: seg_single
+2+     >> end of macro: .xdata_ovly
+24    	 0000				__extractedConst_2_1
+25    	 0000					.dw  (0xf5555555)
+	 0000	 F5555555	 
+26    							.xdata_ovly
+26     >> start of macro: .xdata_ovly
+1+    									seg_single , "X_OVLY", X
+1+     >> start of macro: seg_single
+1+    						  .if ( "" != "" ) & defined( ___SegStart_X_ )
+2+    						    segment
+3+    						  .else
+4+    						    segment "X_OVLY"
+5+    							.if "" != ""
+6+    						___SegStart_X_
+7+    							.endif
+8+    						  .endif
+9+    							#RememberSegmentType
+10+    >> end of macro: seg_single
+2+     >> end of macro: .xdata_ovly
+27    	 0000				__extractedConst_3_0
+28    	 0000					.dw  (0xeaaaaaab)
+	 0000	 EAAAAAAB	 
+29    							.xdata_ovly
+29     >> start of macro: .xdata_ovly
+1+    									seg_single , "X_OVLY", X
+1+     >> start of macro: seg_single
+1+    						  .if ( "" != "" ) & defined( ___SegStart_X_ )
+2+    						    segment
+3+    						  .else
+4+    						    segment "X_OVLY"
+5+    							.if "" != ""
+6+    						___SegStart_X_
+7+    							.endif
+8+    						  .endif
+9+    							#RememberSegmentType
+10+    >> end of macro: seg_single
+2+     >> end of macro: .xdata_ovly
+30    	 0000				_hard_clip_threshold
+31    	 0000					.dw  (0x10000000)
+	 0000	 10000000	 
+32    							.xdata_ovly
+32     >> start of macro: .xdata_ovly
+1+    									seg_single , "X_OVLY", X
+1+     >> start of macro: seg_single
+1+    						  .if ( "" != "" ) & defined( ___SegStart_X_ )
+2+    						    segment
+3+    						  .else
+4+    						    segment "X_OVLY"
+5+    							.if "" != ""
+6+    						___SegStart_X_
+7+    							.endif
+8+    						  .endif
+9+    							#RememberSegmentType
+10+    >> end of macro: seg_single
+2+     >> end of macro: .xdata_ovly
+33    	 0000				_n_hard_clip_threshold
+34    	 0000					.dw  (0xf0000000)
+	 0000	 F0000000	 
+35    							.xdata_ovly
+35     >> start of macro: .xdata_ovly
+1+    									seg_single , "X_OVLY", X
+1+     >> start of macro: seg_single
+1+    						  .if ( "" != "" ) & defined( ___SegStart_X_ )
+2+    						    segment
+3+    						  .else
+4+    						    segment "X_OVLY"
+5+    							.if "" != ""
+6+    						___SegStart_X_
+7+    							.endif
+8+    						  .endif
+9+    							#RememberSegmentType
+10+    >> end of macro: seg_single
+2+     >> end of macro: .xdata_ovly
+36    	 0000				_n_soft_clip_threshold1
+37    	 0000					.dw  (0xf5555555)
+	 0000	 F5555555	 
+38    							.xdata_ovly
+38     >> start of macro: .xdata_ovly
+1+    									seg_single , "X_OVLY", X
+1+     >> start of macro: seg_single
+1+    						  .if ( "" != "" ) & defined( ___SegStart_X_ )
+2+    						    segment
+3+    						  .else
+4+    						    segment "X_OVLY"
+5+    							.if "" != ""
+6+    						___SegStart_X_
+7+    							.endif
+8+    						  .endif
+9+    							#RememberSegmentType
+10+    >> end of macro: seg_single
+2+     >> end of macro: .xdata_ovly
+39    	 0000				_n_soft_clip_threshold2
+40    	 0000					.dw  (0xeaaaaaab)
+	 0000	 EAAAAAAB	 
+41    							.xdata_ovly
+41     >> start of macro: .xdata_ovly
+1+    									seg_single , "X_OVLY", X
+1+     >> start of macro: seg_single
+1+    						  .if ( "" != "" ) & defined( ___SegStart_X_ )
+2+    						    segment
+3+    						  .else
+4+    						    segment "X_OVLY"
+5+    							.if "" != ""
+6+    						___SegStart_X_
+7+    							.endif
+8+    						  .endif
+9+    							#RememberSegmentType
+10+    >> end of macro: seg_single
+2+     >> end of macro: .xdata_ovly
+42    	 0000				_soft_clip_threshold1
+43    	 0000					.dw  (0xaaaaaab)
+	 0000	 0AAAAAAB	 
+44    							.xdata_ovly
+44     >> start of macro: .xdata_ovly
+1+    									seg_single , "X_OVLY", X
+1+     >> start of macro: seg_single
+1+    						  .if ( "" != "" ) & defined( ___SegStart_X_ )
+2+    						    segment
+3+    						  .else
+4+    						    segment "X_OVLY"
+5+    							.if "" != ""
+6+    						___SegStart_X_
+7+    							.endif
+8+    						  .endif
+9+    							#RememberSegmentType
+10+    >> end of macro: seg_single
+2+     >> end of macro: .xdata_ovly
+45    	 0000				_soft_clip_threshold2
+46    	 0000					.dw  (0x15555555)
+	 0000	 15555555	 
+47    							.xdata_ovly
+47     >> start of macro: .xdata_ovly
+1+    									seg_single , "X_OVLY", X
+1+     >> start of macro: seg_single
+1+    						  .if ( "" != "" ) & defined( ___SegStart_X_ )
+2+    						    segment
+3+    						  .else
+4+    						    segment "X_OVLY"
+5+    							.if "" != ""
+6+    						___SegStart_X_
+7+    							.endif
+8+    						  .endif
+9+    							#RememberSegmentType
+10+    >> end of macro: seg_single
+2+     >> end of macro: .xdata_ovly
+48    	 0000				_soft_mul
+49    	 0000					.bss (0x3)
+50    							.xdata_ovly
+50     >> start of macro: .xdata_ovly
+1+    									seg_single , "X_OVLY", X
+1+     >> start of macro: seg_single
+1+    						  .if ( "" != "" ) & defined( ___SegStart_X_ )
+2+    						    segment
+3+    						  .else
+4+    						    segment "X_OVLY"
+5+    							.if "" != ""
+6+    						___SegStart_X_
+7+    							.endif
+8+    						  .endif
+9+    							#RememberSegmentType
+10+    >> end of macro: seg_single
+2+     >> end of macro: .xdata_ovly
+51    	 0000				_soft_pow
+52    	 0000					.bss (0x3)
+53    							.xdata_ovly
+53     >> start of macro: .xdata_ovly
+1+    									seg_single , "X_OVLY", X
+1+     >> start of macro: seg_single
+1+    						  .if ( "" != "" ) & defined( ___SegStart_X_ )
+2+    						    segment
+3+    						  .else
+4+    						    segment "X_OVLY"
+5+    							.if "" != ""
+6+    						___SegStart_X_
+7+    							.endif
+8+    						  .endif
+9+    							#RememberSegmentType
+10+    >> end of macro: seg_single
+2+     >> end of macro: .xdata_ovly
+54    	 0000				_x
+55    	 0000					.bss (0x3)
+56    							.code_ovly
+56     >> start of macro: .code_ovly
+1+    									seg_single , "CODE_OVLY", CODE
+1+     >> start of macro: seg_single
+1+    						  .if ( "" != "" ) & defined( ___SegStart_CODE_ )
+2+    						    segment
+3+    						  .else
+4+    						    segment "CODE_OVLY"
+5+    							.if "" != ""
+6+    						___SegStart_CODE_
+7+    							.endif
+8+    						  .endif
+9+    							#RememberSegmentType
+10+    >> end of macro: seg_single
+2+     >> end of macro: .code_ovly
+57    						
+58    						
+59    						
+60    	 0000				switch_0:			/* LN: 29 | CYCLE: 0 | RULES: () */ 
+61    	 0000				_distortion:			/* LN: 25 | CYCLE: 0 | RULES: () */ 
+62    	 0000	 88040000		a0 = xmem[_type + 0]			# LN: 29 | 
+63    	 0001	 00004E80		a0 & a0			# LN: 29 | 
+64    	 0002	 84080010		if (a == 0) jmp (case_0)			# LN: 29 | 
+65    	 0003	 88040000		a0 = xmem[_type + 0]			# LN: 29 | 
+66    	 0004	 894A0001		uhalfword(a1) = (0x1)			# LN: 29 | 
+67    	 0005	 00004F08		a0 - a1			# LN: 29 | 
+68    	 0006	 84080028		if (a == 0) jmp (case_1)			# LN: 29 | 
+69    	 0007	 88040000		a0 = xmem[_type + 0]			# LN: 29 | 
+70    	 0008	 894A0002		uhalfword(a1) = (0x2)			# LN: 29 | 
+71    	 0009	 00004F08		a0 - a1			# LN: 29 | 
+72    	 000A	 840800BA		if (a == 0) jmp (case_2)			# LN: 29 | 
+73    	 000B	 88040000		a0 = xmem[_type + 0]			# LN: 29 | 
+74    	 000C	 894A0003		uhalfword(a1) = (0x3)			# LN: 29 | 
+75    	 000D	 00004F08		a0 - a1			# LN: 29 | 
+76    	 000E	 840800CF		if (a == 0) jmp (case_3)			# LN: 29 | 
+77    	 000F	 800800E3		jmp (__epilogue_104)			# LN: 136 | 
+78    	 0010				case_0:			/* LN: 30 | CYCLE: 0 | RULES: () */ 
+79    	 0010	 81000026		do (0x10), label_end_92			# LN: 32 | 
+80    	 0011				label_begin_92:			/* LN: 32 | CYCLE: 0 | RULES: () */ 
+81    	 0011	 B0040000		i0 = xmem[_input_distortion + 0]
+82    	 0012	 80840000		x0 = ymem[_distortion_gain + 0]			# LN: 34 | 
+83    	 0013	 81140000		x1 = xmem[i0]			# LN: 34 | 
+84    	 0014	 A0050000		i0 = (0) + (_output_distortion)			# LN: 34 | 
+85    	 0015	 B0140000		i0 = xmem[i0]
+86    	 0016	 00002020		a0 = x1 * x0			# LN: 34 |
+87    							// left one place
+88    	 0017	 83AA0007		mr_sr = (0x07)
+89    	 0018	 48407FFF		x0 = a0
+90    	 0019	 40487FFF		a0 = x0
+91    							// right one place
+92    	 001A	 83AA0005		mr_sr = (0x05)
+93    	 001B	 48407FFF		x0 = a0
+94    	 001C	 40487FFF		a0 = x0
+95    							// left one place
+96    	 001D	 83AA0003		mr_sr = (0x03)
+97    	 001E	 48407FFF		x0 = a0
+98    	 001F	 40487FFF		a0 = x0
+99    							
+100   	 0020	 88540010		xmem[i0] = a0; i0 += 1	# LN: 34 | 
+101   							
+102   	 0021	 83AA0000		mr_sr = (0x00)
+103   							
+104   	 0022	 B0440000		xmem[_output_distortion + 0] = i0			# LN: 44 | 
+105   	 0023	 B0040000		i0 = xmem[_input_distortion + 0]			# LN: 45 | 
+106   	 0024	 00007FFF		nop #empty cycle
+107   	 0025	 02087FFF		i0 += 1		# LN: 45 | 
+108   	 0026				label_end_92:			# LN: 32 | CYCLE: 14 | RULES: ()
+109   	 0026	 B0440000		xmem[_input_distortion + 0] = i0			# LN: 45 | 
+110   	 0027				for_end_0:			/* LN: 32 | CYCLE: 0 | RULES: () */ 
+111   	 0027	 800800E3		jmp (__epilogue_104)			# LN: 47 | 
+112   							
+113   	 0028				case_1:			/* LN: 49 | CYCLE: 0 | RULES: () */ 
+114   	 0028	 810000B8		do (0x10), label_end_93			# LN: 51 | 
+115   	 0029				label_begin_93:			/* LN: 51 | CYCLE: 0 | RULES: () */ 
+116   	 0029	 B0040000		i0 = xmem[_input_distortion + 0]			# LN: 53 | 
+117   	 002A	 80840000		x0 = ymem[_distortion_gain + 0]			# LN: 53 | 
+118   	 002B	 81140000		x1 = xmem[i0]			# LN: 53 | 
+119   	 002C	 A0050000		i0 = (0) + (_output_distortion)			# LN: 53 | 
+120   	 002D	 B0140000		i0 = xmem[i0]			# LN: 53 | 
+121   	 002E	 00002020		a0 = x1 * x0			# LN: 53 | 
+122   	 002F	 88540000		xmem[i0] = a0			# LN: 53 | 
+123   	 0030	 B0040000		i0 = xmem[_output_distortion + 0]			# LN: 54 | 
+124   	 0031	 88040000		a0 = xmem[__extractedConst_0_1 + 0]			# LN: 54 | 
+125   	 0032	 89140000		a1 = xmem[i0]			# LN: 54 | 
+126   	 0033	 00004F01		a1 - a0			# LN: 54 | 
+127   	 0034	 85080067		if (a <= 0) jmp (else_2)			# LN: 54 | 
+128   	 0035	 B0040000		i0 = xmem[_output_distortion + 0]			# LN: 56 | 
+129   	 0036	 88040000		a0 = xmem[__extractedConst_1_0 + 0]			# LN: 56 | 
+130   	 0037	 89140000		a1 = xmem[i0]			# LN: 56 | 
+131   	 0038	 00004F01		a1 - a0			# LN: 56 | 
+132   	 0039	 8508003F		if (a <= 0) jmp (else_3)			# LN: 56 | 
+133   	 003A	 A0050000		i0 = (0) + (_output_distortion)			# LN: 59 | 
+134   	 003B	 B0140000		i0 = xmem[i0]			# LN: 59 | 
+135   	 003C	 887A1000		a0 = (0x1000)			# LN: 59 | 
+136   	 003D	 98540000		xmem[i0] = a0h			# LN: 59 | 
+137   	 003E	 800800A4		jmp (endif_4)			# LN: 59 | 
+138   	 003F				else_3:			/* LN: 56 | CYCLE: 0 | RULES: () */ 
+139   	 003F	 B0040000		i0 = xmem[_output_distortion + 0]			# LN: 63 | 
+140   	 0040	 B1040000		i1 = xmem[_output_distortion + 0]			# LN: 63 | 
+141   	 0041	 88140000		a0 = xmem[i0]			# LN: 63 | 
+142   	 0042	 8C140001		b0 = xmem[i1]			# LN: 63 | 
+143   	 0043	 00004C21		a1 =+ b0			# LN: 63 | 
+144   	 0044	 80880000		call (__mul_sat_laccum)			# LN: 63 | 
+145   	 0045	 A0440000		xmem[_soft_pow + 0] = a0g			# LN: 63 | 
+146   	 0046	 98440001		xmem[_soft_pow + 1] = a0h			# LN: 63 | 
+147   	 0047	 90440002		xmem[_soft_pow + 2] = a0l			# LN: 63 | 
+148   	 0048	 A4040000		b0g = xmem[_soft_pow + 0]			# LN: 64 | 
+149   	 0049	 9C040001		b0h = xmem[_soft_pow + 1]			# LN: 64 | 
+150   	 004A	 884A000C		uhalfword(a0) = (0xc)			# LN: 64 | 
+151   	 004B	 94040002		b0l = xmem[_soft_pow + 2]			# LN: 64 | 
+152   	 004C	 80880000		call (__int_to_laccum)			# LN: 64 | 
+153   	 004D	 00005C21		a1 =+ b0; b1 =+ a0			# LN: 64, 64 | 
+154   	 004E	 00004C28		a0 =+ b1			# LN: 64 | 
+155   	 004F	 80880000		call (__mul_sat_laccum)			# LN: 64 | 
+156   	 0050	 A0440000		xmem[_soft_pow + 0] = a0g			# LN: 64 | 
+157   	 0051	 98440001		xmem[_soft_pow + 1] = a0h			# LN: 64 | 
+158   	 0052	 90440002		xmem[_soft_pow + 2] = a0l			# LN: 64 | 
+159   	 0053	 B0040000		i0 = xmem[_output_distortion + 0]			# LN: 65 | 
+160   	 0054	 A1050000		i1 = (0) + (_output_distortion)			# LN: 66 | 
+161   	 0055	 88140000		a0 = xmem[i0]			# LN: 65 | 
+162   	 0056	 00004E00		a0 = a0 << 1			# LN: 65 | 
+163   	 0057	 00004E00		a0 = a0 << 1			# LN: 65 | 
+164   	 0058	 A0440000		xmem[_soft_mul + 0] = a0g			# LN: 65 | 
+165   	 0059	 98440001		xmem[_soft_mul + 1] = a0h			# LN: 65 | 
+166   	 005A	 90440002		xmem[_soft_mul + 2] = a0l			# LN: 65 | 
+167   	 005B	 88040000		a0 = xmem[__extractedConst_2_1 + 0]			# LN: 66 | 
+168   	 005C	 A1040000		a1g = xmem[_soft_mul + 0]			# LN: 66 | 
+169   	 005D	 99040001		a1h = xmem[_soft_mul + 1]			# LN: 66 | 
+170   	 005E	 91040002		a1l = xmem[_soft_mul + 2]			# LN: 66 | 
+171   	 005F	 00004408		a0 = a0 + a1			# LN: 66 | 
+172   	 0060	 A1040000		a1g = xmem[_soft_pow + 0]			# LN: 66 | 
+173   	 0061	 99040001		a1h = xmem[_soft_pow + 1]			# LN: 66 | 
+174   	 0062	 91040002		a1l = xmem[_soft_pow + 2]			# LN: 66 | 
+175   	 0063	 B0140001		i0 = xmem[i1]			# LN: 66 | 
+176   	 0064	 00004448		a0 = a0 - a1			# LN: 66 | 
+177   	 0065	 88540000		xmem[i0] = a0			# LN: 66 | 
+178   	 0066	 800800A4		jmp (endif_4)			# LN: 66 | 
+179   	 0067				else_2:			/* LN: 54 | CYCLE: 0 | RULES: () */ 
+180   	 0067	 B0040000		i0 = xmem[_output_distortion + 0]			# LN: 72 | 
+181   	 0068	 88040000		a0 = xmem[__extractedConst_2_1 + 0]			# LN: 72 | 
+182   	 0069	 89140000		a1 = xmem[i0]			# LN: 72 | 
+183   	 006A	 00004F01		a1 - a0			# LN: 72 | 
+184   	 006B	 84C8009E		if (a >= 0) jmp (else_4)			# LN: 72 | 
+185   	 006C	 B0040000		i0 = xmem[_output_distortion + 0]			# LN: 74 | 
+186   	 006D	 88040000		a0 = xmem[__extractedConst_3_0 + 0]			# LN: 74 | 
+187   	 006E	 89140000		a1 = xmem[i0]			# LN: 74 | 
+188   	 006F	 00004F01		a1 - a0			# LN: 74 | 
+189   	 0070	 84C80076		if (a >= 0) jmp (else_5)			# LN: 74 | 
+190   	 0071	 A0050000		i0 = (0) + (_output_distortion)			# LN: 77 | 
+191   	 0072	 B0140000		i0 = xmem[i0]			# LN: 77 | 
+192   	 0073	 887AF000		a0 = (0xf000)			# LN: 77 | 
+193   	 0074	 98540000		xmem[i0] = a0h			# LN: 77 | 
+194   	 0075	 800800A4		jmp (endif_4)			# LN: 77 | 
+195   	 0076				else_5:			/* LN: 74 | CYCLE: 0 | RULES: () */ 
+196   	 0076	 B0040000		i0 = xmem[_output_distortion + 0]			# LN: 81 | 
+197   	 0077	 B1040000		i1 = xmem[_output_distortion + 0]			# LN: 81 | 
+198   	 0078	 88140000		a0 = xmem[i0]			# LN: 81 | 
+199   	 0079	 8C140001		b0 = xmem[i1]			# LN: 81 | 
+200   	 007A	 00004C21		a1 =+ b0			# LN: 81 | 
+201   	 007B	 80880000		call (__mul_sat_laccum)			# LN: 81 | 
+202   	 007C	 A0440000		xmem[_soft_pow + 0] = a0g			# LN: 81 | 
+203   	 007D	 98440001		xmem[_soft_pow + 1] = a0h			# LN: 81 | 
+204   	 007E	 90440002		xmem[_soft_pow + 2] = a0l			# LN: 81 | 
+205   	 007F	 A4040000		b0g = xmem[_soft_pow + 0]			# LN: 82 | 
+206   	 0080	 9C040001		b0h = xmem[_soft_pow + 1]			# LN: 82 | 
+207   	 0081	 884A000C		uhalfword(a0) = (0xc)			# LN: 82 | 
+208   	 0082	 94040002		b0l = xmem[_soft_pow + 2]			# LN: 82 | 
+209   	 0083	 80880000		call (__int_to_laccum)			# LN: 82 | 
+210   	 0084	 00005C21		a1 =+ b0; b1 =+ a0			# LN: 82, 82 | 
+211   	 0085	 00004C28		a0 =+ b1			# LN: 82 | 
+212   	 0086	 80880000		call (__mul_sat_laccum)			# LN: 82 | 
+213   	 0087	 A0440000		xmem[_soft_pow + 0] = a0g			# LN: 82 | 
+214   	 0088	 98440001		xmem[_soft_pow + 1] = a0h			# LN: 82 | 
+215   	 0089	 90440002		xmem[_soft_pow + 2] = a0l			# LN: 82 | 
+216   	 008A	 B0040000		i0 = xmem[_output_distortion + 0]			# LN: 83 | 
+217   	 008B	 A1050000		i1 = (0) + (_output_distortion)			# LN: 84 | 
+218   	 008C	 88140000		a0 = xmem[i0]			# LN: 83 | 
+219   	 008D	 00004E00		a0 = a0 << 1			# LN: 83 | 
+220   	 008E	 00004E00		a0 = a0 << 1			# LN: 83 | 
+221   	 008F	 A0440000		xmem[_soft_mul + 0] = a0g			# LN: 83 | 
+222   	 0090	 98440001		xmem[_soft_mul + 1] = a0h			# LN: 83 | 
+223   	 0091	 90440002		xmem[_soft_mul + 2] = a0l			# LN: 83 | 
+224   	 0092	 88040000		a0 = xmem[__extractedConst_0_1 + 0]			# LN: 84 | 
+225   	 0093	 A1040000		a1g = xmem[_soft_mul + 0]			# LN: 84 | 
+226   	 0094	 99040001		a1h = xmem[_soft_mul + 1]			# LN: 84 | 
+227   	 0095	 91040002		a1l = xmem[_soft_mul + 2]			# LN: 84 | 
+228   	 0096	 00004408		a0 = a0 + a1			# LN: 84 | 
+229   	 0097	 A1040000		a1g = xmem[_soft_pow + 0]			# LN: 84 | 
+230   	 0098	 99040001		a1h = xmem[_soft_pow + 1]			# LN: 84 | 
+231   	 0099	 91040002		a1l = xmem[_soft_pow + 2]			# LN: 84 | 
+232   	 009A	 B0140001		i0 = xmem[i1]			# LN: 84 | 
+233   	 009B	 00004408		a0 = a0 + a1			# LN: 84 | 
+234   	 009C	 88540000		xmem[i0] = a0			# LN: 84 | 
+235   	 009D	 800800A4		jmp (endif_4)			# LN: 84 | 
+236   	 009E				else_4:			/* LN: 72 | CYCLE: 0 | RULES: () */ 
+237   	 009E	 B0040000		i0 = xmem[_output_distortion + 0]			# LN: 90 | 
+238   	 009F	 A1050000		i1 = (0) + (_output_distortion)			# LN: 90 | 
+239   	 00A0	 88140000		a0 = xmem[i0]			# LN: 90 | 
+240   	 00A1	 B0140001		i0 = xmem[i1]			# LN: 90 | 
+241   	 00A2	 00004E00		a0 = a0 << 1			# LN: 90 | 
+242   	 00A3	 98540000		xmem[i0] = a0h			# LN: 90 | 
+243   	 00A4				endif_2:			/* LN: 54 | CYCLE: 0 | RULES: () */ 
+244   	 00A4				endif_4:			/* LN: 72 | CYCLE: 0 | RULES: () */ 
+245   	 00A4	 B0040000		i0 = xmem[_output_distortion + 0]			# LN: 93 | 
+246   	 00A5	 A1050000		i1 = (0) + (_output_distortion)			# LN: 93 | 
+247   	 00A6	 88140000		a0 = xmem[i0]			# LN: 93 | 
+248   	 00A7	 B0140001		i0 = xmem[i1]			# LN: 93 | 
+249   	 00A8	 00004E40		a0 = a0 >> 1			# LN: 93 | 
+250   	 00A9	 98540000		xmem[i0] = a0h			# LN: 93 | 
+251   	 00AA	 B0040000		i0 = xmem[_output_distortion + 0]			# LN: 95 | 
+252   	 00AB	 A1050000		i1 = (0) + (_output_distortion)			# LN: 95 | 
+253   	 00AC	 88140000		a0 = xmem[i0]			# LN: 95 | 
+254   	 00AD	 00004E00		a0 = a0 << 1			# LN: 95 | 
+255   	 00AE	 B0140001		i0 = xmem[i1]			# LN: 95 | 
+256   	 00AF	 00004E00		a0 = a0 << 1			# LN: 95 | 
+257   	 00B0	 98540000		xmem[i0] = a0h			# LN: 95 | 
+258   	 00B1	 B0040000		i0 = xmem[_output_distortion + 0]			# LN: 96 | 
+259   	 00B2	 00007FFF		nop #empty cycle
+260   	 00B3	 02087FFF		i0 += 1			# LN: 96 | 
+261   	 00B4	 B0440000		xmem[_output_distortion + 0] = i0			# LN: 96 | 
+262   	 00B5	 B0040000		i0 = xmem[_input_distortion + 0]			# LN: 97 | 
+263   	 00B6	 00007FFF		nop #empty cycle
+264   	 00B7	 02087FFF		i0 += 1			# LN: 97 | 
+265   	 00B8				label_end_93:			# LN: 51 | CYCLE: 20 | RULES: ()
+266   	 00B8	 B0440000		xmem[_input_distortion + 0] = i0			# LN: 97 | 
+267   	 00B9				for_end_1:			/* LN: 51 | CYCLE: 0 | RULES: () */ 
+268   	 00B9	 800800E3		jmp (__epilogue_104)			# LN: 99 | 
+269   	 00BA				case_2:			/* LN: 101 | CYCLE: 0 | RULES: () */ 
+270   	 00BA	 810000CD		do (0x10), label_end_94			# LN: 103 | 
+271   	 00BB				label_begin_94:			/* LN: 103 | CYCLE: 0 | RULES: () */ 
+272   	 00BB	 B0040000		i0 = xmem[_input_distortion + 0]			# LN: 105 | 
+273   	 00BC	 80840000		x0 = ymem[_distortion_gain + 0]			# LN: 105 | 
+274   	 00BD	 81140000		x1 = xmem[i0]			# LN: 105 | 
+275   	 00BE	 A0050000		i0 = (0) + (_output_distortion)			# LN: 105 | 
+276   	 00BF	 B0140000		i0 = xmem[i0]			# LN: 105 | 
+277   	 00C0	 00002020		a0 = x1 * x0			# LN: 105 | 
+278   	 00C1	 00004CC0		a0 = |a0|
+279   	 00C2	 88540000		xmem[i0] = a0			# LN: 105 | 
+280   						
+281   	 00C3	 00004E00		a0 = a0 << 1			# LN: 111 | 
+282   							
+283   	 00C4	 00004E00		a0 = a0 << 1			# LN: 111 | 
+284   	 00C5	 98540000		xmem[i0] = a0h			# LN: 111 | 
+285   	 00C6	 B0040000		i0 = xmem[_output_distortion + 0]			# LN: 112 | 
+286   	 00C7	 00007FFF		nop #empty cycle
+287   	 00C8	 02087FFF		i0 += 1			# LN: 112 | 
+288   	 00C9	 B0440000		xmem[_output_distortion + 0] = i0			# LN: 112 | 
+289   	 00CA	 B0040000		i0 = xmem[_input_distortion + 0]			# LN: 113 | 
+290   	 00CB	 00007FFF		nop #empty cycle
+291   	 00CC	 02087FFF		i0 += 1			# LN: 113 | 
+292   	 00CD				label_end_94:			# LN: 103 | CYCLE: 14 | RULES: ()
+293   	 00CD	 B0440000		xmem[_input_distortion + 0] = i0			# LN: 113 | 
+294   	 00CE				for_end_2:			/* LN: 103 | CYCLE: 0 | RULES: () */ 
+295   	 00CE	 800800E3		jmp (__epilogue_104)			# LN: 115 | 
+296   	 00CF				case_3:			/* LN: 117 | CYCLE: 0 | RULES: () */ 
+297   	 00CF	 810000E2		do (0x10), label_end_95			# LN: 119 | 
+298   	 00D0				label_begin_95:			/* LN: 119 | CYCLE: 0 | RULES: () */ 
+299   	 00D0	 B0040000		i0 = xmem[_input_distortion + 0]			# LN: 121 | 
+300   	 00D1	 80840000		x0 = ymem[_distortion_gain + 0]			# LN: 121 | 
+301   	 00D2	 81140000		x1 = xmem[i0]			# LN: 121 | 
+302   	 00D3	 A0050000		i0 = (0) + (_output_distortion)			# LN: 121 | 
+303   	 00D4	 B0140000		i0 = xmem[i0]			# LN: 121 | 
+304   	 00D5	 00002020		a0 = x1 * x0			# LN: 121 | 
+305   	 00D6	 88540000		xmem[i0] = a0			# LN: 121 |
+306   	 00D7	 00004CE4		b0 = |a0|
+307   	 00D8	 00004420		a0 = a0 + b0
+308   							
+309   	 00D9	 00004E00		a0 = a0 << 1			# LN: 128 | 
+310   	 00DA	 98540000		xmem[i0] = a0h			# LN: 128 | 
+311   	 00DB	 B0040000		i0 = xmem[_output_distortion + 0]			# LN: 130 | 
+312   	 00DC	 00007FFF		nop #empty cycle
+313   	 00DD	 02087FFF		i0 += 1			# LN: 130 | 
+314   	 00DE	 B0440000		xmem[_output_distortion + 0] = i0			# LN: 130 | 
+315   	 00DF	 B0040000		i0 = xmem[_input_distortion + 0]			# LN: 131 | 
+316   	 00E0	 00007FFF		nop #empty cycle
+317   	 00E1	 02087FFF		i0 += 1			# LN: 131 | 
+318   	 00E2				label_end_95:			# LN: 119 | CYCLE: 28 | RULES: ()
+319   	 00E2	 B0440000		xmem[_input_distortion + 0] = i0			# LN: 131 | 
+320   	 00E3				__epilogue_104:			/* LN: 138 | CYCLE: 0 | RULES: () */ 
+321   	 00E3				for_end_3:			/* LN: 119 | CYCLE: 0 | RULES: () */ 
+322   	 00E3	 81880000		ret			# LN: 138 | 
+323   						(null)
+				 SYMBOL TABLE 
+
+    Name                                                                                    Type                  Value 
+
+_COMMON_INC_PATH_                                                               					 Define                 "C:/CirrusDSP/crystal32/common/inc/"
+_DSP_                                                                           					 Define                 "a"
+_LOCAL_INC_PATH_                                                                					 Define                 "inc/"
+_LOCAL_SRC_PATH_                                                                					 Define                 "src/"
+_MUI_VERSION_                                                                   					 Define                 "020000"
+_OVLY_                                                                          					 Define                 "standalone"
+_OVLY_REVISION_                                                                 					 Define                 "020000"
+_ROUTER_INC_PATH_                                                               					 Define                 "rom_inc/"
+_SLOT_                                                                          					 Define                 "0"
+_TARGET_FAMILY_                                                                 					 Define                 "crystal32"
+_TOOLS_VERSION_                                                                 					 Define                 "0x0701"
+_VERSION_                                                                       					 Define                 "00"
+__CASM_VER__                                                                    			  Unused Variable		        0 (701H)
+__epilogue_104                                                                  			         Relocatable         distortion_GEN_0013:00E3H
+__extractedConst_0_1                                                            			         Relocatable         distortion_GEN_0000:0000H
+__extractedConst_1_0                                                            			         Relocatable         distortion_GEN_0001:0000H
+__extractedConst_2_1                                                            			         Relocatable         distortion_GEN_0002:0000H
+__extractedConst_3_0                                                            			         Relocatable         distortion_GEN_0003:0000H
+__int_to_laccum                                                                 					 External   
+__mul_sat_laccum                                                                					 External   
+_distortion                                                                     			  Public Relocatable       distortion_GEN_0013:0000H
+_distortion_gain                                                                					 External   
+_hard_clip_threshold                                                            			  Public Relocatable       distortion_GEN_0004:0000H
+_input_distortion                                                               					 External   
+_n_hard_clip_threshold                                                          			  Public Relocatable       distortion_GEN_0005:0000H
+_n_soft_clip_threshold1                                                         			  Public Relocatable       distortion_GEN_0006:0000H
+_n_soft_clip_threshold2                                                         			  Public Relocatable       distortion_GEN_0007:0000H
+_output_distortion                                                              					 External   
+_soft_clip_threshold1                                                           			  Public Relocatable       distortion_GEN_0008:0000H
+_soft_clip_threshold2                                                           			  Public Relocatable       distortion_GEN_0009:0000H
+_soft_mul                                                                       			  Public Relocatable       distortion_GEN_0010:0000H
+_soft_pow                                                                       			  Public Relocatable       distortion_GEN_0011:0000H
+_type                                                                           					 External   
+_x                                                                              			  Public Relocatable       distortion_GEN_0012:0000H
+case_0                                                                          			         Relocatable         distortion_GEN_0013:0010H
+case_1                                                                          			         Relocatable         distortion_GEN_0013:0028H
+case_2                                                                          			         Relocatable         distortion_GEN_0013:00BAH
+case_3                                                                          			         Relocatable         distortion_GEN_0013:00CFH
+else_2                                                                          			         Relocatable         distortion_GEN_0013:0067H
+else_3                                                                          			         Relocatable         distortion_GEN_0013:003FH
+else_4                                                                          			         Relocatable         distortion_GEN_0013:009EH
+else_5                                                                          			         Relocatable         distortion_GEN_0013:0076H
+endif_2                                                                         			  Unused Relocatable        distortion_GEN_0013:00A4H
+endif_4                                                                         			         Relocatable         distortion_GEN_0013:00A4H
+for_end_0                                                                       			  Unused Relocatable        distortion_GEN_0013:0027H
+for_end_1                                                                       			  Unused Relocatable        distortion_GEN_0013:00B9H
+for_end_2                                                                       			  Unused Relocatable        distortion_GEN_0013:00CEH
+for_end_3                                                                       			  Unused Relocatable        distortion_GEN_0013:00E3H
+label_begin_92                                                                  			  Unused Relocatable        distortion_GEN_0013:0011H
+label_begin_93                                                                  			  Unused Relocatable        distortion_GEN_0013:0029H
+label_begin_94                                                                  			  Unused Relocatable        distortion_GEN_0013:00BBH
+label_begin_95                                                                  			  Unused Relocatable        distortion_GEN_0013:00D0H
+label_end_92                                                                    			         Relocatable         distortion_GEN_0013:0026H
+label_end_93                                                                    			         Relocatable         distortion_GEN_0013:00B8H
+label_end_94                                                                    			         Relocatable         distortion_GEN_0013:00CDH
+label_end_95                                                                    			         Relocatable         distortion_GEN_0013:00E2H
+switch_0                                                                        			  Unused Relocatable        distortion_GEN_0013:0000H
+
+	       SEGMENTS:
+
+Size			  Name										 Class
+0000H	 __INIT                                  			 CODE                                    
+0001H	 distortion_GEN_0000                     			 X_OVLY                                  
+0001H	 distortion_GEN_0001                     			 X_OVLY                                  
+0001H	 distortion_GEN_0002                     			 X_OVLY                                  
+0001H	 distortion_GEN_0003                     			 X_OVLY                                  
+0001H	 distortion_GEN_0004                     			 X_OVLY                                  
+0001H	 distortion_GEN_0005                     			 X_OVLY                                  
+0001H	 distortion_GEN_0006                     			 X_OVLY                                  
+0001H	 distortion_GEN_0007                     			 X_OVLY                                  
+0001H	 distortion_GEN_0008                     			 X_OVLY                                  
+0001H	 distortion_GEN_0009                     			 X_OVLY                                  
+0003H	 distortion_GEN_0010                     			 X_OVLY                                  
+0003H	 distortion_GEN_0011                     			 X_OVLY                                  
+0003H	 distortion_GEN_0012                     			 X_OVLY                                  
+00E4H	 distortion_GEN_0013                     			 CODE_OVLY                               

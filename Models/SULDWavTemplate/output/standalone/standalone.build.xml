@@ -5,6 +5,8 @@
 			<arg value="-oC:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/WavTemplate.img"/>
 			<arg value="-fC:/CirrusDSP/crystal32/memory_maps/v00.mem.xml"/>
 			<arg value="C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main.O"/>
+			<arg value="C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion.O"/>
+			<arg value="C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/processing.O"/>
 			<arg value="--output_type=RAM"/>
 			<arg value="--overlay_type=standalone"/>
 			<arg value="-lC:/CirrusDSP/lib/"/>

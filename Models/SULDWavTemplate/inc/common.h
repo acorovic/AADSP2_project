@@ -9,6 +9,8 @@
 #define N_TAP 4
 #define ECHO_MAX_LENGTH 4096
 
+typedef enum {MODE_0, MODE_1, MODE_2} user_control;
+typedef enum { HARD_CLIPPING, SOFT_CLIPPING, FULL_WAVE_RECTIFIER, HALF_WAVE_RECTIFIER} clipping_type_t;
 
 /* DSP type definitions */
 typedef short DSPshort;					/* DSP integer */
