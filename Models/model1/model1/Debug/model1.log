@@ -1,32 +1,7 @@
-﻿Build started 6.3.2018 16:41:02.
-     1>Project "C:\testing\aadsp2_projekat\Models\model1\model1\model1.vcxproj" on node 2 (build target(s)).
-     1>InitializeBuildStatus:
-         Creating "Debug\model1.unsuccessfulbuild" because "AlwaysCreate" was specified.
-       ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
-         main.cpp
-     1>c:\testing\aadsp2_projekat\models\model1\model1\main.cpp(218): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
-     1>c:\testing\aadsp2_projekat\models\model1\model1\main.cpp(220): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
-     1>c:\testing\aadsp2_projekat\models\model1\model1\main.cpp(290): warning C4244: '=' : conversion from 'DSPfract' to 'int', possible loss of data
-       ManifestResourceCompile:
-         All outputs are up-to-date.
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\testing\aadsp2_projekat\Models\model1\Debug\model1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\model1.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\testing\aadsp2_projekat\Models\model1\Debug\model1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\testing\aadsp2_projekat\Models\model1\Debug\model1.lib" /MACHINE:X86 Debug\model1.exe.embed.manifest.res
-         Debug\main.obj
-         Debug\WAVheader.obj
-       Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\model1.exe.embed.manifest" /manifest Debug\model1.exe.intermediate.manifest
-         All outputs are up-to-date.
-       LinkEmbedManifest:
-         All outputs are up-to-date.
-         model1.vcxproj -> C:\testing\aadsp2_projekat\Models\model1\Debug\model1.exe
-       FinalizeBuildStatus:
-         Deleting file "Debug\model1.unsuccessfulbuild".
-         Touching "Debug\model1.lastbuildstate".
-     1>Done Building Project "C:\testing\aadsp2_projekat\Models\model1\model1\model1.vcxproj" (build target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:00.67
+﻿  main.cpp
+c:\aadsp2_projekat\models\model1\model1\main.cpp(302): warning C4244: '=': conversion from 'DSPfract' to 'int', possible loss of data
+c:\aadsp2_projekat\models\model1\model1\main.cpp(230): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(132): note: see declaration of 'strcpy'
+c:\aadsp2_projekat\models\model1\model1\main.cpp(232): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(132): note: see declaration of 'strcpy'
+  model1.vcxproj -> C:\aadsp2_projekat\Models\model1\Debug\model1.exe

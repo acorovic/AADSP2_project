@@ -32,7 +32,7 @@ DSPfract hard_clip_threshold = 0.5f;
 DSPfract soft_clip_threshold1 = 1.0f / 3.0f;
 DSPfract soft_clip_threshold2 = 2.0f / 3.0f;
 
-clipping_type_t type = HARD_CLIPPING;
+clipping_type_t type = HALF_WAVE_RECTIFIER;
 DSPfract distortion_gain = 2.0f;
 
 void distortion(DSPfract* input, DSPfract* output)
@@ -186,7 +186,19 @@ void processing()
 
 			for (i = 0; i < BLOCK_SIZE; i++)
 			{
-				*lfeOutput = *lsOutput + *rsOutput;
+				if (*lsOutput > 0 && (*rsOutput > 1l - *lsOutput)) {
+					// Overflow
+					*lfeOutput = 0.99999999999998l;
+				}
+				else if (*lsOutput < 0 && (*rsOutput < -1l - *lsOutput))
+				{
+					// Underflow
+					*lfeOutput = -1;
+				}
+				else
+				{
+					*lfeOutput = *lsOutput + *rsOutput;
+				}
 				lfeOutput++;
 				lsOutput++;
 				rsOutput++;

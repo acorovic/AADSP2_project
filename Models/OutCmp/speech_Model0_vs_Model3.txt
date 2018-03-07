@@ -1,10 +1,27 @@
-    Test error! Recorded file is 1550229 samples shorter than the reference file!
-    Max difference is 16777215 (24 bits, -0.00dB)
-    22635 samples compared 
+ Incompatible WAVE files! Different BitsPerSample and/or NumChannels!
+    Test error! Recorded file is 506517 samples shorter than the reference file!
+    Max difference is 16580608 (24 bits, -0.10dB)
+    22650 samples compared 
    -----------------------------------------------------------
     Dif(bits) |    Samples    |   PERCENT  |   First dif
    -----------------------------------------------------------
-         1    |         42    |    0.19%   |  0x0000151d   
-        24    |          7    |    0.03%   |  0x00001421   
+         3    |          1    |    0.00%   |  0x00000006   
+         8    |          2    |    0.01%   |  0x0000546f   
+         9    |          9    |    0.04%   |  0x000052e3   
+        10    |          7    |    0.03%   |  0x000001bf   
+        11    |          4    |    0.02%   |  0x000011b8   
+        12    |         13    |    0.06%   |  0x00000018   
+        13    |         36    |    0.16%   |  0x000015ae   
+        14    |         29    |    0.13%   |  0x00000474   
+        15    |         74    |    0.33%   |  0x00000135   
+        16    |        654    |    2.89%   |  0x00000033   
+        17    |        196    |    0.87%   |  0x00000099   
+        18    |        530    |    2.34%   |  0x00000081   
+        19    |        928    |    4.10%   |  0x0000001e   
+        20    |       1801    |    7.95%   |  0x00000003   
+        21    |       4021    |   17.75%   |  0x0000001b   
+        22    |       4983    |   22.00%   |  0x00000027   
+        23    |       7045    |   31.10%   |  0x0000003f   
+        24    |       2299    |   10.15%   |  0x0000005a   
    -----------------------------------------------------------
-      Error   |         49    |    0.22%              
+      Error   |      22632    |   99.92%              

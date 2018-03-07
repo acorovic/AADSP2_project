@@ -7,8 +7,8 @@ del whiteNoise_Model2_vs_Model3.txt
 cd ..
 
 : Execute Model 0, Model 1, Model 2 and Model 3
-cd ProcessWavFile/Debug
-"ProcessWavFile.exe" "..//..//..//TestStreams//2ch_contour_ne40_24b_48k.wav" "..//..//OutStreams//cmp_0.wav" 2
+cd model0/Debug
+"model0.exe" "..//..//..//TestStreams//Tone_L1k_R3kshort.wav" "..//..//OutStreams//cmp_0.wav" 2
 cd ../..
 
 cd model1/Debug
@@ -17,7 +17,7 @@ cd model1/Debug
 cd ../..
 
 cd model2/Debug
-"model2.exe" "..//..//..//TestStreams//2ch_contour_ne40_24b_48k.wav" "..//..//OutStreams//cmp_2.wav" 2
+"model2.exe" "..//..//..//TestStreams//Tone_L1k_R3kshort.wav" "..//..//OutStreams//cmp_2.wav" 2
 
 :: TO DO: Call model 1 executable and name output file: out_speech_1.wav
 :: TO DO: Call model 2 executable and name output file: out_speech_2.wav
