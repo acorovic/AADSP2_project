@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<project basedir="C:/testing/aadsp2_projekat/Models/SULDWavTemplate" name="WavTemplate">
+<project basedir="C:/testing/aadsp2_projekat/Models/SULDWavTemplate" name="model3">
 	<target description="Linking files..." name="clink">
 		<exec executable="C:/CirrusDSP/bin/clink" failonerror="true">
-			<arg value="-oC:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/WavTemplate.img"/>
+			<arg value="-oC:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/model3.img"/>
 			<arg value="-fC:/CirrusDSP/crystal32/memory_maps/v00.mem.xml"/>
-			<arg value="C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main.O"/>
 			<arg value="C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion.O"/>
+			<arg value="C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main.O"/>
 			<arg value="C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/processing.O"/>
 			<arg value="--output_type=RAM"/>
 			<arg value="--overlay_type=standalone"/>
@@ -17,8 +17,8 @@
 	<target depends="clink" description="Creating .uld file..." name="lnkuld">
 		<exec executable="C:/CirrusDSP/bin/lnkuld" failonerror="true">
 			<arg value="-ja"/>
-			<arg value="C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/WavTemplate.img"/>
-			<arg value="C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/WavTemplate.uld"/>
+			<arg value="C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/model3.img"/>
+			<arg value="C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/model3.uld"/>
 		</exec>
 	</target>
 </project>

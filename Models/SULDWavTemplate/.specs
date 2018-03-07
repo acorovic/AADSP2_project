@@ -89,20 +89,20 @@
         <excluded_files/>
         <objectFiles>
             <objectFile isExported="false" isAdditional="false">
-                <objectFilePath>src/main.O</objectFilePath>
-                <containingProject>WavTemplate</containingProject>
+                <objectFilePath>src/distortion.O</objectFilePath>
+                <containingProject>model3</containingProject>
                 <isExcluded>false</isExcluded>
                 <outputFolder>output</outputFolder>
             </objectFile>
             <objectFile isExported="false" isAdditional="false">
-                <objectFilePath>src/distortion.O</objectFilePath>
-                <containingProject>WavTemplate</containingProject>
+                <objectFilePath>src/main.O</objectFilePath>
+                <containingProject>model3</containingProject>
                 <isExcluded>false</isExcluded>
                 <outputFolder>output</outputFolder>
             </objectFile>
             <objectFile isExported="false" isAdditional="false">
                 <objectFilePath>src/processing.O</objectFilePath>
-                <containingProject>WavTemplate</containingProject>
+                <containingProject>model3</containingProject>
                 <isExcluded>false</isExcluded>
                 <outputFolder>output</outputFolder>
             </objectFile>

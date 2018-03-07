@@ -1,17 +1,17 @@
 ============= BUILDING STARTED ============
-  Project: WavTemplate
+  Project: model3
 ===========================================
 Linking files...
 C:/CirrusDSP/bin/clink
- -oC:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/WavTemplate.img
+ -oC:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/model3.img
  -fC:/CirrusDSP/crystal32/memory_maps/v00.mem.xml
  --output_type=RAM
  --overlay_type=standalone
  -lC:/CirrusDSP/lib/
  -lC:/CirrusDSP/lib/dsplib
  -lC:/CirrusDSP/lib/dsplib/crystal32/
-C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main.O
 C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/distortion.O
+C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main.O
 C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/processing.O
      [exec] Warning #507: Unknown class: Y_OS_CC_GLOBALS
      [exec]             for the segment: CC_HEAPSTEAL_VALUES
@@ -34,8 +34,7 @@ C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/processi
      [exec] C:\CirrusDSP\lib\dsplib\crystal32\cl_wavread_getnchannels.o
      [exec] C:\CirrusDSP\lib\dsplib\crystal32\cl_wavread_number_of_frames.o
      [exec] C:\CirrusDSP\lib\dsplib\crystal32\cl_wavread_open.o
-     [exec] C:\CirrusDSP\lib\dsplib\crys
-     [exec] tal32\cl_wavread_recvsample.o
+     [exec] C:\CirrusDSP\lib\dsplib\crystal32\cl_wavread_recvsample.o
      [exec] C:\CirrusDSP\lib\dsplib\crystal32\cl_wavwrite_close.o
      [exec] C:\CirrusDSP\lib\dsplib\crystal32\cl_wavwrite_open.o
      [exec] C:\CirrusDSP\lib\dsplib\crystal32\cl_wavwrite_sendsample.o
@@ -43,21 +42,21 @@ C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/processi
 Creating .uld file...
 C:/CirrusDSP/bin/lnkuld
  -ja
- C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/WavTemplate.img
- C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/WavTemplate.uld
+ C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/model3.img
+ C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/model3.uld
      [exec] 
-     [exec] Reading file: C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/WavTemplate.img ...
-     [exec] 	Processed 784 line(s).
+     [exec] Reading file: C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/model3.img ...
+     [exec] 	Processed 778 line(s).
      [exec] 
-     [exec] Writing output to file: C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/WavTemplate.uld ...
-     [exec] 
-     [exec] Done!
-     [exec] 
-     [exec] Writing output to file: C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/WavTemplate.uldb ...
+     [exec] Writing output to file: C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/model3.uld ...
      [exec] 
      [exec] Done!
      [exec] 
-     [exec] Writing output to file: C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/WavTemplate.uldc ...
+     [exec] Writing output to file: C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/model3.uldb ...
+     [exec] 
+     [exec] Done!
+     [exec] 
+     [exec] Writing output to file: C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/model3.uldc ...
 
 BUILD SUCCESSFUL
 Total time: 1 second

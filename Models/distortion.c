@@ -5,7 +5,7 @@ extern __memX DSPfract* output_distortion;
 
 extern __memX clipping_type_t type;
 
-extern __memY DSPfract distortion_gain;
+//extern __memY DSPfract distortion_gain;
 
 // Half wave recifier accum var
 DSPaccum x;
@@ -25,6 +25,9 @@ __memX const DSPfract n_soft_clip_threshold2 = FRACT_NUM(-0.16666666666666667);
 void distortion()
 {
 	int i;
+	// Distortion gain
+	DSPfract distortion_gain = FRACT_NUM(0.5);
+
 	// Apply distortion (sample per sample)
 	switch (type) {
 	case HARD_CLIPPING:
