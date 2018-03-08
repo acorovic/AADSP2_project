@@ -1,7 +1,12 @@
-﻿  main.cpp
-c:\aadsp2_projekat\models\model1\model1\main.cpp(302): warning C4244: '=': conversion from 'DSPfract' to 'int', possible loss of data
-c:\aadsp2_projekat\models\model1\model1\main.cpp(230): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+﻿  WAVheader.cpp
+c:\testing\aadsp2_projekat\models\model1\model1\wavheader.cpp(84): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+  main.cpp
+c:\testing\aadsp2_projekat\models\model1\model1\main.cpp(321): warning C4244: '=': conversion from 'DSPfract' to 'int', possible loss of data
+c:\testing\aadsp2_projekat\models\model1\model1\main.cpp(230): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(132): note: see declaration of 'strcpy'
-c:\aadsp2_projekat\models\model1\model1\main.cpp(232): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\testing\aadsp2_projekat\models\model1\model1\main.cpp(232): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(132): note: see declaration of 'strcpy'
-  model1.vcxproj -> C:\aadsp2_projekat\Models\model1\Debug\model1.exe
+  Generating Code...
+  LINK : C:\testing\aadsp2_projekat\Models\model1\Debug\model1.exe not found or not built by the last incremental link; performing full link
+  model1.vcxproj -> C:\testing\aadsp2_projekat\Models\model1\Debug\model1.exe

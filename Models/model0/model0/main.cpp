@@ -18,6 +18,8 @@ double sampleBuffer[MAX_NUM_CHANNEL][BLOCK_SIZE];
 double numGain = pow(10, ((double)gainDb/20));
 user_control outputMode = MODE_2;
 
+distortion_state_t dist_state;
+
 void processing()
 {
 	int i;
@@ -27,12 +29,11 @@ void processing()
 	double* leftOutput = sampleBuffer[0];
 	double* rightOutput = sampleBuffer[1];
 
-	distortion_state_t dist_state;
 
 	dist_state.numChannels = 1;
 	dist_state.numSamples = BLOCK_SIZE;
 	dist_state.sampleRate = 48000;
-	dist_state.type = HALF_WAVE_RECTIFIER;
+	//dist_state.type = HALF_WAVE_RECTIFIER;
 	dist_state.gain = 2;
 
 	switch(outputMode)
@@ -129,7 +130,26 @@ int main(int argc, char* argv[])
 	WAV_HEADER inputWAVhdr,outputWAVhdr;
 	
 	int option = atoi(argv[3]);
-	
+
+	int distortion_option = atoi(argv[4]);
+
+	switch (distortion_option)
+	{
+	case 0:
+		dist_state.type = HARD_CLIPPING;
+		break;
+	case 1:
+		dist_state.type = SOFT_CLIPPING;
+		break;
+	case 2:
+		dist_state.type = FULL_WAVE_RECTIFIER;
+		break;
+	case 3:
+		dist_state.type = HALF_WAVE_RECTIFIER;
+		break;
+	default:
+		break;
+	}
 
 	// Init channel buffers
 	for(int i=0; i<MAX_NUM_CHANNEL; i++)

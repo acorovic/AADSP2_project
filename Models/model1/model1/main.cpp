@@ -239,7 +239,26 @@ int main(int argc, char* argv[])
 	//-------------------------------------------------
 	
 	// Set up output WAV header
-	//-------------------------------------------------	
+	//-------------------------------------------------
+	int distortion_option = atoi(argv[4]);
+
+	switch (distortion_option)
+	{
+	case 0:
+		type = HARD_CLIPPING;
+		break;
+	case 1:
+		type = SOFT_CLIPPING;
+		break;
+	case 2:
+		type = FULL_WAVE_RECTIFIER;
+		break;
+	case 3:
+		type = HALF_WAVE_RECTIFIER;
+		break;
+	default:
+		break;
+	}
 	outputWAVhdr = inputWAVhdr;
 	switch (option)
 	{

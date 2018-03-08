@@ -1,3 +1,8 @@
+: Channel options 0 -> 2 channels, 1 -> 4 channels, 2 -> 6 channels
+SET /A CHANNEL_NUM=2
+: Distortion option options 0 -> hard clipping, 1 -> soft clipping, 2 -> full wave recifier, 3 -> half wave recifier
+SET /A DISTORTION_OPTION=0
+
 : Delete log files first.
 cd OutCmp
 del output1_Model0_vs_Model1.txt
@@ -8,16 +13,16 @@ cd ..
 
 : Execute Model 0, Model 1, Model 2 and Model 3
 cd model0/Debug
-"model0.exe" "..//..//..//TestStreams//Tone_L1k_R3kshort.wav" "..//..//OutStreams//cmp_0.wav" 2
+"model0.exe" "..//..//..//TestStreams//Tone_L1k_R3kshort.wav" "..//..//OutStreams//cmp_0.wav" "%CHANNEL_NUM%" "%DISTORTION_OPTION%"
 cd ../..
 
 cd model1/Debug
-"model1.exe" "..//..//..//TestStreams//Tone_L1k_R3kshort.wav" "..//..//OutStreams//cmp_1.wav" 2
+"model1.exe" "..//..//..//TestStreams//Tone_L1k_R3kshort.wav" "..//..//OutStreams//cmp_1.wav" "%CHANNEL_NUM%" "%DISTORTION_OPTION%"
 
 cd ../..
 
 cd model2/Debug
-"model2.exe" "..//..//..//TestStreams//Tone_L1k_R3kshort.wav" "..//..//OutStreams//cmp_2.wav" 2
+"model2.exe" "..//..//..//TestStreams//Tone_L1k_R3kshort.wav" "..//..//OutStreams//cmp_2.wav" "%CHANNEL_NUM%" "%DISTORTION_OPTION%"
 
 :: TO DO: Call model 1 executable and name output file: out_speech_1.wav
 :: TO DO: Call model 2 executable and name output file: out_speech_2.wav
