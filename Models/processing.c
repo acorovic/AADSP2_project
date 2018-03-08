@@ -75,6 +75,7 @@ void processing()
 				centralOutput++;
 				leftInput++;
 				rightInput++;
+
 			}
 
 			leftInput = sampleBuffer[0];
@@ -94,6 +95,7 @@ void processing()
 				lfeOutput++;
 				lsOutput++;
 				rsOutput++;
+
 			}
 		}
 		break;

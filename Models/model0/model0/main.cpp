@@ -32,7 +32,7 @@ void processing()
 	dist_state.numChannels = 1;
 	dist_state.numSamples = BLOCK_SIZE;
 	dist_state.sampleRate = 48000;
-	dist_state.type = FULL_WAVE_RECTIFIER;
+	dist_state.type = HALF_WAVE_RECTIFIER;
 	dist_state.gain = 2;
 
 	switch(outputMode)

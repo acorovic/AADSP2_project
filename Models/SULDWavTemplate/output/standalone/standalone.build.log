@@ -1,6 +1,94 @@
 ============= BUILDING STARTED ============
   Project: model3
 ===========================================
+Compiling .c files...
+   [delete] Deleting: C:\testing\aadsp2_projekat\Models\SULDWavTemplate\output\standalone\src\main.O
+   [delete] Deleting: C:\testing\aadsp2_projekat\Models\SULDWavTemplate\output\standalone\src\main.s
+C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c
+C:/CirrusDSP/bin/ccc2 C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c
+ -S
+ -ruf
+ -fcse
+ -fprc
+ -fcompact
+ -funsafe-loop-optimizations
+ -edi
+ -emit-hints
+ -ira
+ -fconst-pool=X
+ -fno0init
+ -femit-asm-struct
+ -cdl
+ -D_TOOLS_VERSION_=0x0701
+ -D_SLOT_=0
+ -D_OVLY_=standalone
+ -D_OVLY_REVISION_=020000
+ -D_VERSION_=00
+ -D_DSP_=a
+ -D_COMMON_INC_PATH_=C:/CirrusDSP/crystal32/common/inc/
+ -D_TARGET_FAMILY_=crystal32
+ -D_MUI_VERSION_=020000
+ -IC:/CirrusDSP/include/
+ -IC:/CirrusDSP/include/dsplib/
+ -IC:/testing/aadsp2_projekat/Models/SULDWavTemplate/inc/
+ -oC:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main.s
+ -D_LOCAL_SRC_PATH_=src/
+ -D_LOCAL_INC_PATH_=inc/
+ -D_ROUTER_INC_PATH_=rom_inc/
+     [exec] "C:/CirrusDSP/include/stdio.h", line 8: warning #1108: #warning directive: Functionality of stdio.h header file is not fully supported
+     [exec]   #warning Functionality of stdio.h header file is not fully supported
+     [exec]    ^
+     [exec] 
+     [exec] "C:/CirrusDSP/include/string.h", line 8: warning #1108: #warning directive: Functionality of string.h header file is not fully supported
+     [exec]   #warning Functionality of string.h header file is not fully supported
+     [exec]    ^
+     [exec] 
+     [exec] "C:/CirrusDSP/include/string.h", line 13: warning #303: typedef name has already been declared (with same type)
+     [exec]   typedef unsigned int size_t;
+     [exec]                        ^
+     [exec] 
+     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 35: warning #4007: Pointer to unspecified memory zone.
+     [exec] 
+     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 37: warning #4007: Pointer to unspecified memory zone.
+     [exec] 
+     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 38: warning #4007: Pointer to unspecified memory zone.
+     [exec] 
+     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 53: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 110: info: Call to runtime function __div. Look at the separate document for information how to avoid this call.
+     [exec] 
+     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 117: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/testing/aadsp2_projekat/Models/SULDWavTemplate/src/main.c", line 127: info: SRS is used at this line.
+     [exec] 
+     [exec] FRONT END TIME: 0 seconds
+     [exec] BACK  END TIME: 0 seconds
+     [exec] 
+Assembling .a and .s files...
+C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main.s
+C:/CirrusDSP/bin/casm C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main.s
+ --debug
+ -c
+ -s
+ -e
+ -D_TOOLS_VERSION_=0x0701
+ -D_SLOT_=0
+ -D_OVLY_=standalone
+ -D_OVLY_REVISION_=020000
+ -D_VERSION_=00
+ -D_DSP_=a
+ -D_COMMON_INC_PATH_=C:/CirrusDSP/crystal32/common/inc/
+ -D_TARGET_FAMILY_=crystal32
+ -D_MUI_VERSION_=020000
+ -IC:/CirrusDSP/include/
+ -IC:/CirrusDSP/include/dsplib/
+ -IC:/testing/aadsp2_projekat/Models/SULDWavTemplate/inc/
+ -lC:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main.lst
+ -oC:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/main.O
+ -iC:/CirrusDSP/crystal32/common/inc/base.h
+ -D_LOCAL_SRC_PATH_=src/
+ -D_LOCAL_INC_PATH_=inc/
+ -D_ROUTER_INC_PATH_=rom_inc/
 Linking files...
 C:/CirrusDSP/bin/clink
  -oC:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/model3.img
@@ -46,7 +134,7 @@ C:/CirrusDSP/bin/lnkuld
  C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/model3.uld
      [exec] 
      [exec] Reading file: C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/model3.img ...
-     [exec] 	Processed 778 line(s).
+     [exec] 	Processed 776 line(s).
      [exec] 
      [exec] Writing output to file: C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/model3.uld ...
      [exec] 
@@ -59,4 +147,4 @@ C:/CirrusDSP/bin/lnkuld
      [exec] Writing output to file: C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/model3.uldc ...
 
 BUILD SUCCESSFUL
-Total time: 1 second
+Total time: 3 seconds

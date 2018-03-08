@@ -14,7 +14,7 @@ __memX DSPfract __attribute__((__aligned__(16)) ) sampleBuffer[MAX_NUM_CHANNEL][
 
 __memX DSPint enable = 1;
 __memX user_control outputMode = MODE_0;
-__memX clipping_type_t type = FULL_WAVE_RECTIFIER;
+__memX clipping_type_t type = HALF_WAVE_RECTIFIER;
 
 // Linear gain
 __memY DSPfract numGain = FRACT_NUM(0.63095734448019324943436013662234);

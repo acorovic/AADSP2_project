@@ -576,8 +576,8 @@
 10+    >> end of macro: seg_single
 2+     >> end of macro: .xdata_ovly
 205   	 0000				_type
-206   	 0000					.dw  (0x2)
-	 0000	 00000002	 
+206   	 0000					.dw  (0x3)
+	 0000	 00000003	 
 207   							.code_ovly
 207    >> start of macro: .code_ovly
 1+    									seg_single , "CODE_OVLY", CODE

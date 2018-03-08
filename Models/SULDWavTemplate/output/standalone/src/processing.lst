@@ -29,185 +29,203 @@
 15    						
 16    						
 17    						
-18    	 0000				_processing:			/* LN: 20 | CYCLE: 0 | RULES: () */ 
-19    	 0000	 A0050000		i0 = (0) + (_sampleBuffer + 0)			# LN: 24 | 
-20    	 0001	 B0440000		xmem[_leftInput + 0] = i0			# LN: 24 | 
-21    	 0002	 A0050000		i0 = (0) + (_sampleBuffer + 16)			# LN: 25 | 
-22    	 0003	 B0440000		xmem[_rightInput + 0] = i0			# LN: 25 | 
-23    	 0004	 88040000		a0 = xmem[_outputMode + 0]			# LN: 27 | 
-24    	 0005	 00004E80		a0 & a0			# LN: 27 | 
-25    	 0006	 84080010		if (a == 0) jmp (case_0)			# LN: 27 | 
-26    	 0007	 88040000		a0 = xmem[_outputMode + 0]			# LN: 27 | 
-27    	 0008	 894A0001		uhalfword(a1) = (0x1)			# LN: 27 | 
-28    	 0009	 00004F08		a0 - a1			# LN: 27 | 
-29    	 000A	 84080028		if (a == 0) jmp (case_1)			# LN: 27 | 
-30    	 000B	 88040000		a0 = xmem[_outputMode + 0]			# LN: 27 | 
-31    	 000C	 894A0002		uhalfword(a1) = (0x2)			# LN: 27 | 
-32    	 000D	 00004F08		a0 - a1			# LN: 27 | 
-33    	 000E	 84080052		if (a == 0) jmp (case_2)			# LN: 27 | 
-34    	 000F	 800800A0		jmp (__epilogue_106)			# LN: 27 | 
-35    	 0010				case_0:			/* LN: 29 | CYCLE: 0 | RULES: () */ 
-36    	 0010	 81000026		do (0x10), label_end_92			# LN: 30 | 
-37    	 0011				label_begin_92:			/* LN: 30 | CYCLE: 0 | RULES: () */ 
-38    	 0011	 B0040000		i0 = xmem[_leftInput + 0]			# LN: 32 | 
-39    	 0012	 80840000		x0 = ymem[_numGain + 0]			# LN: 32 | 
-40    	 0013	 81140000		x1 = xmem[i0]			# LN: 32 | 
-41    	 0014	 A0050000		i0 = (0) + (_leftInput)			# LN: 32 | 
-42    	 0015	 B0140000		i0 = xmem[i0]			# LN: 32 | 
-43    	 0016	 00002020		a0 = x1 * x0			# LN: 32 | 
-44    	 0017	 88540000		xmem[i0] = a0			# LN: 32 | 
-45    	 0018	 B0040000		i0 = xmem[_rightInput + 0]			# LN: 33 | 
-46    	 0019	 80840000		x0 = ymem[_numGain + 0]			# LN: 33 | 
-47    	 001A	 81140000		x1 = xmem[i0]			# LN: 33 | 
-48    	 001B	 A0050000		i0 = (0) + (_rightInput)			# LN: 33 | 
-49    	 001C	 B0140000		i0 = xmem[i0]			# LN: 33 | 
-50    	 001D	 00002020		a0 = x1 * x0			# LN: 33 | 
-51    	 001E	 88540000		xmem[i0] = a0			# LN: 33 | 
-52    	 001F	 B0040000		i0 = xmem[_leftInput + 0]			# LN: 34 | 
-53    	 0020	 00007FFF		nop #empty cycle
-54    	 0021	 02087FFF		i0 += 1			# LN: 34 | 
-55    	 0022	 B0440000		xmem[_leftInput + 0] = i0			# LN: 34 | 
-56    	 0023	 B0040000		i0 = xmem[_rightInput + 0]			# LN: 35 | 
-57    	 0024	 00007FFF		nop #empty cycle
-58    	 0025	 02087FFF		i0 += 1			# LN: 35 | 
-59    	 0026				label_end_92:			# LN: 30 | CYCLE: 21 | RULES: ()
-60    	 0026	 B0440000		xmem[_rightInput + 0] = i0			# LN: 35 | 
-61    	 0027				for_end_0:			/* LN: 30 | CYCLE: 0 | RULES: () */ 
-62    	 0027	 800800A0		jmp (__epilogue_106)			# LN: 37 | 
-63    	 0028				case_1:			/* LN: 38 | CYCLE: 0 | RULES: () */ 
-64    	 0028	 A0050000		i0 = (0) + (_sampleBuffer + 32)			# LN: 40 | 
-65    	 0029	 B0440000		xmem[_lsOutput + 0] = i0			# LN: 40 | 
-66    	 002A	 A0050000		i0 = (0) + (_sampleBuffer + 48)			# LN: 41 | 
-67    	 002B	 B0440000		xmem[_rsOutput + 0] = i0			# LN: 41 | 
-68    	 002C	 81000042		do (0x10), label_end_93			# LN: 43 | 
-69    	 002D				label_begin_93:			/* LN: 43 | CYCLE: 0 | RULES: () */ 
-70    	 002D	 B0040000		i0 = xmem[_leftInput + 0]			# LN: 45 | 
-71    	 002E	 80840000		x0 = ymem[_numGain + 0]			# LN: 45 | 
-72    	 002F	 81140000		x1 = xmem[i0]			# LN: 45 | 
-73    	 0030	 A0050000		i0 = (0) + (_leftInput)			# LN: 45 | 
-74    	 0031	 B0140000		i0 = xmem[i0]			# LN: 45 | 
-75    	 0032	 00002020		a0 = x1 * x0			# LN: 45 | 
-76    	 0033	 88540000		xmem[i0] = a0			# LN: 45 | 
-77    	 0034	 B0040000		i0 = xmem[_rightInput + 0]			# LN: 46 | 
-78    	 0035	 80840000		x0 = ymem[_numGain + 0]			# LN: 46 | 
-79    	 0036	 81140000		x1 = xmem[i0]			# LN: 46 | 
-80    	 0037	 A0050000		i0 = (0) + (_rightInput)			# LN: 46 | 
-81    	 0038	 B0140000		i0 = xmem[i0]			# LN: 46 | 
-82    	 0039	 00002020		a0 = x1 * x0			# LN: 46 | 
-83    	 003A	 88540000		xmem[i0] = a0			# LN: 46 | 
-84    	 003B	 B0040000		i0 = xmem[_leftInput + 0]			# LN: 47 | 
-85    	 003C	 00007FFF		nop #empty cycle
-86    	 003D	 02087FFF		i0 += 1			# LN: 47 | 
-87    	 003E	 B0440000		xmem[_leftInput + 0] = i0			# LN: 47 | 
-88    	 003F	 B0040000		i0 = xmem[_rightInput + 0]			# LN: 48 | 
-89    	 0040	 00007FFF		nop #empty cycle
-90    	 0041	 02087FFF		i0 += 1			# LN: 48 | 
-91    	 0042				label_end_93:			# LN: 43 | CYCLE: 21 | RULES: ()
-92    	 0042	 B0440000		xmem[_rightInput + 0] = i0			# LN: 48 | 
-93    	 0043				for_end_1:			/* LN: 43 | CYCLE: 0 | RULES: () */ 
-94    	 0043	 A0050000		i0 = (0) + (_sampleBuffer + 0)			# LN: 51 | 
-95    	 0044	 B0440000		xmem[_leftInput + 0] = i0			# LN: 51 | 
-96    	 0045	 A0050000		i0 = (0) + (_sampleBuffer + 16)			# LN: 52 | 
-97    	 0046	 B0440000		xmem[_rightInput + 0] = i0			# LN: 52 | 
-98    	 0047	 88040000		a0 = xmem[_leftInput + 0]			# LN: 54 | 
-99    	 0048	 88440000		xmem[_input_distortion + 0] = a0			# LN: 54 | 
-100   	 0049	 88040000		a0 = xmem[_lsOutput + 0]			# LN: 55 | 
-101   	 004A	 88440000		xmem[_output_distortion + 0] = a0			# LN: 55 | 
-102   	 004B	 80880000		call (_distortion)			# LN: 56 | 
-103   	 004C	 88040000		a0 = xmem[_rightInput + 0]			# LN: 58 | 
-104   	 004D	 88440000		xmem[_input_distortion + 0] = a0			# LN: 58 | 
-105   	 004E	 88040000		a0 = xmem[_rsOutput + 0]			# LN: 59 | 
-106   	 004F	 88440000		xmem[_output_distortion + 0] = a0			# LN: 59 | 
-107   	 0050	 80880000		call (_distortion)			# LN: 60 | 
-108   	 0051	 800800A0		jmp (__epilogue_106)			# LN: 62 | 
-109   	 0052				case_2:			/* LN: 63 | CYCLE: 0 | RULES: () */ 
-110   	 0052	 A0050000		i0 = (0) + (_sampleBuffer + 32)			# LN: 65 | 
-111   	 0053	 B0440000		xmem[_lsOutput + 0] = i0			# LN: 65 | 
-112   	 0054	 A0050000		i0 = (0) + (_sampleBuffer + 48)			# LN: 66 | 
-113   	 0055	 B0440000		xmem[_rsOutput + 0] = i0			# LN: 66 | 
-114   	 0056	 A0050000		i0 = (0) + (_sampleBuffer + 64)			# LN: 67 | 
-115   	 0057	 B0440000		xmem[_centralOutput + 0] = i0			# LN: 67 | 
-116   	 0058	 A0050000		i0 = (0) + (_sampleBuffer + 80)			# LN: 68 | 
-117   	 0059	 B0440000		xmem[_lfeOutput + 0] = i0			# LN: 68 | 
-118   	 005A	 8100007C		do (0x10), label_end_94			# LN: 70 | 
-119   	 005B				label_begin_94:			/* LN: 70 | CYCLE: 0 | RULES: () */ 
-120   	 005B	 B0040000		i0 = xmem[_leftInput + 0]			# LN: 72 | 
-121   	 005C	 80840000		x0 = ymem[_numGain + 0]			# LN: 72 | 
-122   	 005D	 81140000		x1 = xmem[i0]			# LN: 72 | 
-123   	 005E	 A0050000		i0 = (0) + (_leftInput)			# LN: 72 | 
-124   	 005F	 B0140000		i0 = xmem[i0]			# LN: 72 | 
-125   	 0060	 00002020		a0 = x1 * x0			# LN: 72 | 
-126   	 0061	 88540000		xmem[i0] = a0			# LN: 72 | 
-127   	 0062	 B0040000		i0 = xmem[_rightInput + 0]			# LN: 73 | 
-128   	 0063	 80840000		x0 = ymem[_numGain + 0]			# LN: 73 | 
-129   	 0064	 81140000		x1 = xmem[i0]			# LN: 73 | 
-130   	 0065	 A0050000		i0 = (0) + (_rightInput)			# LN: 73 | 
-131   	 0066	 B0140000		i0 = xmem[i0]			# LN: 73 | 
-132   	 0067	 00002020		a0 = x1 * x0			# LN: 73 | 
-133   	 0068	 88540000		xmem[i0] = a0			# LN: 73 | 
-134   	 0069	 B0040000		i0 = xmem[_rightInput + 0]			# LN: 74 | 
-135   	 006A	 B1040000		i1 = xmem[_leftInput + 0]			# LN: 74 | 
-136   	 006B	 88140000		a0 = xmem[i0]			# LN: 74 | 
-137   	 006C	 89140001		a1 = xmem[i1]			# LN: 74 | 
-138   	 006D	 A0050000		i0 = (0) + (_centralOutput)			# LN: 74 | 
-139   	 006E	 B0140000		i0 = xmem[i0]			# LN: 74 | 
-140   	 006F	 00004408		a0 = a0 + a1			# LN: 74 | 
-141   	 0070	 98540000		xmem[i0] = a0h			# LN: 74 | 
-142   	 0071	 B0040000		i0 = xmem[_centralOutput + 0]			# LN: 75 | 
-143   	 0072	 00007FFF		nop #empty cycle
-144   	 0073	 02087FFF		i0 += 1			# LN: 75 | 
-145   	 0074	 B0440000		xmem[_centralOutput + 0] = i0			# LN: 75 | 
-146   	 0075	 B0040000		i0 = xmem[_leftInput + 0]			# LN: 76 | 
-147   	 0076	 00007FFF		nop #empty cycle
-148   	 0077	 02087FFF		i0 += 1			# LN: 76 | 
-149   	 0078	 B0440000		xmem[_leftInput + 0] = i0			# LN: 76 | 
-150   	 0079	 B0040000		i0 = xmem[_rightInput + 0]			# LN: 77 | 
-151   	 007A	 00007FFF		nop #empty cycle
-152   	 007B	 02087FFF		i0 += 1			# LN: 77 | 
-153   	 007C				label_end_94:			# LN: 70 | CYCLE: 33 | RULES: ()
-154   	 007C	 B0440000		xmem[_rightInput + 0] = i0			# LN: 77 | 
-155   	 007D				for_end_2:			/* LN: 70 | CYCLE: 0 | RULES: () */ 
-156   	 007D	 A0050000		i0 = (0) + (_sampleBuffer + 0)			# LN: 80 | 
-157   	 007E	 B0440000		xmem[_leftInput + 0] = i0			# LN: 80 | 
-158   	 007F	 A0050000		i0 = (0) + (_sampleBuffer + 16)			# LN: 81 | 
-159   	 0080	 B0440000		xmem[_rightInput + 0] = i0			# LN: 81 | 
-160   	 0081	 88040000		a0 = xmem[_leftInput + 0]			# LN: 83 | 
-161   	 0082	 88440000		xmem[_input_distortion + 0] = a0			# LN: 83 | 
-162   	 0083	 88040000		a0 = xmem[_lsOutput + 0]			# LN: 84 | 
-163   	 0084	 88440000		xmem[_output_distortion + 0] = a0			# LN: 84 | 
-164   	 0085	 80880000		call (_distortion)			# LN: 85 | 
-165   	 0086	 88040000		a0 = xmem[_rightInput + 0]			# LN: 87 | 
-166   	 0087	 88440000		xmem[_input_distortion + 0] = a0			# LN: 87 | 
-167   	 0088	 88040000		a0 = xmem[_rsOutput + 0]			# LN: 88 | 
-168   	 0089	 88440000		xmem[_output_distortion + 0] = a0			# LN: 88 | 
-169   	 008A	 80880000		call (_distortion)			# LN: 89 | 
-170   	 008B	 8100009F		do (0x10), label_end_95			# LN: 91 | 
-171   	 008C				label_begin_95:			/* LN: 91 | CYCLE: 0 | RULES: () */ 
-172   	 008C	 B0040000		i0 = xmem[_lsOutput + 0]			# LN: 93 | 
-173   	 008D	 B1040000		i1 = xmem[_rsOutput + 0]			# LN: 93 | 
-174   	 008E	 88140000		a0 = xmem[i0]			# LN: 93 | 
-175   	 008F	 89140001		a1 = xmem[i1]			# LN: 93 | 
-176   	 0090	 A0050000		i0 = (0) + (_lfeOutput)			# LN: 93 | 
-177   	 0091	 B0140000		i0 = xmem[i0]			# LN: 93 | 
-178   	 0092	 00004408		a0 = a0 + a1			# LN: 93 | 
-179   	 0093	 88540000		xmem[i0] = a0			# LN: 93 | 
-180   	 0094	 B0040000		i0 = xmem[_lfeOutput + 0]			# LN: 94 | 
-181   	 0095	 00007FFF		nop #empty cycle
-182   	 0096	 02087FFF		i0 += 1			# LN: 94 | 
-183   	 0097	 B0440000		xmem[_lfeOutput + 0] = i0			# LN: 94 | 
-184   	 0098	 B0040000		i0 = xmem[_lsOutput + 0]			# LN: 95 | 
-185   	 0099	 00007FFF		nop #empty cycle
-186   	 009A	 02087FFF		i0 += 1			# LN: 95 | 
-187   	 009B	 B0440000		xmem[_lsOutput + 0] = i0			# LN: 95 | 
-188   	 009C	 B0040000		i0 = xmem[_rsOutput + 0]			# LN: 96 | 
-189   	 009D	 00007FFF		nop #empty cycle
-190   	 009E	 02087FFF		i0 += 1			# LN: 96 | 
-191   	 009F				label_end_95:			# LN: 91 | CYCLE: 19 | RULES: ()
-192   	 009F	 B0440000		xmem[_rsOutput + 0] = i0			# LN: 96 | 
-193   	 00A0				__epilogue_106:			/* LN: 103 | CYCLE: 0 | RULES: () */ 
-194   	 00A0				for_end_3:			/* LN: 91 | CYCLE: 0 | RULES: () */ 
-195   	 00A0	 81880000		ret			# LN: 103 | 
-196   						(null)
+18    	 0000				switch_0:			/* LN: 27 | CYCLE: 0 | RULES: () */ 
+19    	 0000				_processing:			/* LN: 20 | CYCLE: 0 | RULES: () */ 
+20    	 0000	 A0050000		i0 = (0) + (_sampleBuffer + 0)			# LN: 24 | 
+21    	 0001	 B0440000		xmem[_leftInput + 0] = i0			# LN: 24 | 
+22    	 0002	 A0050000		i0 = (0) + (_sampleBuffer + 16)			# LN: 25 | 
+23    	 0003	 B0440000		xmem[_rightInput + 0] = i0			# LN: 25 | 
+24    	 0004	 88040000		a0 = xmem[_outputMode + 0]			# LN: 27 | 
+25    	 0005	 00004E80		a0 & a0			# LN: 27 | 
+26    	 0006	 84080010		if (a == 0) jmp (case_0)			# LN: 27 | 
+27    	 0007	 88040000		a0 = xmem[_outputMode + 0]			# LN: 27 | 
+28    	 0008	 894A0001		uhalfword(a1) = (0x1)			# LN: 27 | 
+29    	 0009	 00004F08		a0 - a1			# LN: 27 | 
+30    	 000A	 84080021		if (a == 0) jmp (case_1)			# LN: 27 | 
+31    	 000B	 88040000		a0 = xmem[_outputMode + 0]			# LN: 27 | 
+32    	 000C	 894A0002		uhalfword(a1) = (0x2)			# LN: 27 | 
+33    	 000D	 00004F08		a0 - a1			# LN: 27 | 
+34    	 000E	 8408004B		if (a == 0) jmp (case_2)			# LN: 27 | 
+35    	 000F	 80080098		jmp (__epilogue_108)			# LN: 27 | 
+36    	 0010				case_0:			/* LN: 29 | CYCLE: 0 | RULES: () */ 
+37    	 0010	 84840000		y0 = ymem[_numGain + 0]
+38    							
+39    	 0011	 B8040000		i4 = xmem[_leftInput + 0]			# LN: 32 | 
+40    	 0012	 B9040000		i5 = xmem[_rightInput + 0]
+41    							
+42    	 0013	 8100001F		do (0x10), label_end_92			# LN: 30 | 
+43    	 0014				label_begin_92:			/* LN: 30 | CYCLE: 0 | RULES: () */ 
+44    							#i0 = xmem[_leftInput + 0]			# LN: 32 | 
+45    							
+46    							// address where to store result of multiply
+47    	 0014	 A1050000		i1 = (0) + (_leftInput)			# LN: 32 | 
+48    	 0015	 81140004		x1 = xmem[i4]			# LN: 32 | 
+49    	 0016	 B8140001		i4 = xmem[i1]			# LN: 32 | 
+50    							
+51    	 0017	 00002480		a0 = x1 * y0			# LN: 32 | 
+52    	 0018	 88540014		xmem[i4] = a0; i4 += 1			# LN: 32 | 
+53    							#i0 = xmem[_rightInput + 0]			# LN: 33 | 
+54    							
+55    							// address where to store result of multiply 
+56    	 0019	 A1050000		i1 = (0) + (_rightInput)			# LN: 33 | 
+57    	 001A	 81140005		x1 = xmem[i5]			# LN: 33 | 
+58    							
+59    	 001B	 B9140001		i5 = xmem[i1]; 		# LN: 33 | 
+60    	 001C	 00002480		a0 = x1 * y0			# LN: 33 | 
+61    	 001D	 88540015		xmem[i5] = a0; i5 += 1		# LN: 33 | 
+62    							#i0 = xmem[_leftInput + 0]			# LN: 34 | 
+63    							#nop #empty cycle
+64    							#i4 += 1			# LN: 34 | 
+65    	 001E	 B8440000		xmem[_leftInput + 0] = i4			# LN: 34 | 
+66    							#i0 = xmem[_rightInput + 0]			# LN: 35 | 
+67    							#nop #empty cycle
+68    							#i5 += 1			# LN: 35 | 
+69    	 001F				label_end_92:			# LN: 30 | CYCLE: 21 | RULES: ()
+70    	 001F	 B9440000		xmem[_rightInput + 0] = i5			# LN: 35 | 
+71    	 0020				for_end_0:			/* LN: 30 | CYCLE: 0 | RULES: () */ 
+72    	 0020	 80080098		jmp (__epilogue_108)			# LN: 37 | 
+73    	 0021				case_1:			/* LN: 38 | CYCLE: 0 | RULES: () */ 
+74    	 0021	 A0050000		i0 = (0) + (_sampleBuffer + 32)			# LN: 40 | 
+75    	 0022	 B0440000		xmem[_lsOutput + 0] = i0			# LN: 40 | 
+76    	 0023	 A0050000		i0 = (0) + (_sampleBuffer + 48)			# LN: 41 | 
+77    	 0024	 B0440000		xmem[_rsOutput + 0] = i0			# LN: 41 | 
+78    	 0025	 8100003B		do (0x10), label_end_93			# LN: 43 | 
+79    	 0026				label_begin_93:			/* LN: 43 | CYCLE: 0 | RULES: () */ 
+80    	 0026	 B0040000		i0 = xmem[_leftInput + 0]			# LN: 45 | 
+81    	 0027	 80840000		x0 = ymem[_numGain + 0]			# LN: 45 | 
+82    	 0028	 81140000		x1 = xmem[i0]			# LN: 45 | 
+83    	 0029	 A0050000		i0 = (0) + (_leftInput)			# LN: 45 | 
+84    	 002A	 B0140000		i0 = xmem[i0]			# LN: 45 | 
+85    	 002B	 00002020		a0 = x1 * x0			# LN: 45 | 
+86    	 002C	 88540000		xmem[i0] = a0			# LN: 45 | 
+87    	 002D	 B0040000		i0 = xmem[_rightInput + 0]			# LN: 46 | 
+88    	 002E	 80840000		x0 = ymem[_numGain + 0]			# LN: 46 | 
+89    	 002F	 81140000		x1 = xmem[i0]			# LN: 46 | 
+90    	 0030	 A0050000		i0 = (0) + (_rightInput)			# LN: 46 | 
+91    	 0031	 B0140000		i0 = xmem[i0]			# LN: 46 | 
+92    	 0032	 00002020		a0 = x1 * x0			# LN: 46 | 
+93    	 0033	 88540000		xmem[i0] = a0			# LN: 46 | 
+94    	 0034	 B0040000		i0 = xmem[_leftInput + 0]			# LN: 47 | 
+95    	 0035	 00007FFF		nop #empty cycle
+96    	 0036	 02087FFF		i0 += 1			# LN: 47 | 
+97    	 0037	 B0440000		xmem[_leftInput + 0] = i0			# LN: 47 | 
+98    	 0038	 B0040000		i0 = xmem[_rightInput + 0]			# LN: 48 | 
+99    	 0039	 00007FFF		nop #empty cycle
+100   	 003A	 02087FFF		i0 += 1			# LN: 48 | 
+101   	 003B				label_end_93:			# LN: 43 | CYCLE: 21 | RULES: ()
+102   	 003B	 B0440000		xmem[_rightInput + 0] = i0			# LN: 48 | 
+103   	 003C				for_end_1:			/* LN: 43 | CYCLE: 0 | RULES: () */ 
+104   	 003C	 A0050000		i0 = (0) + (_sampleBuffer + 0)			# LN: 51 | 
+105   	 003D	 B0440000		xmem[_leftInput + 0] = i0			# LN: 51 | 
+106   	 003E	 A0050000		i0 = (0) + (_sampleBuffer + 16)			# LN: 52 | 
+107   	 003F	 B0440000		xmem[_rightInput + 0] = i0			# LN: 52 | 
+108   	 0040	 88040000		a0 = xmem[_leftInput + 0]			# LN: 54 | 
+109   	 0041	 88440000		xmem[_input_distortion + 0] = a0			# LN: 54 | 
+110   	 0042	 88040000		a0 = xmem[_lsOutput + 0]			# LN: 55 | 
+111   	 0043	 88440000		xmem[_output_distortion + 0] = a0			# LN: 55 | 
+112   	 0044	 80880000		call (_distortion)			# LN: 56 | 
+113   	 0045	 88040000		a0 = xmem[_rightInput + 0]			# LN: 58 | 
+114   	 0046	 88440000		xmem[_input_distortion + 0] = a0			# LN: 58 | 
+115   	 0047	 88040000		a0 = xmem[_rsOutput + 0]			# LN: 59 | 
+116   	 0048	 88440000		xmem[_output_distortion + 0] = a0			# LN: 59 | 
+117   	 0049	 80880000		call (_distortion)			# LN: 60 | 
+118   	 004A	 80080098		jmp (__epilogue_108)			# LN: 62 | 
+119   	 004B				case_2:			/* LN: 63 | CYCLE: 0 | RULES: () */ 
+120   	 004B	 A0050000		i0 = (0) + (_sampleBuffer + 32)			# LN: 65 | 
+121   	 004C	 B0440000		xmem[_lsOutput + 0] = i0;		# LN: 65 | 
+122   	 004D	 A0050000		i0 = (0) + (_sampleBuffer + 48)			# LN: 66 | 
+123   	 004E	 B0440000		xmem[_rsOutput + 0] = i0			# LN: 66 | 
+124   	 004F	 A0050000		i0 = (0) + (_sampleBuffer + 64)			# LN: 67 | 
+125   	 0050	 B0440000		xmem[_centralOutput + 0] = i0			# LN: 67 | 
+126   	 0051	 A0050000		i0 = (0) + (_sampleBuffer + 80)			# LN: 68 | 
+127   	 0052	 B0440000		xmem[_lfeOutput + 0] = i0			# LN: 68 |
+128   							
+129   	 0053	 84840000		y0 = ymem[_numGain + 0]			# LN: 72 | 
+130   							# leftInput address
+131   							#i4 = (0) + (_leftInput)			# LN: 72 | 
+132   							# rightInput address
+133   							#i5 = xmem[_rightInput + 0]
+134   							
+135   	 0054	 81000074		do (0x10), label_end_94			# LN: 70 | 
+136   	 0055				label_begin_94:			/* LN: 70 | CYCLE: 0 | RULES: () */ 
+137   	 0055	 B1040000		i1 = xmem[_leftInput + 0]			# LN: 72 | 
+138   	 0056	 A0050000		i0 = (0) + (_leftInput)			# LN: 72 | 
+139   	 0057	 81140001		x1 = xmem[i1]			# LN: 72 | 
+140   							
+141   	 0058	 B0140000		i0 = xmem[i0]			# LN: 72 | 
+142   	 0059	 00002480		a0 = x1 * y0			# LN: 72 | 
+143   	 005A	 88540000		xmem[i0] = a0			# LN: 72 | 
+144   	 005B	 B1040000		i1 = xmem[_rightInput + 0]			# LN: 73 | 
+145   						
+146   	 005C	 A0050000		i0 = (0) + (_rightInput)			# LN: 73 | 	
+147   	 005D	 81140001		x1 = xmem[i1]			# LN: 73 | 
+148   							
+149   	 005E	 B0140000		i0 = xmem[i0]			# LN: 73 | 
+150   	 005F	 00002480		a0 = x1 * y0			# LN: 73 | 
+151   	 0060	 88540000		xmem[i0] = a0			# LN: 73 | 
+152   	 0061	 B0040000		i0 = xmem[_rightInput + 0]			# LN: 74 | 
+153   	 0062	 B1040000		i1 = xmem[_leftInput + 0]			# LN: 74 | 
+154   	 0063	 88140000		a0 = xmem[i0]			# LN: 74 | 
+155   	 0064	 89140001		a1 = xmem[i1]			# LN: 74 | 
+156   	 0065	 A0050000		i0 = (0) + (_centralOutput)			# LN: 74 | 
+157   	 0066	 B0140000		i0 = xmem[i0]			# LN: 74 | 
+158   	 0067	 00004408		a0 = a0 + a1			# LN: 74 | 
+159   	 0068	 98540000		xmem[i0] = a0h			# LN: 74 | 
+160   	 0069	 B0040000		i0 = xmem[_centralOutput + 0]			# LN: 75 | 
+161   	 006A	 00007FFF		nop #empty cycle
+162   	 006B	 02087FFF		i0 += 1			# LN: 75 | 
+163   	 006C	 B0440000		xmem[_centralOutput + 0] = i0			# LN: 75 | 
+164   	 006D	 B0040000		i0 = xmem[_leftInput + 0]			# LN: 76 | 
+165   	 006E	 00007FFF		nop #empty cycle
+166   	 006F	 02087FFF		i0 += 1			# LN: 76 | 
+167   	 0070	 B0440000		xmem[_leftInput + 0] = i0			# LN: 76 | 
+168   	 0071	 B0040000		i0 = xmem[_rightInput + 0]			# LN: 77 | 
+169   	 0072	 00007FFF		nop #empty cycle
+170   	 0073	 02087FFF		i0 += 1			# LN: 77 | 
+171   	 0074				label_end_94:			# LN: 70 | CYCLE: 33 | RULES: ()
+172   	 0074	 B0440000		xmem[_rightInput + 0] = i0			# LN: 77 | 
+173   	 0075				for_end_2:			/* LN: 70 | CYCLE: 0 | RULES: () */ 
+174   	 0075	 A0050000		i0 = (0) + (_sampleBuffer + 0)			# LN: 81 | 
+175   	 0076	 B0440000		xmem[_leftInput + 0] = i0			# LN: 81 | 
+176   	 0077	 A0050000		i0 = (0) + (_sampleBuffer + 16)			# LN: 82 | 
+177   	 0078	 B0440000		xmem[_rightInput + 0] = i0			# LN: 82 | 
+178   	 0079	 88040000		a0 = xmem[_leftInput + 0]			# LN: 84 | 
+179   	 007A	 88440000		xmem[_input_distortion + 0] = a0			# LN: 84 | 
+180   	 007B	 88040000		a0 = xmem[_lsOutput + 0]			# LN: 85 | 
+181   	 007C	 88440000		xmem[_output_distortion + 0] = a0			# LN: 85 | 
+182   	 007D	 80880000		call (_distortion)			# LN: 86 | 
+183   	 007E	 88040000		a0 = xmem[_rightInput + 0]			# LN: 88 | 
+184   	 007F	 88440000		xmem[_input_distortion + 0] = a0			# LN: 88 | 
+185   	 0080	 88040000		a0 = xmem[_rsOutput + 0]			# LN: 89 | 
+186   	 0081	 88440000		xmem[_output_distortion + 0] = a0			# LN: 89 | 
+187   	 0082	 80880000		call (_distortion)			# LN: 90 | 
+188   	 0083	 81000097		do (0x10), label_end_95			# LN: 92 | 
+189   	 0084				label_begin_95:			/* LN: 92 | CYCLE: 0 | RULES: () */ 
+190   	 0084	 B0040000		i0 = xmem[_lsOutput + 0]			# LN: 94 | 
+191   	 0085	 B1040000		i1 = xmem[_rsOutput + 0]			# LN: 94 | 
+192   	 0086	 88140000		a0 = xmem[i0]			# LN: 94 | 
+193   	 0087	 89140001		a1 = xmem[i1]			# LN: 94 | 
+194   	 0088	 A0050000		i0 = (0) + (_lfeOutput)			# LN: 94 | 
+195   	 0089	 B0140000		i0 = xmem[i0]			# LN: 94 | 
+196   	 008A	 00004408		a0 = a0 + a1			# LN: 94 | 
+197   	 008B	 88540000		xmem[i0] = a0			# LN: 94 | 
+198   	 008C	 B0040000		i0 = xmem[_lfeOutput + 0]			# LN: 95 | 
+199   	 008D	 00007FFF		nop #empty cycle
+200   	 008E	 02087FFF		i0 += 1			# LN: 95 | 
+201   	 008F	 B0440000		xmem[_lfeOutput + 0] = i0			# LN: 95 | 
+202   	 0090	 B0040000		i0 = xmem[_lsOutput + 0]			# LN: 96 | 
+203   	 0091	 00007FFF		nop #empty cycle
+204   	 0092	 02087FFF		i0 += 1			# LN: 96 | 
+205   	 0093	 B0440000		xmem[_lsOutput + 0] = i0			# LN: 96 | 
+206   	 0094	 B0040000		i0 = xmem[_rsOutput + 0]			# LN: 97 | 
+207   	 0095	 00007FFF		nop #empty cycle
+208   	 0096	 02087FFF		i0 += 1			# LN: 97 | 
+209   	 0097				label_end_95:			# LN: 92 | CYCLE: 19 | RULES: ()
+210   	 0097	 B0440000		xmem[_rsOutput + 0] = i0			# LN: 97 | 
+211   	 0098				__epilogue_108:			/* LN: 105 | CYCLE: 0 | RULES: () */ 
+212   	 0098				for_end_3:			/* LN: 92 | CYCLE: 0 | RULES: () */ 
+213   	 0098	 81880000		ret			# LN: 105 | 
+214   						(null)
 				 SYMBOL TABLE 
 
     Name                                                                                    Type                  Value 
@@ -225,7 +243,7 @@ _TARGET_FAMILY_                                                                 
 _TOOLS_VERSION_                                                                 					 Define                 "0x0701"
 _VERSION_                                                                       					 Define                 "00"
 __CASM_VER__                                                                    			  Unused Variable		        0 (701H)
-__epilogue_106                                                                  			         Relocatable         processing_GEN_0000:00A0H
+__epilogue_108                                                                  			         Relocatable         processing_GEN_0000:0098H
 _centralOutput                                                                  					 External   
 _distortion                                                                     					 External   
 _input_distortion                                                               					 External   
@@ -240,23 +258,24 @@ _rightInput                                                                     
 _rsOutput                                                                       					 External   
 _sampleBuffer                                                                   					 External   
 case_0                                                                          			         Relocatable         processing_GEN_0000:0010H
-case_1                                                                          			         Relocatable         processing_GEN_0000:0028H
-case_2                                                                          			         Relocatable         processing_GEN_0000:0052H
-for_end_0                                                                       			  Unused Relocatable        processing_GEN_0000:0027H
-for_end_1                                                                       			  Unused Relocatable        processing_GEN_0000:0043H
-for_end_2                                                                       			  Unused Relocatable        processing_GEN_0000:007DH
-for_end_3                                                                       			  Unused Relocatable        processing_GEN_0000:00A0H
-label_begin_92                                                                  			  Unused Relocatable        processing_GEN_0000:0011H
-label_begin_93                                                                  			  Unused Relocatable        processing_GEN_0000:002DH
-label_begin_94                                                                  			  Unused Relocatable        processing_GEN_0000:005BH
-label_begin_95                                                                  			  Unused Relocatable        processing_GEN_0000:008CH
-label_end_92                                                                    			         Relocatable         processing_GEN_0000:0026H
-label_end_93                                                                    			         Relocatable         processing_GEN_0000:0042H
-label_end_94                                                                    			         Relocatable         processing_GEN_0000:007CH
-label_end_95                                                                    			         Relocatable         processing_GEN_0000:009FH
+case_1                                                                          			         Relocatable         processing_GEN_0000:0021H
+case_2                                                                          			         Relocatable         processing_GEN_0000:004BH
+for_end_0                                                                       			  Unused Relocatable        processing_GEN_0000:0020H
+for_end_1                                                                       			  Unused Relocatable        processing_GEN_0000:003CH
+for_end_2                                                                       			  Unused Relocatable        processing_GEN_0000:0075H
+for_end_3                                                                       			  Unused Relocatable        processing_GEN_0000:0098H
+label_begin_92                                                                  			  Unused Relocatable        processing_GEN_0000:0014H
+label_begin_93                                                                  			  Unused Relocatable        processing_GEN_0000:0026H
+label_begin_94                                                                  			  Unused Relocatable        processing_GEN_0000:0055H
+label_begin_95                                                                  			  Unused Relocatable        processing_GEN_0000:0084H
+label_end_92                                                                    			         Relocatable         processing_GEN_0000:001FH
+label_end_93                                                                    			         Relocatable         processing_GEN_0000:003BH
+label_end_94                                                                    			         Relocatable         processing_GEN_0000:0074H
+label_end_95                                                                    			         Relocatable         processing_GEN_0000:0097H
+switch_0                                                                        			  Unused Relocatable        processing_GEN_0000:0000H
 
 	       SEGMENTS:
 
 Size			  Name										 Class
 0000H	 __INIT                                  			 CODE                                    
-00A1H	 processing_GEN_0000                     			 CODE_OVLY                               
+0099H	 processing_GEN_0000                     			 CODE_OVLY                               

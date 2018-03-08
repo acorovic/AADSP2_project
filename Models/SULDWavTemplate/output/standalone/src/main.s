@@ -203,7 +203,7 @@ _string_const_3
 	.dw  (0x0)
 	.xdata_ovly
 _type
-	.dw  (0x2)
+	.dw  (0x3)
 	.code_ovly
 
 
