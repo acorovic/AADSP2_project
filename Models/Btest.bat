@@ -4,9 +4,10 @@ SET CONFIGURATION=Debug
 SET PROJECT_NAME=model
 SET PROJECT_ULD="SULDWavTemplate/output/standalone/model3.uld"
 
+: Underflow and overflow from model 1 to model 2 happening on HARD_CLIPPING & 6 channels output
 : Channel options 0 -> 2 channels, 1 -> 4 channels, 2 -> 6 channels
-SET /A CHANNEL_NUM=1
-: Distortion option options 0 -> hard clipping, 1 -> soft clipping, 2 -> full wave recifier, 3 -> half wave recifier
+SET /A CHANNEL_NUM=2
+: Distortion option options 0 -> hard clipping, 2 -> full wave recifier, 3 -> half wave recifier
 SET /A DISTORTION_OPTION=0
 
 SET SIMULATOR=C:\CirrusDSP\bin\cmdline_simulator.exe -silent

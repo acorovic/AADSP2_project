@@ -104,7 +104,7 @@ void processing()
 				else if (*lsOutput < 0 && (*rsOutput < -1l - *lsOutput))
 				{
 					// Underflow
-					*lfeOutput = -1l;
+					*lfeOutput = -0.999999999999999l;
 				}
 				else
 				{

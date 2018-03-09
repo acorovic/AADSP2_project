@@ -1,2 +1,0 @@
-    Test error! Recorded file is 3446400 samples shorter than the reference file!
-      No differences encountered!
