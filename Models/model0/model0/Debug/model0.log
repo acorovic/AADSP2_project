@@ -4,10 +4,4 @@ c:\testing\aadsp2_projekat\models\model0\model0\main.cpp(160): warning C4996: 's
   c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(132): note: see declaration of 'strcpy'
 c:\testing\aadsp2_projekat\models\model0\model0\main.cpp(162): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(132): note: see declaration of 'strcpy'
-  distortion.cpp
-  WAVheader.cpp
-c:\testing\aadsp2_projekat\models\model0\model0\wavheader.cpp(84): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
-  Generating Code...
-  LINK : C:\testing\aadsp2_projekat\Models\model0\Debug\model0.exe not found or not built by the last incremental link; performing full link
   model0.vcxproj -> C:\testing\aadsp2_projekat\Models\model0\Debug\model0.exe

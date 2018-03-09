@@ -14,7 +14,7 @@ __memX DSPfract __attribute__((__aligned__(16)) ) sampleBuffer[MAX_NUM_CHANNEL][
 
 __memX DSPint enable = 1;
 __memX user_control outputMode = MODE_0;
-__memX clipping_type_t type = HALF_WAVE_RECTIFIER;
+__memX clipping_type_t type = HARD_CLIPPING;
 
 // Linear gain
 __memY DSPfract numGain = FRACT_NUM(0.63095734448019324943436013662234);
@@ -46,7 +46,8 @@ int main(int argc, char *argv[])
     int iNumSamples;
     int i;
     int my_channels;
-    char option = '2';
+    char option = argv[2][0];
+    char distortion_option = argv[3][0];
 
 	// Init channel buffers
 	for(i=0; i<MAX_NUM_CHANNEL; i++)
@@ -54,7 +55,7 @@ int main(int argc, char *argv[])
     
 	// Open input wav file
 	//-------------------------------------------------
-	strcpy(WavInputName, "../../TestStreams/Tone_L1k_R3kshort.wav");
+	strcpy(WavInputName, argv[0]);
 	wav_in = cl_wavread_open(WavInputName);
 	 if(wav_in == NULL)
     {
@@ -70,26 +71,41 @@ int main(int argc, char *argv[])
     sampleRate = cl_wavread_frame_rate(wav_in);
     iNumSamples =  cl_wavread_number_of_frames(wav_in);
 	//-------------------------------------------------
+    switch (distortion_option)
+	{
+	case '0':
+		type = HARD_CLIPPING;
+		break;
+	case '1':
+		type = SOFT_CLIPPING;
+		break;
+	case '2':
+		type = FULL_WAVE_RECTIFIER;
+		break;
+	case '3':
+		type = HALF_WAVE_RECTIFIER;
+		break;
+	}
 
     switch (option)
-    	{
-    	case '0':
-    		my_channels = 2;
-    		outputMode = MODE_0;
-    		break;
-    	case '1':
-    		my_channels = 4;
-    		outputMode = MODE_1;
-    		break;
-    	case '2':
-    		my_channels = 6;
-    		outputMode = MODE_2;
-    		break;
-    	}
+	{
+	case '0':
+		my_channels = 2;
+		outputMode = MODE_0;
+		break;
+	case '1':
+		my_channels = 4;
+		outputMode = MODE_1;
+		break;
+	case '2':
+		my_channels = 6;
+		outputMode = MODE_2;
+		break;
+	}
 	
 	// Open output wav file
 	//-------------------------------------------------
-	strcpy(WavOutputName, "../OutStreams/cmp_3.wav");
+	strcpy(WavOutputName, argv[1]);
 	wav_out = cl_wavwrite_open(WavOutputName, bitsPerSample, my_channels, sampleRate);
 	if(!wav_out)
     {

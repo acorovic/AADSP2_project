@@ -32,8 +32,7 @@ C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/src/processi
      [exec] C:\CirrusDSP\lib\dsplib\crystal32\cl_wavread_close.o
      [exec] C:\CirrusDSP\lib\dsplib\crystal32\cl_wavread_frame_rate.o
      [exec] C:\CirrusDSP\lib\dsplib\crystal32\cl_wavread_getnchannels.o
-     [exec] C:\CirrusDSP\lib\d
-     [exec] splib\crystal32\cl_wavread_number_of_frames.o
+     [exec] C:\CirrusDSP\lib\dsplib\crystal32\cl_wavread_number_of_frames.o
      [exec] C:\CirrusDSP\lib\dsplib\crystal32\cl_wavread_open.o
      [exec] C:\CirrusDSP\lib\dsplib\crystal32\cl_wavread_recvsample.o
      [exec] C:\CirrusDSP\lib\dsplib\crystal32\cl_wavwrite_close.o
@@ -47,7 +46,7 @@ C:/CirrusDSP/bin/lnkuld
  C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/model3.uld
      [exec] 
      [exec] Reading file: C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/model3.img ...
-     [exec] 	Processed 770 line(s).
+     [exec] 	Processed 798 line(s).
      [exec] 
      [exec] Writing output to file: C:/testing/aadsp2_projekat/Models/SULDWavTemplate/output/standalone/model3.uld ...
      [exec] 
