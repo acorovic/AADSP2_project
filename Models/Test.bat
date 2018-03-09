@@ -1,7 +1,7 @@
 : Channel options 0 -> 2 channels, 1 -> 4 channels, 2 -> 6 channels
-SET /A CHANNEL_NUM=1
+SET /A CHANNEL_NUM=0
 : Distortion option options 0 -> hard clipping, 1 -> soft clipping, 2 -> full wave recifier, 3 -> half wave recifier
-SET /A DISTORTION_OPTION=2
+SET /A DISTORTION_OPTION=0
 : Stream name
 SET STREAM_NAME=Tone_L1k_R3kshort.wav
 
