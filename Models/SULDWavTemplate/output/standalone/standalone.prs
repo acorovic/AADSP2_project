@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<settings built="true" last_build_time="1520589725852">
+<settings built="true" last_build_time="1520593465056">
 	<dependencies>
-		<source_file last_build_time="1520589720570" path="src/distortion.a"/>
-		<source_file last_build_time="1520584316471" path="src/main.c">
+		<source_file last_build_time="1520591712696" path="src/distortion.a"/>
+		<source_file last_build_time="1520591712134" path="src/main.c">
 			<dependency>../../../../../CirrusDSP/include/stdio.h</dependency>
 			<dependency>../../../../../CirrusDSP/include/dsplib/wavefile.h</dependency>
 			<dependency>../../../../../CirrusDSP/include/stdfix.h</dependency>
@@ -23,6 +23,6 @@
 			<dependency>../inc/processing.h</dependency>
 			<dependency>../../../../../CirrusDSP/include/circbuff.h</dependency>
 		</source_file>
-		<source_file last_build_time="1520583879097" path="src/processing.a"/>
+		<source_file last_build_time="1520591711557" path="src/processing.a"/>
 	</dependencies>
 </settings>

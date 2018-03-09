@@ -83,7 +83,7 @@ import clide.boardconfig.xml.simulator.XmlScpFile;
 	//
 	// argv (optional)
 	//
-	'argv':                         "../../TestStreams/Freq_sweep_short.wav ../OutStreams/cmp_3.wav 1 0",
+	'argv':                         "../../TestStreams/Freq_sweep_short.wav ../OutStreams/cmp_3.wav 2 0",
 	
 	//
 	// scp files (optional)
