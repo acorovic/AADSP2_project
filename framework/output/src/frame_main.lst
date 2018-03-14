@@ -1,0 +1,842 @@
+1     	 0000					.extern ___C_STACK_BG
+2     	 0000					.extern ___C_STACK_FG
+3     	 0000					.extern ___X_BL_TEMPBUFF
+4     	 0000					.extern ___X_BL_TEMPBUFF0
+5     	 0000					.extern ___X_BL_TEMPBUFF1
+6     	 0000					.extern ___X_BL_TEMPBUFF10
+7     	 0000					.extern ___X_BL_TEMPBUFF11
+8     	 0000					.extern ___X_BL_TEMPBUFF12
+9     	 0000					.extern ___X_BL_TEMPBUFF13
+10    	 0000					.extern ___X_BL_TEMPBUFF14
+11    	 0000					.extern ___X_BL_TEMPBUFF15
+12    	 0000					.extern ___X_BL_TEMPBUFF2
+13    	 0000					.extern ___X_BL_TEMPBUFF3
+14    	 0000					.extern ___X_BL_TEMPBUFF4
+15    	 0000					.extern ___X_BL_TEMPBUFF5
+16    	 0000					.extern ___X_BL_TEMPBUFF6
+17    	 0000					.extern ___X_BL_TEMPBUFF7
+18    	 0000					.extern ___X_BL_TEMPBUFF8
+19    	 0000					.extern ___X_BL_TEMPBUFF9
+20    	 0000					.extern ___X_BX_TEMPBUFF
+21    	 0000					.extern ___X_BX_TEMPBUFF0
+22    	 0000					.extern ___X_BX_TEMPBUFF1
+23    	 0000					.extern ___X_BX_TEMPBUFF10
+24    	 0000					.extern ___X_BX_TEMPBUFF11
+25    	 0000					.extern ___X_BX_TEMPBUFF12
+26    	 0000					.extern ___X_BX_TEMPBUFF13
+27    	 0000					.extern ___X_BX_TEMPBUFF14
+28    	 0000					.extern ___X_BX_TEMPBUFF15
+29    	 0000					.extern ___X_BX_TEMPBUFF2
+30    	 0000					.extern ___X_BX_TEMPBUFF3
+31    	 0000					.extern ___X_BX_TEMPBUFF4
+32    	 0000					.extern ___X_BX_TEMPBUFF5
+33    	 0000					.extern ___X_BX_TEMPBUFF6
+34    	 0000					.extern ___X_BX_TEMPBUFF7
+35    	 0000					.extern ___X_BX_TEMPBUFF8
+36    	 0000					.extern ___X_BX_TEMPBUFF9
+37    	 0000					.extern ___X_BY_IOBUFFER_PTRS
+38    	 0000					.extern ___X_BY_TEMPBUFF
+39    	 0000					.extern ___X_BY_TEMPBUFF0
+40    	 0000					.extern ___X_BY_TEMPBUFF1
+41    	 0000					.extern ___X_BY_TEMPBUFF10
+42    	 0000					.extern ___X_BY_TEMPBUFF11
+43    	 0000					.extern ___X_BY_TEMPBUFF12
+44    	 0000					.extern ___X_BY_TEMPBUFF13
+45    	 0000					.extern ___X_BY_TEMPBUFF14
+46    	 0000					.extern ___X_BY_TEMPBUFF15
+47    	 0000					.extern ___X_BY_TEMPBUFF2
+48    	 0000					.extern ___X_BY_TEMPBUFF3
+49    	 0000					.extern ___X_BY_TEMPBUFF4
+50    	 0000					.extern ___X_BY_TEMPBUFF5
+51    	 0000					.extern ___X_BY_TEMPBUFF6
+52    	 0000					.extern ___X_BY_TEMPBUFF7
+53    	 0000					.extern ___X_BY_TEMPBUFF8
+54    	 0000					.extern ___X_BY_TEMPBUFF9
+55    	 0000					.extern ___X_VX_NEXTFRM_REINIT_REQ
+56    	 0000					.extern ___X_VX_PPM_INPUTMODE
+57    	 0000					.extern ___X_VX_PPM_INPUT_CHANNELS
+58    	 0000					.extern ___X_VX_PPM_OUTPUTMODE
+59    	 0000					.extern ___X_VX_PPM_OUTPUT_CHANNELS
+60    	 0000					.extern ___X_VX_PPM_SAMPLERATE
+61    	 0000					.extern ___X_VX_PPM_VALID_CHANNELS
+62    	 0000					.extern ___X_VX_REINIT
+63    	 0000					.extern ___X_VX_UNDERFLOW
+64    	 0000					.public _centralOutput
+65    	 0000					.public _enable
+66    	 0000					.public _frame_mcv
+67    	 0000					.public _frame_mcv_HOST
+68    	 0000					.extern _frame_mif
+69    	 0000					.public _input_distortion
+70    	 0000					.public _leftInput
+71    	 0000					.public _lfeOutput
+72    	 0000					.public _lsOutput
+73    	 0000					.public _numGain
+74    	 0000					.public _outputMode
+75    	 0000					.public _output_distortion
+76    	 0000					.public _rightInput
+77    	 0000					.public _rsOutput
+78    	 0000					.public _sampleBuffer
+79    	 0000					.public _type
+80    	 0000					.public _frame_background
+81    	 0000					.public _frame_brick
+82    	 0000					.public _frame_frame
+83    	 0000					.public _frame_postKickstart
+84    	 0000					.public _frame_postMallocInit
+85    	 0000					.public _frame_preKickstart
+86    	 0000					.public _frame_preMallocInit
+87    	 0000					.public _frame_timer
+88    	 0000					.extern _processing
+89    	 0000					.extern cl_clearNM0_7
+90    						X_centralOutput	.xdata_ovly
+90     >> start of macro: .xdata_ovly
+1+    									seg_single X_centralOutput, "X_OVLY", X
+1+     >> start of macro: seg_single
+1+    						  .if ( "X_centralOutput" != "" ) & defined( ___SegStart_X_X_centralOutput )
+2+    						X_centralOutput    segment
+3+    						  .else
+4+    						X_centralOutput    segment "X_OVLY"
+5+    							.if "X_centralOutput" != ""
+6+    	 0000				___SegStart_X_X_centralOutput
+7+    							.endif
+8+    						  .endif
+9+    							#RememberSegmentType
+10+    >> end of macro: seg_single
+2+     >> end of macro: .xdata_ovly
+91    	 0000				_centralOutput
+92    	 0000					.bss (0x1)
+93    						X_enable	.xdata_ovly
+93     >> start of macro: .xdata_ovly
+1+    									seg_single X_enable, "X_OVLY", X
+1+     >> start of macro: seg_single
+1+    						  .if ( "X_enable" != "" ) & defined( ___SegStart_X_X_enable )
+2+    						X_enable    segment
+3+    						  .else
+4+    						X_enable    segment "X_OVLY"
+5+    							.if "X_enable" != ""
+6+    	 0000				___SegStart_X_X_enable
+7+    							.endif
+8+    						  .endif
+9+    							#RememberSegmentType
+10+    >> end of macro: seg_single
+2+     >> end of macro: .xdata_ovly
+94    	 0000				_enable
+95    	 0000					.dw  (0x1)
+	 0000	 00000001	 
+96    						Y_frame_mcv	.ydata_ovly
+96     >> start of macro: .ydata_ovly
+1+    									seg_single Y_frame_mcv, "Y_OVLY", Y
+1+     >> start of macro: seg_single
+1+    						  .if ( "Y_frame_mcv" != "" ) & defined( ___SegStart_Y_Y_frame_mcv )
+2+    						Y_frame_mcv    segment
+3+    						  .else
+4+    						Y_frame_mcv    segment "Y_OVLY"
+5+    							.if "Y_frame_mcv" != ""
+6+    	 0000				___SegStart_Y_Y_frame_mcv
+7+    							.endif
+8+    						  .endif
+9+    							#RememberSegmentType
+10+    >> end of macro: seg_single
+2+     >> end of macro: .ydata_ovly
+97    	 0000				_frame_mcv
+98    	 0000					.bss (0x4)
+99    						Y_frame_mcv_HOST	.ydata_ovly
+99     >> start of macro: .ydata_ovly
+1+    									seg_single Y_frame_mcv_HOST, "Y_OVLY", Y
+1+     >> start of macro: seg_single
+1+    						  .if ( "Y_frame_mcv_HOST" != "" ) & defined( ___SegStart_Y_Y_frame_mcv_HOST )
+2+    						Y_frame_mcv_HOST    segment
+3+    						  .else
+4+    						Y_frame_mcv_HOST    segment "Y_OVLY"
+5+    							.if "Y_frame_mcv_HOST" != ""
+6+    	 0000				___SegStart_Y_Y_frame_mcv_HOST
+7+    							.endif
+8+    						  .endif
+9+    							#RememberSegmentType
+10+    >> end of macro: seg_single
+2+     >> end of macro: .ydata_ovly
+100   	 0000				_frame_mcv_HOST
+101   	 0000					.dw  (0x1)
+	 0000	 00000001	 
+102   	 0001					.dw  (0x50c335d4)
+	 0001	 50C335D4	 
+103   	 0002					.dw  (0x0)
+	 0002	 00000000	 
+104   	 0003					.dw  (0x0)
+	 0003	 00000000	 
+105   						X_input_distortion	.xdata_ovly
+105    >> start of macro: .xdata_ovly
+1+    									seg_single X_input_distortion, "X_OVLY", X
+1+     >> start of macro: seg_single
+1+    						  .if ( "X_input_distortion" != "" ) & defined( ___SegStart_X_X_input_distortion )
+2+    						X_input_distortion    segment
+3+    						  .else
+4+    						X_input_distortion    segment "X_OVLY"
+5+    							.if "X_input_distortion" != ""
+6+    	 0000				___SegStart_X_X_input_distortion
+7+    							.endif
+8+    						  .endif
+9+    							#RememberSegmentType
+10+    >> end of macro: seg_single
+2+     >> end of macro: .xdata_ovly
+106   	 0000				_input_distortion
+107   	 0000					.bss (0x1)
+108   						X_leftInput	.xdata_ovly
+108    >> start of macro: .xdata_ovly
+1+    									seg_single X_leftInput, "X_OVLY", X
+1+     >> start of macro: seg_single
+1+    						  .if ( "X_leftInput" != "" ) & defined( ___SegStart_X_X_leftInput )
+2+    						X_leftInput    segment
+3+    						  .else
+4+    						X_leftInput    segment "X_OVLY"
+5+    							.if "X_leftInput" != ""
+6+    	 0000				___SegStart_X_X_leftInput
+7+    							.endif
+8+    						  .endif
+9+    							#RememberSegmentType
+10+    >> end of macro: seg_single
+2+     >> end of macro: .xdata_ovly
+109   	 0000				_leftInput
+110   	 0000					.bss (0x1)
+111   						X_lfeOutput	.xdata_ovly
+111    >> start of macro: .xdata_ovly
+1+    									seg_single X_lfeOutput, "X_OVLY", X
+1+     >> start of macro: seg_single
+1+    						  .if ( "X_lfeOutput" != "" ) & defined( ___SegStart_X_X_lfeOutput )
+2+    						X_lfeOutput    segment
+3+    						  .else
+4+    						X_lfeOutput    segment "X_OVLY"
+5+    							.if "X_lfeOutput" != ""
+6+    	 0000				___SegStart_X_X_lfeOutput
+7+    							.endif
+8+    						  .endif
+9+    							#RememberSegmentType
+10+    >> end of macro: seg_single
+2+     >> end of macro: .xdata_ovly
+112   	 0000				_lfeOutput
+113   	 0000					.bss (0x1)
+114   						X_lsOutput	.xdata_ovly
+114    >> start of macro: .xdata_ovly
+1+    									seg_single X_lsOutput, "X_OVLY", X
+1+     >> start of macro: seg_single
+1+    						  .if ( "X_lsOutput" != "" ) & defined( ___SegStart_X_X_lsOutput )
+2+    						X_lsOutput    segment
+3+    						  .else
+4+    						X_lsOutput    segment "X_OVLY"
+5+    							.if "X_lsOutput" != ""
+6+    	 0000				___SegStart_X_X_lsOutput
+7+    							.endif
+8+    						  .endif
+9+    							#RememberSegmentType
+10+    >> end of macro: seg_single
+2+     >> end of macro: .xdata_ovly
+115   	 0000				_lsOutput
+116   	 0000					.bss (0x1)
+117   						Y_numGain	.ydata_ovly
+117    >> start of macro: .ydata_ovly
+1+    									seg_single Y_numGain, "Y_OVLY", Y
+1+     >> start of macro: seg_single
+1+    						  .if ( "Y_numGain" != "" ) & defined( ___SegStart_Y_Y_numGain )
+2+    						Y_numGain    segment
+3+    						  .else
+4+    						Y_numGain    segment "Y_OVLY"
+5+    							.if "Y_numGain" != ""
+6+    	 0000				___SegStart_Y_Y_numGain
+7+    							.endif
+8+    						  .endif
+9+    							#RememberSegmentType
+10+    >> end of macro: seg_single
+2+     >> end of macro: .ydata_ovly
+118   	 0000				_numGain
+119   	 0000					.dw  (0x50c335d4)
+	 0000	 50C335D4	 
+120   						X_outputMode	.xdata_ovly
+120    >> start of macro: .xdata_ovly
+1+    									seg_single X_outputMode, "X_OVLY", X
+1+     >> start of macro: seg_single
+1+    						  .if ( "X_outputMode" != "" ) & defined( ___SegStart_X_X_outputMode )
+2+    						X_outputMode    segment
+3+    						  .else
+4+    						X_outputMode    segment "X_OVLY"
+5+    							.if "X_outputMode" != ""
+6+    	 0000				___SegStart_X_X_outputMode
+7+    							.endif
+8+    						  .endif
+9+    							#RememberSegmentType
+10+    >> end of macro: seg_single
+2+     >> end of macro: .xdata_ovly
+121   	 0000				_outputMode
+122   	 0000					.dw  (0x2)
+	 0000	 00000002	 
+123   						X_output_distortion	.xdata_ovly
+123    >> start of macro: .xdata_ovly
+1+    									seg_single X_output_distortion, "X_OVLY", X
+1+     >> start of macro: seg_single
+1+    						  .if ( "X_output_distortion" != "" ) & defined( ___SegStart_X_X_output_distortion )
+2+    						X_output_distortion    segment
+3+    						  .else
+4+    						X_output_distortion    segment "X_OVLY"
+5+    							.if "X_output_distortion" != ""
+6+    	 0000				___SegStart_X_X_output_distortion
+7+    							.endif
+8+    						  .endif
+9+    							#RememberSegmentType
+10+    >> end of macro: seg_single
+2+     >> end of macro: .xdata_ovly
+124   	 0000				_output_distortion
+125   	 0000					.bss (0x1)
+126   						X_rightInput	.xdata_ovly
+126    >> start of macro: .xdata_ovly
+1+    									seg_single X_rightInput, "X_OVLY", X
+1+     >> start of macro: seg_single
+1+    						  .if ( "X_rightInput" != "" ) & defined( ___SegStart_X_X_rightInput )
+2+    						X_rightInput    segment
+3+    						  .else
+4+    						X_rightInput    segment "X_OVLY"
+5+    							.if "X_rightInput" != ""
+6+    	 0000				___SegStart_X_X_rightInput
+7+    							.endif
+8+    						  .endif
+9+    							#RememberSegmentType
+10+    >> end of macro: seg_single
+2+     >> end of macro: .xdata_ovly
+127   	 0000				_rightInput
+128   	 0000					.bss (0x1)
+129   						X_rsOutput	.xdata_ovly
+129    >> start of macro: .xdata_ovly
+1+    									seg_single X_rsOutput, "X_OVLY", X
+1+     >> start of macro: seg_single
+1+    						  .if ( "X_rsOutput" != "" ) & defined( ___SegStart_X_X_rsOutput )
+2+    						X_rsOutput    segment
+3+    						  .else
+4+    						X_rsOutput    segment "X_OVLY"
+5+    							.if "X_rsOutput" != ""
+6+    	 0000				___SegStart_X_X_rsOutput
+7+    							.endif
+8+    						  .endif
+9+    							#RememberSegmentType
+10+    >> end of macro: seg_single
+2+     >> end of macro: .xdata_ovly
+130   	 0000				_rsOutput
+131   	 0000					.bss (0x1)
+132   						X_sampleBuffer	.xdata_ovly align 16
+132    >> start of macro: .xdata_ovly align
+1+    									seg_align X_sampleBuffer, "X_OVLY", X, 16
+1+     >> start of macro: seg_align
+1+    						X_sampleBuffer    SEGMENT "X_OVLY" ALIGN( 16 )
+2+    						  .if "X_sampleBuffer" != ""
+3+    	 0000				___SegStart_X_X_sampleBuffer
+4+    						  .endif
+5+    							#RememberSegmentType
+6+     >> end of macro: seg_align
+2+     >> end of macro: .xdata_ovly align
+133   	 0000				_sampleBuffer
+134   	 0000					.bss (0x80)
+135   						X_type	.xdata_ovly
+135    >> start of macro: .xdata_ovly
+1+    									seg_single X_type, "X_OVLY", X
+1+     >> start of macro: seg_single
+1+    						  .if ( "X_type" != "" ) & defined( ___SegStart_X_X_type )
+2+    						X_type    segment
+3+    						  .else
+4+    						X_type    segment "X_OVLY"
+5+    							.if "X_type" != ""
+6+    	 0000				___SegStart_X_X_type
+7+    							.endif
+8+    						  .endif
+9+    							#RememberSegmentType
+10+    >> end of macro: seg_single
+2+     >> end of macro: .xdata_ovly
+136   	 0000				_type
+137   	 0000					.dw  (0x0)
+	 0000	 00000000	 
+138   							.code_ovly
+138    >> start of macro: .code_ovly
+1+    									seg_single , "CODE_OVLY", CODE
+1+     >> start of macro: seg_single
+1+    						  .if ( "" != "" ) & defined( ___SegStart_CODE_ )
+2+    						    segment
+3+    						  .else
+4+    						    segment "CODE_OVLY"
+5+    							.if "" != ""
+6+    						___SegStart_CODE_
+7+    							.endif
+8+    						  .endif
+9+    							#RememberSegmentType
+10+    >> end of macro: seg_single
+2+     >> end of macro: .code_ovly
+139   						
+140   						
+141   						
+142   	 0000				_frame_background:			/* LN: 98 | CYCLE: 0 | RULES: () */ 
+143   	 0000	 80880000		call (cl_clearNM0_7)			# LN: 98 | 
+144   	 0001	 A7050000		i7 = (0) + (___C_STACK_BG)			# LN: 98 | 
+145   	 0002	 BB540007		xmem[i7] = i7			# LN: 98 | 
+146   	 0003	 020F7FFF		i7 += 1			# LN: 98 | 
+147   	 0004				cline_98_0:			/* LN: 101 | CYCLE: 0 | RULES: () */ 
+148   	 0004	 A0050000		i0 = (0) + (_frame_mcv_HOST)			# LN: 101 | 
+149   	 0005	 A1050000		i1 = (0) + (_frame_mcv)			# LN: 101 | 
+150   	 0006	 80400008		do (0x4), label_end_11_0			# LN: 101 | 
+151   	 0007				label_begin_11_0:			/* LN: 101 | CYCLE: 0 | RULES: (CLowerMoveStructOrArrayFromMemToMem32to32) */ 
+152   	 0007	 80940010		x0 = ymem[i0]; i0 += 1			# LN: 101, 101 | 
+153   	 0008				label_end_11_0:			# LN: 101 | CYCLE: 1 | RULES: (CLowerMoveStructOrArrayFromMemToMem32to32)
+154   	 0008	 80D40011		ymem[i1] = x0; i1 += 1			# LN: 101, 101 | 
+155   	 0009				cline_101_0:			/* LN: 102 | CYCLE: 0 | RULES: () */ 
+156   	 0009	 88840001		a0 = ymem[_frame_mcv + 1]			# LN: 102 | 
+157   	 000A	 98C40000		ymem[_numGain + 0] = a0h			# LN: 102 | 
+158   	 000B				cline_102_0:			/* LN: 104 | CYCLE: 0 | RULES: () */ 
+159   	 000B	 88840002		a0 = ymem[_frame_mcv + 2]			# LN: 104 | 
+160   	 000C	 00004E80		a0 & a0			# LN: 104 | 
+161   	 000D	 84480011		if (a != 0) jmp (else_4)			# LN: 104 | 
+162   	 000E				cline_104_0:			/* LN: 106 | CYCLE: 0 | RULES: () */ 
+163   	 000E	 00004DC0		a0 = 0			# LN: 106 | 
+164   	 000F	 98440000		xmem[_outputMode + 0] = a0h			# LN: 106 | 
+165   	 0010	 8008001A		jmp (endif_4)			# LN: 106 | 
+166   	 0011				cline_106_0:			/* LN: 107 | CYCLE: 0 | RULES: () */ 
+167   	 0011				else_4:			/* LN: 104 | CYCLE: 0 | RULES: () */ 
+168   	 0011	 88840002		a0 = ymem[_frame_mcv + 2]			# LN: 107 | 
+169   	 0012	 894A0001		uhalfword(a1) = (0x1)			# LN: 107 | 
+170   	 0013	 00004F08		a0 - a1			# LN: 107 | 
+171   	 0014	 84480018		if (a != 0) jmp (else_5)			# LN: 107 | 
+172   	 0015				cline_107_0:			/* LN: 109 | CYCLE: 0 | RULES: () */ 
+173   	 0015	 884A0001		uhalfword(a0) = (0x1)			# LN: 109 | 
+174   	 0016	 98440000		xmem[_outputMode + 0] = a0h			# LN: 109 | 
+175   	 0017	 8008001A		jmp (endif_5)			# LN: 109 | 
+176   	 0018				cline_109_0:			/* LN: 111 | CYCLE: 0 | RULES: () */ 
+177   	 0018				else_5:			/* LN: 107 | CYCLE: 0 | RULES: () */ 
+178   	 0018	 884A0002		uhalfword(a0) = (0x2)			# LN: 111 | 
+179   	 0019	 98440000		xmem[_outputMode + 0] = a0h			# LN: 111 | 
+180   	 001A				cline_111_0:			/* LN: 114 | CYCLE: 0 | RULES: () */ 
+181   	 001A				endif_4:			/* LN: 104 | CYCLE: 0 | RULES: () */ 
+182   	 001A				endif_5:			/* LN: 107 | CYCLE: 0 | RULES: () */ 
+183   	 001A	 88840003		a0 = ymem[_frame_mcv + 3]			# LN: 114 | 
+184   	 001B	 00004E80		a0 & a0			# LN: 114 | 
+185   	 001C	 84480020		if (a != 0) jmp (else_6)			# LN: 114 | 
+186   	 001D				cline_114_0:			/* LN: 116 | CYCLE: 0 | RULES: () */ 
+187   	 001D	 00004DC0		a0 = 0			# LN: 116 | 
+188   	 001E	 98440000		xmem[_type + 0] = a0h			# LN: 116 | 
+189   	 001F	 80080030		jmp (endif_6)			# LN: 116 | 
+190   	 0020				cline_116_0:			/* LN: 117 | CYCLE: 0 | RULES: () */ 
+191   	 0020				else_6:			/* LN: 114 | CYCLE: 0 | RULES: () */ 
+192   	 0020	 88840003		a0 = ymem[_frame_mcv + 3]			# LN: 117 | 
+193   	 0021	 894A0001		uhalfword(a1) = (0x1)			# LN: 117 | 
+194   	 0022	 00004F08		a0 - a1			# LN: 117 | 
+195   	 0023	 84480027		if (a != 0) jmp (else_7)			# LN: 117 | 
+196   	 0024				cline_117_0:			/* LN: 119 | CYCLE: 0 | RULES: () */ 
+197   	 0024	 884A0001		uhalfword(a0) = (0x1)			# LN: 119 | 
+198   	 0025	 98440000		xmem[_type + 0] = a0h			# LN: 119 | 
+199   	 0026	 80080030		jmp (endif_7)			# LN: 119 | 
+200   	 0027				cline_119_0:			/* LN: 120 | CYCLE: 0 | RULES: () */ 
+201   	 0027				else_7:			/* LN: 117 | CYCLE: 0 | RULES: () */ 
+202   	 0027	 88840003		a0 = ymem[_frame_mcv + 3]			# LN: 120 | 
+203   	 0028	 894A0002		uhalfword(a1) = (0x2)			# LN: 120 | 
+204   	 0029	 00004F08		a0 - a1			# LN: 120 | 
+205   	 002A	 8448002E		if (a != 0) jmp (else_8)			# LN: 120 | 
+206   	 002B				cline_120_0:			/* LN: 121 | CYCLE: 0 | RULES: () */ 
+207   	 002B	 884A0002		uhalfword(a0) = (0x2)			# LN: 121 | 
+208   	 002C	 98440000		xmem[_type + 0] = a0h			# LN: 121 | 
+209   	 002D	 80080030		jmp (endif_8)			# LN: 121 | 
+210   	 002E				cline_121_0:			/* LN: 124 | CYCLE: 0 | RULES: () */ 
+211   	 002E				else_8:			/* LN: 120 | CYCLE: 0 | RULES: () */ 
+212   	 002E	 884A0003		uhalfword(a0) = (0x3)			# LN: 124 | 
+213   	 002F	 98440000		xmem[_type + 0] = a0h			# LN: 124 | 
+214   	 0030				cline_124_0:			/* LN: 128 | CYCLE: 0 | RULES: () */ 
+215   	 0030				endif_6:			/* LN: 114 | CYCLE: 0 | RULES: () */ 
+216   	 0030				endif_7:			/* LN: 117 | CYCLE: 0 | RULES: () */ 
+217   	 0030				endif_8:			/* LN: 120 | CYCLE: 0 | RULES: () */ 
+218   	 0030	 80080031		jmp (__epilogue_176)			# LN: 128 | 
+219   	 0031				__epilogue_176:			/* LN: 128 | CYCLE: 0 | RULES: () */ 
+220   	 0031	 02177FFF		i7 -= 1			# LN: 128 | 
+221   	 0032	 81880000		ret			# LN: 128 | 
+222   						
+223   						
+224   						
+225   	 0033				_frame_brick:			/* LN: 74 | CYCLE: 0 | RULES: () */ 
+226   	 0033	 80880000		call (cl_clearNM0_7)			# LN: 74 | 
+227   	 0034	 A7050000		i7 = (0) + (___C_STACK_FG)			# LN: 74 | 
+228   	 0035	 BB540007		xmem[i7] = i7			# LN: 74 | 
+229   	 0036	 020F7FFF		i7 += 1			# LN: 74 | 
+230   	 0037				cline_74_0:			/* LN: 77 | CYCLE: 0 | RULES: () */ 
+231   	 0037	 B0840000		i0 = ymem[___X_BY_IOBUFFER_PTRS + 0]			# LN: 77 | 
+232   	 0038	 B0440000		xmem[_leftInput + 0] = i0			# LN: 77 | 
+233   	 0039				cline_77_0:			/* LN: 78 | CYCLE: 0 | RULES: () */ 
+234   	 0039	 B0840000		i0 = ymem[___X_BY_IOBUFFER_PTRS + 1]			# LN: 78 | 
+235   	 003A	 B0440000		xmem[_rightInput + 0] = i0			# LN: 78 | 
+236   	 003B				cline_78_0:			/* LN: 79 | CYCLE: 0 | RULES: () */ 
+237   	 003B	 B0840000		i0 = ymem[___X_BY_IOBUFFER_PTRS + 4]			# LN: 79 | 
+238   	 003C	 B0440000		xmem[_centralOutput + 0] = i0			# LN: 79 | 
+239   	 003D				cline_79_0:			/* LN: 80 | CYCLE: 0 | RULES: () */ 
+240   	 003D	 B0840000		i0 = ymem[___X_BY_IOBUFFER_PTRS + 2]			# LN: 80 | 
+241   	 003E	 B0440000		xmem[_lsOutput + 0] = i0			# LN: 80 | 
+242   	 003F				cline_80_0:			/* LN: 81 | CYCLE: 0 | RULES: () */ 
+243   	 003F	 B0840000		i0 = ymem[___X_BY_IOBUFFER_PTRS + 3]			# LN: 81 | 
+244   	 0040	 B0440000		xmem[_rsOutput + 0] = i0			# LN: 81 | 
+245   	 0041				cline_81_0:			/* LN: 82 | CYCLE: 0 | RULES: () */ 
+246   	 0041	 B0840000		i0 = ymem[___X_BY_IOBUFFER_PTRS + 5]			# LN: 82 | 
+247   	 0042	 B0440000		xmem[_lfeOutput + 0] = i0			# LN: 82 | 
+248   	 0043				cline_82_0:			/* LN: 84 | CYCLE: 0 | RULES: () */ 
+249   	 0043	 88040000		a0 = xmem[_outputMode + 0]			# LN: 84 | 
+250   	 0044	 00004E80		a0 & a0			# LN: 84 | 
+251   	 0045	 8448004B		if (a != 0) jmp (else_2)			# LN: 84 | 
+252   	 0046				cline_84_0:			/* LN: 86 | CYCLE: 0 | RULES: () */ 
+253   	 0046	 88040000		a0 = xmem[___X_VX_PPM_VALID_CHANNELS + 0]			# LN: 86 | 
+254   	 0047	 894A0002		uhalfword(a1) = (0x2)			# LN: 86 | 
+255   	 0048	 00004D08		a0 = a0 | a1			# LN: 86 | 
+256   	 0049	 98440000		xmem[___X_VX_PPM_VALID_CHANNELS + 0] = a0h			# LN: 86 | 
+257   	 004A	 80080058		jmp (endif_2)			# LN: 86 | 
+258   	 004B				cline_86_0:			/* LN: 87 | CYCLE: 0 | RULES: () */ 
+259   	 004B				else_2:			/* LN: 84 | CYCLE: 0 | RULES: () */ 
+260   	 004B	 88040000		a0 = xmem[_outputMode + 0]			# LN: 87 | 
+261   	 004C	 894A0001		uhalfword(a1) = (0x1)			# LN: 87 | 
+262   	 004D	 00004F08		a0 - a1			# LN: 87 | 
+263   	 004E	 84480054		if (a != 0) jmp (else_3)			# LN: 87 | 
+264   	 004F				cline_87_0:			/* LN: 89 | CYCLE: 0 | RULES: () */ 
+265   	 004F	 88040000		a0 = xmem[___X_VX_PPM_VALID_CHANNELS + 0]			# LN: 89 | 
+266   	 0050	 894A000F		uhalfword(a1) = (0xf)			# LN: 89 | 
+267   	 0051	 00004D08		a0 = a0 | a1			# LN: 89 | 
+268   	 0052	 98440000		xmem[___X_VX_PPM_VALID_CHANNELS + 0] = a0h			# LN: 89 | 
+269   	 0053	 80080058		jmp (endif_3)			# LN: 89 | 
+270   	 0054				cline_89_0:			/* LN: 91 | CYCLE: 0 | RULES: () */ 
+271   	 0054				else_3:			/* LN: 87 | CYCLE: 0 | RULES: () */ 
+272   	 0054	 88040000		a0 = xmem[___X_VX_PPM_VALID_CHANNELS + 0]			# LN: 91 | 
+273   	 0055	 894A003F		uhalfword(a1) = (0x3f)			# LN: 91 | 
+274   	 0056	 00004D08		a0 = a0 | a1			# LN: 91 | 
+275   	 0057	 98440000		xmem[___X_VX_PPM_VALID_CHANNELS + 0] = a0h			# LN: 91 | 
+276   	 0058				cline_91_0:			/* LN: 95 | CYCLE: 0 | RULES: () */ 
+277   	 0058				endif_2:			/* LN: 84 | CYCLE: 0 | RULES: () */ 
+278   	 0058				endif_3:			/* LN: 87 | CYCLE: 0 | RULES: () */ 
+279   	 0058	 80880000		call (_processing)			# LN: 95 | 
+280   	 0059				cline_95_0:			/* LN: 96 | CYCLE: 0 | RULES: () */ 
+281   	 0059	 8008005A		jmp (__epilogue_174)			# LN: 96 | 
+282   	 005A				__epilogue_174:			/* LN: 96 | CYCLE: 0 | RULES: () */ 
+283   	 005A	 02177FFF		i7 -= 1			# LN: 96 | 
+284   	 005B	 81880000		ret			# LN: 96 | 
+285   						
+286   						
+287   						
+288   	 005C				_frame_frame:			/* LN: 69 | CYCLE: 0 | RULES: () */ 
+289   	 005C	 80880000		call (cl_clearNM0_7)			# LN: 69 | 
+290   	 005D	 A7050000		i7 = (0) + (___C_STACK_FG)			# LN: 69 | 
+291   	 005E	 BB540007		xmem[i7] = i7			# LN: 69 | 
+292   	 005F	 020F7FFF		i7 += 1			# LN: 69 | 
+293   	 0060				cline_69_0:			/* LN: 72 | CYCLE: 0 | RULES: () */ 
+294   	 0060	 80080061		jmp (__epilogue_172)			# LN: 72 | 
+295   	 0061				__epilogue_172:			/* LN: 72 | CYCLE: 0 | RULES: () */ 
+296   	 0061	 02177FFF		i7 -= 1			# LN: 72 | 
+297   	 0062	 81880000		ret			# LN: 72 | 
+298   						
+299   						
+300   						
+301   	 0063				_frame_postKickstart:			/* LN: 59 | CYCLE: 0 | RULES: () */ 
+302   	 0063	 80880000		call (cl_clearNM0_7)			# LN: 59 | 
+303   	 0064	 A7050000		i7 = (0) + (___C_STACK_FG)			# LN: 59 | 
+304   	 0065	 BB540007		xmem[i7] = i7			# LN: 59 | 
+305   	 0066	 020F7FFF		i7 += 1			# LN: 59 | 
+306   	 0067				cline_59_0:			/* LN: 62 | CYCLE: 0 | RULES: () */ 
+307   	 0067	 80080068		jmp (__epilogue_168)			# LN: 62 | 
+308   	 0068				__epilogue_168:			/* LN: 62 | CYCLE: 0 | RULES: () */ 
+309   	 0068	 02177FFF		i7 -= 1			# LN: 62 | 
+310   	 0069	 81880000		ret			# LN: 62 | 
+311   						
+312   						
+313   						
+314   	 006A				_frame_postMallocInit:			/* LN: 135 | CYCLE: 0 | RULES: () */ 
+315   	 006A	 80880000		call (cl_clearNM0_7)			# LN: 135 | 
+316   	 006B	 A7050000		i7 = (0) + (___C_STACK_FG)			# LN: 135 | 
+317   	 006C	 BB540007		xmem[i7] = i7			# LN: 135 | 
+318   	 006D	 020F7FFF		i7 += 1			# LN: 135 | 
+319   	 006E				cline_135_0:			/* LN: 138 | CYCLE: 0 | RULES: () */ 
+320   	 006E	 8008006F		jmp (__epilogue_180)			# LN: 138 | 
+321   	 006F				__epilogue_180:			/* LN: 138 | CYCLE: 0 | RULES: () */ 
+322   	 006F	 02177FFF		i7 -= 1			# LN: 138 | 
+323   	 0070	 81880000		ret			# LN: 138 | 
+324   						
+325   						
+326   						
+327   	 0071				_frame_preKickstart:			/* LN: 43 | CYCLE: 0 | RULES: () */ 
+328   	 0071	 80880000		call (cl_clearNM0_7)			# LN: 43 | 
+329   	 0072	 A7050000		i7 = (0) + (___C_STACK_FG)			# LN: 43 | 
+330   	 0073	 BB540007		xmem[i7] = i7			# LN: 43 | 
+331   	 0074	 020F7FFF		i7 += 1			# LN: 43 | 
+332   	 0075	 87750001		i7 = i7 + (0x1)			# LN: 43 | 
+333   	 0076	 91750001		i1 = i7 - (0x1)			# LN: 43 | 
+334   	 0077	 B0540001		xmem[i1] = i0			# LN: 43 | 
+335   	 0078				cline_43_0:			/* LN: 48 | CYCLE: 0 | RULES: () */ 
+336   	 0078	 88040000		a0 = xmem[_outputMode + 0]			# LN: 48 | 
+337   	 0079	 00004E80		a0 & a0			# LN: 48 | 
+338   	 007A	 84480080		if (a != 0) jmp (else_0)			# LN: 48 | 
+339   	 007B				cline_48_0:			/* LN: 50 | CYCLE: 0 | RULES: () */ 
+340   	 007B	 88040000		a0 = xmem[___X_VX_PPM_VALID_CHANNELS + 0]			# LN: 50 | 
+341   	 007C	 894A0002		uhalfword(a1) = (0x2)			# LN: 50 | 
+342   	 007D	 00004D08		a0 = a0 | a1			# LN: 50 | 
+343   	 007E	 98440000		xmem[___X_VX_PPM_VALID_CHANNELS + 0] = a0h			# LN: 50 | 
+344   	 007F	 8008008D		jmp (endif_0)			# LN: 50 | 
+345   	 0080				cline_50_0:			/* LN: 51 | CYCLE: 0 | RULES: () */ 
+346   	 0080				else_0:			/* LN: 48 | CYCLE: 0 | RULES: () */ 
+347   	 0080	 88040000		a0 = xmem[_outputMode + 0]			# LN: 51 | 
+348   	 0081	 894A0001		uhalfword(a1) = (0x1)			# LN: 51 | 
+349   	 0082	 00004F08		a0 - a1			# LN: 51 | 
+350   	 0083	 84480089		if (a != 0) jmp (else_1)			# LN: 51 | 
+351   	 0084				cline_51_0:			/* LN: 53 | CYCLE: 0 | RULES: () */ 
+352   	 0084	 88040000		a0 = xmem[___X_VX_PPM_VALID_CHANNELS + 0]			# LN: 53 | 
+353   	 0085	 894A000F		uhalfword(a1) = (0xf)			# LN: 53 | 
+354   	 0086	 00004D08		a0 = a0 | a1			# LN: 53 | 
+355   	 0087	 98440000		xmem[___X_VX_PPM_VALID_CHANNELS + 0] = a0h			# LN: 53 | 
+356   	 0088	 8008008D		jmp (endif_1)			# LN: 53 | 
+357   	 0089				cline_53_0:			/* LN: 55 | CYCLE: 0 | RULES: () */ 
+358   	 0089				else_1:			/* LN: 51 | CYCLE: 0 | RULES: () */ 
+359   	 0089	 88040000		a0 = xmem[___X_VX_PPM_VALID_CHANNELS + 0]			# LN: 55 | 
+360   	 008A	 894A003F		uhalfword(a1) = (0x3f)			# LN: 55 | 
+361   	 008B	 00004D08		a0 = a0 | a1			# LN: 55 | 
+362   	 008C	 98440000		xmem[___X_VX_PPM_VALID_CHANNELS + 0] = a0h			# LN: 55 | 
+363   	 008D				cline_55_0:			/* LN: 57 | CYCLE: 0 | RULES: () */ 
+364   	 008D				endif_0:			/* LN: 48 | CYCLE: 0 | RULES: () */ 
+365   	 008D				endif_1:			/* LN: 51 | CYCLE: 0 | RULES: () */ 
+366   	 008D	 8008008E		jmp (__epilogue_166)			# LN: 57 | 
+367   	 008E				__epilogue_166:			/* LN: 57 | CYCLE: 0 | RULES: () */ 
+368   	 008E	 97750001		i7 = i7 - (0x1)			# LN: 57 | 
+369   	 008F	 02177FFF		i7 -= 1			# LN: 57 | 
+370   	 0090	 81880000		ret			# LN: 57 | 
+371   						
+372   						
+373   						
+374   	 0091				_frame_preMallocInit:			/* LN: 130 | CYCLE: 0 | RULES: () */ 
+375   	 0091	 80880000		call (cl_clearNM0_7)			# LN: 130 | 
+376   	 0092	 A7050000		i7 = (0) + (___C_STACK_FG)			# LN: 130 | 
+377   	 0093	 BB540007		xmem[i7] = i7			# LN: 130 | 
+378   	 0094	 020F7FFF		i7 += 1			# LN: 130 | 
+379   	 0095				cline_130_0:			/* LN: 133 | CYCLE: 0 | RULES: () */ 
+380   	 0095	 80080096		jmp (__epilogue_178)			# LN: 133 | 
+381   	 0096				__epilogue_178:			/* LN: 133 | CYCLE: 0 | RULES: () */ 
+382   	 0096	 02177FFF		i7 -= 1			# LN: 133 | 
+383   	 0097	 81880000		ret			# LN: 133 | 
+384   						
+385   						
+386   						
+387   	 0098				_frame_timer:			/* LN: 64 | CYCLE: 0 | RULES: () */ 
+388   	 0098	 80880000		call (cl_clearNM0_7)			# LN: 64 | 
+389   	 0099	 A7050000		i7 = (0) + (___C_STACK_FG)			# LN: 64 | 
+390   	 009A	 BB540007		xmem[i7] = i7			# LN: 64 | 
+391   	 009B	 020F7FFF		i7 += 1			# LN: 64 | 
+392   	 009C				cline_64_0:			/* LN: 67 | CYCLE: 0 | RULES: () */ 
+393   	 009C	 8008009D		jmp (__epilogue_170)			# LN: 67 | 
+394   	 009D				__epilogue_170:			/* LN: 67 | CYCLE: 0 | RULES: () */ 
+395   	 009D	 02177FFF		i7 -= 1			# LN: 67 | 
+396   	 009E	 81880000		ret			# LN: 67 | 
+397   						(null)
+				 SYMBOL TABLE 
+
+    Name                                                                                    Type                  Value 
+
+X_centralOutput                                                                 			  Unused Relocatable        X_centralOutput:0000H
+X_enable                                                                        			  Unused Relocatable        X_enable:0000H
+X_input_distortion                                                              			  Unused Relocatable        X_input_distortion:0000H
+X_leftInput                                                                     			  Unused Relocatable        X_leftInput:0000H
+X_lfeOutput                                                                     			  Unused Relocatable        X_lfeOutput:0000H
+X_lsOutput                                                                      			  Unused Relocatable        X_lsOutput:0000H
+X_outputMode                                                                    			  Unused Relocatable        X_outputMode:0000H
+X_output_distortion                                                             			  Unused Relocatable        X_output_distortion:0000H
+X_rightInput                                                                    			  Unused Relocatable        X_rightInput:0000H
+X_rsOutput                                                                      			  Unused Relocatable        X_rsOutput:0000H
+X_sampleBuffer                                                                  			  Unused Relocatable        X_sampleBuffer:0000H
+X_type                                                                          			  Unused Relocatable        X_type:0000H
+Y_frame_mcv                                                                     			  Unused Relocatable        Y_frame_mcv:0000H
+Y_frame_mcv_HOST                                                                			  Unused Relocatable        Y_frame_mcv_HOST:0000H
+Y_numGain                                                                       			  Unused Relocatable        Y_numGain:0000H
+_COMMON_INC_PATH_                                                               					 Define                 "C:/CirrusDSP/crystal32/common/inc/"
+_DSP_                                                                           			  Unused Variable		        0 (0H)
+_LOCAL_INC_PATH_                                                                					 Define                 "inc/"
+_LOCAL_SRC_PATH_                                                                					 Define                 "src/"
+_ROUTER_INC_PATH_                                                               					 Define                 "rom_inc/"
+__CASM_VER__                                                                    			  Unused Variable		        0 (701H)
+___C_STACK_BG                                                                   					 External   
+___C_STACK_FG                                                                   					 External   
+___SegStart_X_X_centralOutput                                                   			  Unused Relocatable        X_centralOutput:0000H
+___SegStart_X_X_enable                                                          			  Unused Relocatable        X_enable:0000H
+___SegStart_X_X_input_distortion                                                			  Unused Relocatable        X_input_distortion:0000H
+___SegStart_X_X_leftInput                                                       			  Unused Relocatable        X_leftInput:0000H
+___SegStart_X_X_lfeOutput                                                       			  Unused Relocatable        X_lfeOutput:0000H
+___SegStart_X_X_lsOutput                                                        			  Unused Relocatable        X_lsOutput:0000H
+___SegStart_X_X_outputMode                                                      			  Unused Relocatable        X_outputMode:0000H
+___SegStart_X_X_output_distortion                                               			  Unused Relocatable        X_output_distortion:0000H
+___SegStart_X_X_rightInput                                                      			  Unused Relocatable        X_rightInput:0000H
+___SegStart_X_X_rsOutput                                                        			  Unused Relocatable        X_rsOutput:0000H
+___SegStart_X_X_sampleBuffer                                                    			  Unused Relocatable        X_sampleBuffer:0000H
+___SegStart_X_X_type                                                            			  Unused Relocatable        X_type:0000H
+___SegStart_Y_Y_frame_mcv                                                       			  Unused Relocatable        Y_frame_mcv:0000H
+___SegStart_Y_Y_frame_mcv_HOST                                                  			  Unused Relocatable        Y_frame_mcv_HOST:0000H
+___SegStart_Y_Y_numGain                                                         			  Unused Relocatable        Y_numGain:0000H
+___X_BL_TEMPBUFF                                                                					 External   
+___X_BL_TEMPBUFF0                                                               					 External   
+___X_BL_TEMPBUFF1                                                               					 External   
+___X_BL_TEMPBUFF10                                                              					 External   
+___X_BL_TEMPBUFF11                                                              					 External   
+___X_BL_TEMPBUFF12                                                              					 External   
+___X_BL_TEMPBUFF13                                                              					 External   
+___X_BL_TEMPBUFF14                                                              					 External   
+___X_BL_TEMPBUFF15                                                              					 External   
+___X_BL_TEMPBUFF2                                                               					 External   
+___X_BL_TEMPBUFF3                                                               					 External   
+___X_BL_TEMPBUFF4                                                               					 External   
+___X_BL_TEMPBUFF5                                                               					 External   
+___X_BL_TEMPBUFF6                                                               					 External   
+___X_BL_TEMPBUFF7                                                               					 External   
+___X_BL_TEMPBUFF8                                                               					 External   
+___X_BL_TEMPBUFF9                                                               					 External   
+___X_BX_TEMPBUFF                                                                					 External   
+___X_BX_TEMPBUFF0                                                               					 External   
+___X_BX_TEMPBUFF1                                                               					 External   
+___X_BX_TEMPBUFF10                                                              					 External   
+___X_BX_TEMPBUFF11                                                              					 External   
+___X_BX_TEMPBUFF12                                                              					 External   
+___X_BX_TEMPBUFF13                                                              					 External   
+___X_BX_TEMPBUFF14                                                              					 External   
+___X_BX_TEMPBUFF15                                                              					 External   
+___X_BX_TEMPBUFF2                                                               					 External   
+___X_BX_TEMPBUFF3                                                               					 External   
+___X_BX_TEMPBUFF4                                                               					 External   
+___X_BX_TEMPBUFF5                                                               					 External   
+___X_BX_TEMPBUFF6                                                               					 External   
+___X_BX_TEMPBUFF7                                                               					 External   
+___X_BX_TEMPBUFF8                                                               					 External   
+___X_BX_TEMPBUFF9                                                               					 External   
+___X_BY_IOBUFFER_PTRS                                                           					 External   
+___X_BY_TEMPBUFF                                                                					 External   
+___X_BY_TEMPBUFF0                                                               					 External   
+___X_BY_TEMPBUFF1                                                               					 External   
+___X_BY_TEMPBUFF10                                                              					 External   
+___X_BY_TEMPBUFF11                                                              					 External   
+___X_BY_TEMPBUFF12                                                              					 External   
+___X_BY_TEMPBUFF13                                                              					 External   
+___X_BY_TEMPBUFF14                                                              					 External   
+___X_BY_TEMPBUFF15                                                              					 External   
+___X_BY_TEMPBUFF2                                                               					 External   
+___X_BY_TEMPBUFF3                                                               					 External   
+___X_BY_TEMPBUFF4                                                               					 External   
+___X_BY_TEMPBUFF5                                                               					 External   
+___X_BY_TEMPBUFF6                                                               					 External   
+___X_BY_TEMPBUFF7                                                               					 External   
+___X_BY_TEMPBUFF8                                                               					 External   
+___X_BY_TEMPBUFF9                                                               					 External   
+___X_VX_NEXTFRM_REINIT_REQ                                                      					 External   
+___X_VX_PPM_INPUTMODE                                                           					 External   
+___X_VX_PPM_INPUT_CHANNELS                                                      					 External   
+___X_VX_PPM_OUTPUTMODE                                                          					 External   
+___X_VX_PPM_OUTPUT_CHANNELS                                                     					 External   
+___X_VX_PPM_SAMPLERATE                                                          					 External   
+___X_VX_PPM_VALID_CHANNELS                                                      					 External   
+___X_VX_REINIT                                                                  					 External   
+___X_VX_UNDERFLOW                                                               					 External   
+__epilogue_166                                                                  			         Relocatable         frame_main_GEN_0000:008EH
+__epilogue_168                                                                  			         Relocatable         frame_main_GEN_0000:0068H
+__epilogue_170                                                                  			         Relocatable         frame_main_GEN_0000:009DH
+__epilogue_172                                                                  			         Relocatable         frame_main_GEN_0000:0061H
+__epilogue_174                                                                  			         Relocatable         frame_main_GEN_0000:005AH
+__epilogue_176                                                                  			         Relocatable         frame_main_GEN_0000:0031H
+__epilogue_178                                                                  			         Relocatable         frame_main_GEN_0000:0096H
+__epilogue_180                                                                  			         Relocatable         frame_main_GEN_0000:006FH
+_centralOutput                                                                  			  Public Relocatable       X_centralOutput:0000H
+_enable                                                                         			  Public Relocatable       X_enable:0000H
+_frame_background                                                               			  Public Relocatable       frame_main_GEN_0000:0000H
+_frame_brick                                                                    			  Public Relocatable       frame_main_GEN_0000:0033H
+_frame_frame                                                                    			  Public Relocatable       frame_main_GEN_0000:005CH
+_frame_mcv                                                                      			  Public Relocatable       Y_frame_mcv:0000H
+_frame_mcv_HOST                                                                 			  Public Relocatable       Y_frame_mcv_HOST:0000H
+_frame_mif                                                                      					 External   
+_frame_postKickstart                                                            			  Public Relocatable       frame_main_GEN_0000:0063H
+_frame_postMallocInit                                                           			  Public Relocatable       frame_main_GEN_0000:006AH
+_frame_preKickstart                                                             			  Public Relocatable       frame_main_GEN_0000:0071H
+_frame_preMallocInit                                                            			  Public Relocatable       frame_main_GEN_0000:0091H
+_frame_timer                                                                    			  Public Relocatable       frame_main_GEN_0000:0098H
+_input_distortion                                                               			  Public Relocatable       X_input_distortion:0000H
+_leftInput                                                                      			  Public Relocatable       X_leftInput:0000H
+_lfeOutput                                                                      			  Public Relocatable       X_lfeOutput:0000H
+_lsOutput                                                                       			  Public Relocatable       X_lsOutput:0000H
+_numGain                                                                        			  Public Relocatable       Y_numGain:0000H
+_outputMode                                                                     			  Public Relocatable       X_outputMode:0000H
+_output_distortion                                                              			  Public Relocatable       X_output_distortion:0000H
+_processing                                                                     					 External   
+_rightInput                                                                     			  Public Relocatable       X_rightInput:0000H
+_rsOutput                                                                       			  Public Relocatable       X_rsOutput:0000H
+_sampleBuffer                                                                   			  Public Relocatable       X_sampleBuffer:0000H
+_type                                                                           			  Public Relocatable       X_type:0000H
+cl_clearNM0_7                                                                   					 External   
+cline_101_0                                                                     			  Unused Relocatable        frame_main_GEN_0000:0009H
+cline_102_0                                                                     			  Unused Relocatable        frame_main_GEN_0000:000BH
+cline_104_0                                                                     			  Unused Relocatable        frame_main_GEN_0000:000EH
+cline_106_0                                                                     			  Unused Relocatable        frame_main_GEN_0000:0011H
+cline_107_0                                                                     			  Unused Relocatable        frame_main_GEN_0000:0015H
+cline_109_0                                                                     			  Unused Relocatable        frame_main_GEN_0000:0018H
+cline_111_0                                                                     			  Unused Relocatable        frame_main_GEN_0000:001AH
+cline_114_0                                                                     			  Unused Relocatable        frame_main_GEN_0000:001DH
+cline_116_0                                                                     			  Unused Relocatable        frame_main_GEN_0000:0020H
+cline_117_0                                                                     			  Unused Relocatable        frame_main_GEN_0000:0024H
+cline_119_0                                                                     			  Unused Relocatable        frame_main_GEN_0000:0027H
+cline_120_0                                                                     			  Unused Relocatable        frame_main_GEN_0000:002BH
+cline_121_0                                                                     			  Unused Relocatable        frame_main_GEN_0000:002EH
+cline_124_0                                                                     			  Unused Relocatable        frame_main_GEN_0000:0030H
+cline_130_0                                                                     			  Unused Relocatable        frame_main_GEN_0000:0095H
+cline_135_0                                                                     			  Unused Relocatable        frame_main_GEN_0000:006EH
+cline_43_0                                                                      			  Unused Relocatable        frame_main_GEN_0000:0078H
+cline_48_0                                                                      			  Unused Relocatable        frame_main_GEN_0000:007BH
+cline_50_0                                                                      			  Unused Relocatable        frame_main_GEN_0000:0080H
+cline_51_0                                                                      			  Unused Relocatable        frame_main_GEN_0000:0084H
+cline_53_0                                                                      			  Unused Relocatable        frame_main_GEN_0000:0089H
+cline_55_0                                                                      			  Unused Relocatable        frame_main_GEN_0000:008DH
+cline_59_0                                                                      			  Unused Relocatable        frame_main_GEN_0000:0067H
+cline_64_0                                                                      			  Unused Relocatable        frame_main_GEN_0000:009CH
+cline_69_0                                                                      			  Unused Relocatable        frame_main_GEN_0000:0060H
+cline_74_0                                                                      			  Unused Relocatable        frame_main_GEN_0000:0037H
+cline_77_0                                                                      			  Unused Relocatable        frame_main_GEN_0000:0039H
+cline_78_0                                                                      			  Unused Relocatable        frame_main_GEN_0000:003BH
+cline_79_0                                                                      			  Unused Relocatable        frame_main_GEN_0000:003DH
+cline_80_0                                                                      			  Unused Relocatable        frame_main_GEN_0000:003FH
+cline_81_0                                                                      			  Unused Relocatable        frame_main_GEN_0000:0041H
+cline_82_0                                                                      			  Unused Relocatable        frame_main_GEN_0000:0043H
+cline_84_0                                                                      			  Unused Relocatable        frame_main_GEN_0000:0046H
+cline_86_0                                                                      			  Unused Relocatable        frame_main_GEN_0000:004BH
+cline_87_0                                                                      			  Unused Relocatable        frame_main_GEN_0000:004FH
+cline_89_0                                                                      			  Unused Relocatable        frame_main_GEN_0000:0054H
+cline_91_0                                                                      			  Unused Relocatable        frame_main_GEN_0000:0058H
+cline_95_0                                                                      			  Unused Relocatable        frame_main_GEN_0000:0059H
+cline_98_0                                                                      			  Unused Relocatable        frame_main_GEN_0000:0004H
+else_0                                                                          			         Relocatable         frame_main_GEN_0000:0080H
+else_1                                                                          			         Relocatable         frame_main_GEN_0000:0089H
+else_2                                                                          			         Relocatable         frame_main_GEN_0000:004BH
+else_3                                                                          			         Relocatable         frame_main_GEN_0000:0054H
+else_4                                                                          			         Relocatable         frame_main_GEN_0000:0011H
+else_5                                                                          			         Relocatable         frame_main_GEN_0000:0018H
+else_6                                                                          			         Relocatable         frame_main_GEN_0000:0020H
+else_7                                                                          			         Relocatable         frame_main_GEN_0000:0027H
+else_8                                                                          			         Relocatable         frame_main_GEN_0000:002EH
+endif_0                                                                         			         Relocatable         frame_main_GEN_0000:008DH
+endif_1                                                                         			         Relocatable         frame_main_GEN_0000:008DH
+endif_2                                                                         			         Relocatable         frame_main_GEN_0000:0058H
+endif_3                                                                         			         Relocatable         frame_main_GEN_0000:0058H
+endif_4                                                                         			         Relocatable         frame_main_GEN_0000:001AH
+endif_5                                                                         			         Relocatable         frame_main_GEN_0000:001AH
+endif_6                                                                         			         Relocatable         frame_main_GEN_0000:0030H
+endif_7                                                                         			         Relocatable         frame_main_GEN_0000:0030H
+endif_8                                                                         			         Relocatable         frame_main_GEN_0000:0030H
+label_begin_11_0                                                                			  Unused Relocatable        frame_main_GEN_0000:0007H
+label_end_11_0                                                                  			         Relocatable         frame_main_GEN_0000:0008H
+
+	       SEGMENTS:
+
+Size			  Name										 Class
+0000H	 __INIT                                  			 CODE                                    
+0001H	 X_centralOutput                         			 X_OVLY                                  
+0001H	 X_enable                                			 X_OVLY                                  
+0004H	 Y_frame_mcv                             			 Y_OVLY                                  
+0004H	 Y_frame_mcv_HOST                        			 Y_OVLY                                  
+0001H	 X_input_distortion                      			 X_OVLY                                  
+0001H	 X_leftInput                             			 X_OVLY                                  
+0001H	 X_lfeOutput                             			 X_OVLY                                  
+0001H	 X_lsOutput                              			 X_OVLY                                  
+0001H	 Y_numGain                               			 Y_OVLY                                  
+0001H	 X_outputMode                            			 X_OVLY                                  
+0001H	 X_output_distortion                     			 X_OVLY                                  
+0001H	 X_rightInput                            			 X_OVLY                                  
+0001H	 X_rsOutput                              			 X_OVLY                                  
+0080H	 X_sampleBuffer                          			 X_OVLY                                  
+0001H	 X_type                                  			 X_OVLY                                  
+009FH	 frame_main_GEN_0000                     			 CODE_OVLY                               

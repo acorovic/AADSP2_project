@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<settings built="true" last_build_time="1520598556841">
+	<dependencies>
+		<source_file last_build_time="1520598252669" path="gen/src/Overlay_Simulator_odt.a">
+			<dependency>../../../../CirrusDSP/crystal32/common/inc/ovly_version.h</dependency>
+		</source_file>
+	</dependencies>
+</settings>

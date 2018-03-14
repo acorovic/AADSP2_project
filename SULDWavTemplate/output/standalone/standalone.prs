@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<settings built="true" last_build_time="1520604839627">
+	<dependencies>
+		<source_file last_build_time="1520591712696" path="src/distortion.a"/>
+		<source_file last_build_time="1520604837927" path="src/main.c">
+			<dependency>../../../../../CirrusDSP/include/stdio.h</dependency>
+			<dependency>../../../../../CirrusDSP/include/dsplib/wavefile.h</dependency>
+			<dependency>../../../../../CirrusDSP/include/stdfix.h</dependency>
+			<dependency>../../../../../CirrusDSP/include/scaling_coeff.h</dependency>
+			<dependency>../../../../../CirrusDSP/include/string.h</dependency>
+			<dependency>../inc/common.h</dependency>
+			<dependency>../inc/stdfix_emu.h</dependency>
+			<dependency>../inc/processing.h</dependency>
+			<dependency>../../../../../CirrusDSP/include/circbuff.h</dependency>
+			<dependency>../inc/distortion.h</dependency>
+		</source_file>
+		<source_file last_build_time="0" path="src/processing.c">
+			<dependency>../inc/distortion.h</dependency>
+			<dependency>../inc/common.h</dependency>
+			<dependency>../inc/stdfix_emu.h</dependency>
+			<dependency>../../../../../CirrusDSP/include/stdfix.h</dependency>
+			<dependency>../../../../../CirrusDSP/include/scaling_coeff.h</dependency>
+			<dependency>../inc/processing.h</dependency>
+			<dependency>../../../../../CirrusDSP/include/circbuff.h</dependency>
+		</source_file>
+		<source_file last_build_time="1520591711557" path="src/processing.a"/>
+	</dependencies>
+</settings>

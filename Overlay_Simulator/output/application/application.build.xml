@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project basedir="C:/testing/Overlay_Simulator" name="Overlay_Simulator">
+	<target description="Linking files..." name="clink">
+		<exec executable="C:/CirrusDSP/bin/clink" failonerror="true">
+			<arg value="-oC:/testing/Overlay_Simulator/output/application/Overlay_Simulator__application_1_0_0.img"/>
+			<arg value="-fC:/CirrusDSP/crystal32/memory_maps/v01.mem.xml"/>
+			<arg value="C:/testing/Overlay_Simulator/output/application/gen/src/Overlay_Simulator_odt.O"/>
+			<arg value="C:/testing/framework/output/frame_1_0_0.olib"/>
+			<arg value="--output_type=RAM"/>
+			<arg value="--overlay_type=application"/>
+			<arg value="-lC:/CirrusDSP/lib/"/>
+			<arg value="-lC:/CirrusDSP/lib/dsplib"/>
+			<arg value="-lC:/CirrusDSP/lib/dsplib/crystal32/"/>
+			<arg value="-lC:/CirrusDSP/crystal32/common/lib/"/>
+		</exec>
+	</target>
+	<target depends="clink" description="Creating .uld file..." name="lnkuld">
+		<exec executable="C:/CirrusDSP/bin/lnkuld" failonerror="true">
+			<arg value="-ja"/>
+			<arg value="C:/testing/Overlay_Simulator/output/application/Overlay_Simulator__application_1_0_0.img"/>
+			<arg value="C:/testing/Overlay_Simulator/output/application/Overlay_Simulator__application_1_0_0.uld"/>
+		</exec>
+	</target>
+</project>

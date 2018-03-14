@@ -1,0 +1,552 @@
+1     	 0000					.extern ___C_STACK_BG
+2     	 0000					.extern ___C_STACK_FG
+3     	 0000					.extern ___X_BL_TEMPBUFF
+4     	 0000					.extern ___X_BL_TEMPBUFF0
+5     	 0000					.extern ___X_BL_TEMPBUFF1
+6     	 0000					.extern ___X_BL_TEMPBUFF10
+7     	 0000					.extern ___X_BL_TEMPBUFF11
+8     	 0000					.extern ___X_BL_TEMPBUFF12
+9     	 0000					.extern ___X_BL_TEMPBUFF13
+10    	 0000					.extern ___X_BL_TEMPBUFF14
+11    	 0000					.extern ___X_BL_TEMPBUFF15
+12    	 0000					.extern ___X_BL_TEMPBUFF2
+13    	 0000					.extern ___X_BL_TEMPBUFF3
+14    	 0000					.extern ___X_BL_TEMPBUFF4
+15    	 0000					.extern ___X_BL_TEMPBUFF5
+16    	 0000					.extern ___X_BL_TEMPBUFF6
+17    	 0000					.extern ___X_BL_TEMPBUFF7
+18    	 0000					.extern ___X_BL_TEMPBUFF8
+19    	 0000					.extern ___X_BL_TEMPBUFF9
+20    	 0000					.extern ___X_BX_TEMPBUFF
+21    	 0000					.extern ___X_BX_TEMPBUFF0
+22    	 0000					.extern ___X_BX_TEMPBUFF1
+23    	 0000					.extern ___X_BX_TEMPBUFF10
+24    	 0000					.extern ___X_BX_TEMPBUFF11
+25    	 0000					.extern ___X_BX_TEMPBUFF12
+26    	 0000					.extern ___X_BX_TEMPBUFF13
+27    	 0000					.extern ___X_BX_TEMPBUFF14
+28    	 0000					.extern ___X_BX_TEMPBUFF15
+29    	 0000					.extern ___X_BX_TEMPBUFF2
+30    	 0000					.extern ___X_BX_TEMPBUFF3
+31    	 0000					.extern ___X_BX_TEMPBUFF4
+32    	 0000					.extern ___X_BX_TEMPBUFF5
+33    	 0000					.extern ___X_BX_TEMPBUFF6
+34    	 0000					.extern ___X_BX_TEMPBUFF7
+35    	 0000					.extern ___X_BX_TEMPBUFF8
+36    	 0000					.extern ___X_BX_TEMPBUFF9
+37    	 0000					.extern ___X_BY_IOBUFFER_PTRS
+38    	 0000					.extern ___X_BY_TEMPBUFF
+39    	 0000					.extern ___X_BY_TEMPBUFF0
+40    	 0000					.extern ___X_BY_TEMPBUFF1
+41    	 0000					.extern ___X_BY_TEMPBUFF10
+42    	 0000					.extern ___X_BY_TEMPBUFF11
+43    	 0000					.extern ___X_BY_TEMPBUFF12
+44    	 0000					.extern ___X_BY_TEMPBUFF13
+45    	 0000					.extern ___X_BY_TEMPBUFF14
+46    	 0000					.extern ___X_BY_TEMPBUFF15
+47    	 0000					.extern ___X_BY_TEMPBUFF2
+48    	 0000					.extern ___X_BY_TEMPBUFF3
+49    	 0000					.extern ___X_BY_TEMPBUFF4
+50    	 0000					.extern ___X_BY_TEMPBUFF5
+51    	 0000					.extern ___X_BY_TEMPBUFF6
+52    	 0000					.extern ___X_BY_TEMPBUFF7
+53    	 0000					.extern ___X_BY_TEMPBUFF8
+54    	 0000					.extern ___X_BY_TEMPBUFF9
+55    	 0000					.extern ___X_VX_NEXTFRM_REINIT_REQ
+56    	 0000					.extern ___X_VX_PPM_INPUTMODE
+57    	 0000					.extern ___X_VX_PPM_INPUT_CHANNELS
+58    	 0000					.extern ___X_VX_PPM_OUTPUTMODE
+59    	 0000					.extern ___X_VX_PPM_OUTPUT_CHANNELS
+60    	 0000					.extern ___X_VX_PPM_SAMPLERATE
+61    	 0000					.extern ___X_VX_PPM_VALID_CHANNELS
+62    	 0000					.extern ___X_VX_REINIT
+63    	 0000					.extern ___X_VX_UNDERFLOW
+64    	 0000					.extern _centralOutput
+65    	 0000					.extern _frame_mcv
+66    	 0000					.extern _frame_mcv_HOST
+67    	 0000					.extern _frame_mif
+68    	 0000					.extern _input_distortion
+69    	 0000					.extern _leftInput
+70    	 0000					.extern _lfeOutput
+71    	 0000					.extern _lsOutput
+72    	 0000					.extern _numGain
+73    	 0000					.extern _outputMode
+74    	 0000					.extern _output_distortion
+75    	 0000					.extern _rightInput
+76    	 0000					.extern _rsOutput
+77    	 0000					.extern _distortion
+78    	 0000					.public _processing
+79    							.code_ovly
+79     >> start of macro: .code_ovly
+1+    									seg_single , "CODE_OVLY", CODE
+1+     >> start of macro: seg_single
+1+    						  .if ( "" != "" ) & defined( ___SegStart_CODE_ )
+2+    						    segment
+3+    						  .else
+4+    						    segment "CODE_OVLY"
+5+    							.if "" != ""
+6+    						___SegStart_CODE_
+7+    							.endif
+8+    						  .endif
+9+    							#RememberSegmentType
+10+    >> end of macro: seg_single
+2+     >> end of macro: .code_ovly
+80    						
+81    						
+82    						
+83    	 0000				_processing:			/* LN: 19 | CYCLE: 0 | RULES: () */ 
+84    	 0000	 BB540007		xmem[i7] = i7			# LN: 19 | 
+85    	 0001	 020F7FFF		i7 += 1			# LN: 19 | 
+86    	 0002	 87750001		i7 = i7 + (0x1)			# LN: 19 | 
+87    	 0003				cline_19_0:			/* LN: 23 | CYCLE: 0 | RULES: () */ 
+88    	 0003	 B0840000		i0 = ymem[___X_BY_IOBUFFER_PTRS + 0]			# LN: 23 | 
+89    	 0004	 B0440000		xmem[_leftInput + 0] = i0			# LN: 23 | 
+90    	 0005				cline_23_0:			/* LN: 24 | CYCLE: 0 | RULES: () */ 
+91    	 0005	 B0840000		i0 = ymem[___X_BY_IOBUFFER_PTRS + 1]			# LN: 24 | 
+92    	 0006	 B0440000		xmem[_rightInput + 0] = i0			# LN: 24 | 
+93    	 0007				cline_24_0:			/* LN: 26 | CYCLE: 0 | RULES: () */ 
+94    	 0007				switch_0:			/* LN: 26 | CYCLE: 0 | RULES: () */ 
+95    	 0007	 88040000		a0 = xmem[_outputMode + 0]			# LN: 26 | 
+96    	 0008	 00004E80		a0 & a0			# LN: 26 | 
+97    	 0009	 84080013		if (a == 0) jmp (case_0)			# LN: 26 | 
+98    	 000A	 88040000		a0 = xmem[_outputMode + 0]			# LN: 26 | 
+99    	 000B	 894A0001		uhalfword(a1) = (0x1)			# LN: 26 | 
+100   	 000C	 00004F08		a0 - a1			# LN: 26 | 
+101   	 000D	 84080034		if (a == 0) jmp (case_1)			# LN: 26 | 
+102   	 000E	 88040000		a0 = xmem[_outputMode + 0]			# LN: 26 | 
+103   	 000F	 894A0002		uhalfword(a1) = (0x2)			# LN: 26 | 
+104   	 0010	 00004F08		a0 - a1			# LN: 26 | 
+105   	 0011	 84080067		if (a == 0) jmp (case_2)			# LN: 26 | 
+106   	 0012	 800800C8		jmp (switch_end_0)			# LN: 26 | 
+107   	 0013				cline_26_0:			/* LN: 29 | CYCLE: 0 | RULES: () */ 
+108   	 0013				case_0:			/* LN: 28 | CYCLE: 0 | RULES: () */ 
+109   	 0013	 90750001		i0 = i7 - (0x1)			# LN: 29 | 
+110   	 0014	 00004DC0		a0 = 0			# LN: 29 | 
+111   	 0015	 98540000		xmem[i0] = a0h			# LN: 29 | 
+112   	 0016	 81000032		do (0x10), label_end_92			# LN: 29 | 
+113   	 0017				cline_29_0:			/* LN: 31 | CYCLE: 0 | RULES: () */ 
+114   	 0017				label_begin_92:			/* LN: 29 | CYCLE: 0 | RULES: () */ 
+115   	 0017	 B0040000		i0 = xmem[_leftInput + 0]			# LN: 31 | 
+116   	 0018	 80840000		x0 = ymem[_numGain + 0]			# LN: 31 | 
+117   	 0019	 81940000		x1 = ymem[i0]			# LN: 31 | 
+118   	 001A	 A0050000		i0 = (0) + (_leftInput)			# LN: 31 | 
+119   	 001B	 B0140000		i0 = xmem[i0]			# LN: 31 | 
+120   	 001C	 00002020		a0 = x1 * x0			# LN: 31 | 
+121   	 001D	 88D40000		ymem[i0] = a0			# LN: 31 | 
+122   	 001E				cline_31_0:			/* LN: 32 | CYCLE: 0 | RULES: () */ 
+123   	 001E	 B0040000		i0 = xmem[_rightInput + 0]			# LN: 32 | 
+124   	 001F	 80840000		x0 = ymem[_numGain + 0]			# LN: 32 | 
+125   	 0020	 81940000		x1 = ymem[i0]			# LN: 32 | 
+126   	 0021	 A0050000		i0 = (0) + (_rightInput)			# LN: 32 | 
+127   	 0022	 B0140000		i0 = xmem[i0]			# LN: 32 | 
+128   	 0023	 00002020		a0 = x1 * x0			# LN: 32 | 
+129   	 0024	 88D40000		ymem[i0] = a0			# LN: 32 | 
+130   	 0025				cline_32_0:			/* LN: 33 | CYCLE: 0 | RULES: () */ 
+131   	 0025	 B0040000		i0 = xmem[_leftInput + 0]			# LN: 33 | 
+132   	 0026	 00007FFF		nop #empty cycle
+133   	 0027	 02087FFF		i0 += 1			# LN: 33 | 
+134   	 0028	 B0440000		xmem[_leftInput + 0] = i0			# LN: 33 | 
+135   	 0029				cline_33_0:			/* LN: 34 | CYCLE: 0 | RULES: () */ 
+136   	 0029	 B0040000		i0 = xmem[_rightInput + 0]			# LN: 34 | 
+137   	 002A	 00007FFF		nop #empty cycle
+138   	 002B	 02087FFF		i0 += 1			# LN: 34 | 
+139   	 002C	 B0440000		xmem[_rightInput + 0] = i0			# LN: 34 | 
+140   	 002D				cline_34_0:			/* LN: 29 | CYCLE: 0 | RULES: () */ 
+141   	 002D				init_latch_label_0:			/* LN: 35 | CYCLE: 0 | RULES: () */ 
+142   	 002D	 90750001		i0 = i7 - (0x1)			# LN: 29 | 
+143   	 002E	 88140000		a0 = xmem[i0]			# LN: 29 | 
+144   	 002F	 894A0001		uhalfword(a1) = (0x1)			# LN: 29 | 
+145   	 0030	 00004408		a0 = a0 + a1			# LN: 29 | 
+146   	 0031	 90750001		i0 = i7 - (0x1)			# LN: 29 | 
+147   	 0032				label_end_92:			# LN: 29 | CYCLE: 5 | RULES: ()
+148   	 0032	 98540000		xmem[i0] = a0h			# LN: 29 | 
+149   	 0033				cline_29_1:			/* LN: 36 | CYCLE: 0 | RULES: () */ 
+150   	 0033				for_end_0:			/* LN: 29 | CYCLE: 0 | RULES: () */ 
+151   	 0033	 800800C8		jmp (switch_end_0)			# LN: 36 | 
+152   	 0034				cline_36_0:			/* LN: 39 | CYCLE: 0 | RULES: () */ 
+153   	 0034				case_1:			/* LN: 37 | CYCLE: 0 | RULES: () */ 
+154   	 0034	 B0840000		i0 = ymem[___X_BY_IOBUFFER_PTRS + 2]			# LN: 39 | 
+155   	 0035	 B0440000		xmem[_lsOutput + 0] = i0			# LN: 39 | 
+156   	 0036				cline_39_0:			/* LN: 40 | CYCLE: 0 | RULES: () */ 
+157   	 0036	 B0840000		i0 = ymem[___X_BY_IOBUFFER_PTRS + 3]			# LN: 40 | 
+158   	 0037	 B0440000		xmem[_rsOutput + 0] = i0			# LN: 40 | 
+159   	 0038				cline_40_0:			/* LN: 42 | CYCLE: 0 | RULES: () */ 
+160   	 0038	 90750001		i0 = i7 - (0x1)			# LN: 42 | 
+161   	 0039	 00004DC0		a0 = 0			# LN: 42 | 
+162   	 003A	 98540000		xmem[i0] = a0h			# LN: 42 | 
+163   	 003B	 81000057		do (0x10), label_end_93			# LN: 42 | 
+164   	 003C				cline_42_0:			/* LN: 44 | CYCLE: 0 | RULES: () */ 
+165   	 003C				label_begin_93:			/* LN: 42 | CYCLE: 0 | RULES: () */ 
+166   	 003C	 B0040000		i0 = xmem[_leftInput + 0]			# LN: 44 | 
+167   	 003D	 80840000		x0 = ymem[_numGain + 0]			# LN: 44 | 
+168   	 003E	 81940000		x1 = ymem[i0]			# LN: 44 | 
+169   	 003F	 A0050000		i0 = (0) + (_leftInput)			# LN: 44 | 
+170   	 0040	 B0140000		i0 = xmem[i0]			# LN: 44 | 
+171   	 0041	 00002020		a0 = x1 * x0			# LN: 44 | 
+172   	 0042	 88D40000		ymem[i0] = a0			# LN: 44 | 
+173   	 0043				cline_44_0:			/* LN: 45 | CYCLE: 0 | RULES: () */ 
+174   	 0043	 B0040000		i0 = xmem[_rightInput + 0]			# LN: 45 | 
+175   	 0044	 80840000		x0 = ymem[_numGain + 0]			# LN: 45 | 
+176   	 0045	 81940000		x1 = ymem[i0]			# LN: 45 | 
+177   	 0046	 A0050000		i0 = (0) + (_rightInput)			# LN: 45 | 
+178   	 0047	 B0140000		i0 = xmem[i0]			# LN: 45 | 
+179   	 0048	 00002020		a0 = x1 * x0			# LN: 45 | 
+180   	 0049	 88D40000		ymem[i0] = a0			# LN: 45 | 
+181   	 004A				cline_45_0:			/* LN: 46 | CYCLE: 0 | RULES: () */ 
+182   	 004A	 B0040000		i0 = xmem[_leftInput + 0]			# LN: 46 | 
+183   	 004B	 00007FFF		nop #empty cycle
+184   	 004C	 02087FFF		i0 += 1			# LN: 46 | 
+185   	 004D	 B0440000		xmem[_leftInput + 0] = i0			# LN: 46 | 
+186   	 004E				cline_46_0:			/* LN: 47 | CYCLE: 0 | RULES: () */ 
+187   	 004E	 B0040000		i0 = xmem[_rightInput + 0]			# LN: 47 | 
+188   	 004F	 00007FFF		nop #empty cycle
+189   	 0050	 02087FFF		i0 += 1			# LN: 47 | 
+190   	 0051	 B0440000		xmem[_rightInput + 0] = i0			# LN: 47 | 
+191   	 0052				cline_47_0:			/* LN: 42 | CYCLE: 0 | RULES: () */ 
+192   	 0052				init_latch_label_1:			/* LN: 48 | CYCLE: 0 | RULES: () */ 
+193   	 0052	 90750001		i0 = i7 - (0x1)			# LN: 42 | 
+194   	 0053	 88140000		a0 = xmem[i0]			# LN: 42 | 
+195   	 0054	 894A0001		uhalfword(a1) = (0x1)			# LN: 42 | 
+196   	 0055	 00004408		a0 = a0 + a1			# LN: 42 | 
+197   	 0056	 90750001		i0 = i7 - (0x1)			# LN: 42 | 
+198   	 0057				label_end_93:			# LN: 42 | CYCLE: 5 | RULES: ()
+199   	 0057	 98540000		xmem[i0] = a0h			# LN: 42 | 
+200   	 0058				cline_42_1:			/* LN: 50 | CYCLE: 0 | RULES: () */ 
+201   	 0058				for_end_1:			/* LN: 42 | CYCLE: 0 | RULES: () */ 
+202   	 0058	 B0840000		i0 = ymem[___X_BY_IOBUFFER_PTRS + 0]			# LN: 50 | 
+203   	 0059	 B0440000		xmem[_leftInput + 0] = i0			# LN: 50 | 
+204   	 005A				cline_50_0:			/* LN: 51 | CYCLE: 0 | RULES: () */ 
+205   	 005A	 B0840000		i0 = ymem[___X_BY_IOBUFFER_PTRS + 1]			# LN: 51 | 
+206   	 005B	 B0440000		xmem[_rightInput + 0] = i0			# LN: 51 | 
+207   	 005C				cline_51_0:			/* LN: 53 | CYCLE: 0 | RULES: () */ 
+208   	 005C	 88040000		a0 = xmem[_leftInput + 0]			# LN: 53 | 
+209   	 005D	 88440000		xmem[_input_distortion + 0] = a0			# LN: 53 | 
+210   	 005E				cline_53_0:			/* LN: 54 | CYCLE: 0 | RULES: () */ 
+211   	 005E	 88040000		a0 = xmem[_lsOutput + 0]			# LN: 54 | 
+212   	 005F	 88440000		xmem[_output_distortion + 0] = a0			# LN: 54 | 
+213   	 0060				cline_54_0:			/* LN: 55 | CYCLE: 0 | RULES: () */ 
+214   	 0060	 80880000		call (_distortion)			# LN: 55 | 
+215   	 0061				cline_55_0:			/* LN: 57 | CYCLE: 0 | RULES: () */ 
+216   	 0061	 88040000		a0 = xmem[_rightInput + 0]			# LN: 57 | 
+217   	 0062	 88440000		xmem[_input_distortion + 0] = a0			# LN: 57 | 
+218   	 0063				cline_57_0:			/* LN: 58 | CYCLE: 0 | RULES: () */ 
+219   	 0063	 88040000		a0 = xmem[_rsOutput + 0]			# LN: 58 | 
+220   	 0064	 88440000		xmem[_output_distortion + 0] = a0			# LN: 58 | 
+221   	 0065				cline_58_0:			/* LN: 59 | CYCLE: 0 | RULES: () */ 
+222   	 0065	 80880000		call (_distortion)			# LN: 59 | 
+223   	 0066				cline_59_0:			/* LN: 61 | CYCLE: 0 | RULES: () */ 
+224   	 0066	 800800C8		jmp (switch_end_0)			# LN: 61 | 
+225   	 0067				cline_61_0:			/* LN: 64 | CYCLE: 0 | RULES: () */ 
+226   	 0067				case_2:			/* LN: 62 | CYCLE: 0 | RULES: () */ 
+227   	 0067	 B0840000		i0 = ymem[___X_BY_IOBUFFER_PTRS + 2]			# LN: 64 | 
+228   	 0068	 B0440000		xmem[_lsOutput + 0] = i0			# LN: 64 | 
+229   	 0069				cline_64_0:			/* LN: 65 | CYCLE: 0 | RULES: () */ 
+230   	 0069	 B0840000		i0 = ymem[___X_BY_IOBUFFER_PTRS + 3]			# LN: 65 | 
+231   	 006A	 B0440000		xmem[_rsOutput + 0] = i0			# LN: 65 | 
+232   	 006B				cline_65_0:			/* LN: 66 | CYCLE: 0 | RULES: () */ 
+233   	 006B	 B0840000		i0 = ymem[___X_BY_IOBUFFER_PTRS + 4]			# LN: 66 | 
+234   	 006C	 B0440000		xmem[_centralOutput + 0] = i0			# LN: 66 | 
+235   	 006D				cline_66_0:			/* LN: 67 | CYCLE: 0 | RULES: () */ 
+236   	 006D	 B0840000		i0 = ymem[___X_BY_IOBUFFER_PTRS + 5]			# LN: 67 | 
+237   	 006E	 B0440000		xmem[_lfeOutput + 0] = i0			# LN: 67 | 
+238   	 006F				cline_67_0:			/* LN: 69 | CYCLE: 0 | RULES: () */ 
+239   	 006F	 90750001		i0 = i7 - (0x1)			# LN: 69 | 
+240   	 0070	 00004DC0		a0 = 0			# LN: 69 | 
+241   	 0071	 98540000		xmem[i0] = a0h			# LN: 69 | 
+242   	 0072	 8100009A		do (0x10), label_end_94			# LN: 69 | 
+243   	 0073				cline_69_0:			/* LN: 71 | CYCLE: 0 | RULES: () */ 
+244   	 0073				label_begin_94:			/* LN: 69 | CYCLE: 0 | RULES: () */ 
+245   	 0073	 B0040000		i0 = xmem[_leftInput + 0]			# LN: 71 | 
+246   	 0074	 80840000		x0 = ymem[_numGain + 0]			# LN: 71 | 
+247   	 0075	 81940000		x1 = ymem[i0]			# LN: 71 | 
+248   	 0076	 A0050000		i0 = (0) + (_leftInput)			# LN: 71 | 
+249   	 0077	 B0140000		i0 = xmem[i0]			# LN: 71 | 
+250   	 0078	 00002020		a0 = x1 * x0			# LN: 71 | 
+251   	 0079	 88D40000		ymem[i0] = a0			# LN: 71 | 
+252   	 007A				cline_71_0:			/* LN: 72 | CYCLE: 0 | RULES: () */ 
+253   	 007A	 B0040000		i0 = xmem[_rightInput + 0]			# LN: 72 | 
+254   	 007B	 80840000		x0 = ymem[_numGain + 0]			# LN: 72 | 
+255   	 007C	 81940000		x1 = ymem[i0]			# LN: 72 | 
+256   	 007D	 A0050000		i0 = (0) + (_rightInput)			# LN: 72 | 
+257   	 007E	 B0140000		i0 = xmem[i0]			# LN: 72 | 
+258   	 007F	 00002020		a0 = x1 * x0			# LN: 72 | 
+259   	 0080	 88D40000		ymem[i0] = a0			# LN: 72 | 
+260   	 0081				cline_72_0:			/* LN: 73 | CYCLE: 0 | RULES: () */ 
+261   	 0081	 B0040000		i0 = xmem[_rightInput + 0]			# LN: 73 | 
+262   	 0082	 B1040000		i1 = xmem[_leftInput + 0]			# LN: 73 | 
+263   	 0083	 88940000		a0 = ymem[i0]			# LN: 73 | 
+264   	 0084	 89940001		a1 = ymem[i1]			# LN: 73 | 
+265   	 0085	 A0050000		i0 = (0) + (_centralOutput)			# LN: 73 | 
+266   	 0086	 B0140000		i0 = xmem[i0]			# LN: 73 | 
+267   	 0087	 00004408		a0 = a0 + a1			# LN: 73 | 
+268   	 0088	 98D40000		ymem[i0] = a0h			# LN: 73 | 
+269   	 0089				cline_73_0:			/* LN: 74 | CYCLE: 0 | RULES: () */ 
+270   	 0089	 B0040000		i0 = xmem[_centralOutput + 0]			# LN: 74 | 
+271   	 008A	 00007FFF		nop #empty cycle
+272   	 008B	 02087FFF		i0 += 1			# LN: 74 | 
+273   	 008C	 B0440000		xmem[_centralOutput + 0] = i0			# LN: 74 | 
+274   	 008D				cline_74_0:			/* LN: 75 | CYCLE: 0 | RULES: () */ 
+275   	 008D	 B0040000		i0 = xmem[_leftInput + 0]			# LN: 75 | 
+276   	 008E	 00007FFF		nop #empty cycle
+277   	 008F	 02087FFF		i0 += 1			# LN: 75 | 
+278   	 0090	 B0440000		xmem[_leftInput + 0] = i0			# LN: 75 | 
+279   	 0091				cline_75_0:			/* LN: 76 | CYCLE: 0 | RULES: () */ 
+280   	 0091	 B0040000		i0 = xmem[_rightInput + 0]			# LN: 76 | 
+281   	 0092	 00007FFF		nop #empty cycle
+282   	 0093	 02087FFF		i0 += 1			# LN: 76 | 
+283   	 0094	 B0440000		xmem[_rightInput + 0] = i0			# LN: 76 | 
+284   	 0095				cline_76_0:			/* LN: 69 | CYCLE: 0 | RULES: () */ 
+285   	 0095				init_latch_label_2:			/* LN: 78 | CYCLE: 0 | RULES: () */ 
+286   	 0095	 90750001		i0 = i7 - (0x1)			# LN: 69 | 
+287   	 0096	 88140000		a0 = xmem[i0]			# LN: 69 | 
+288   	 0097	 894A0001		uhalfword(a1) = (0x1)			# LN: 69 | 
+289   	 0098	 00004408		a0 = a0 + a1			# LN: 69 | 
+290   	 0099	 90750001		i0 = i7 - (0x1)			# LN: 69 | 
+291   	 009A				label_end_94:			# LN: 69 | CYCLE: 5 | RULES: ()
+292   	 009A	 98540000		xmem[i0] = a0h			# LN: 69 | 
+293   	 009B				cline_69_1:			/* LN: 80 | CYCLE: 0 | RULES: () */ 
+294   	 009B				for_end_2:			/* LN: 69 | CYCLE: 0 | RULES: () */ 
+295   	 009B	 B0840000		i0 = ymem[___X_BY_IOBUFFER_PTRS + 0]			# LN: 80 | 
+296   	 009C	 B0440000		xmem[_leftInput + 0] = i0			# LN: 80 | 
+297   	 009D				cline_80_0:			/* LN: 81 | CYCLE: 0 | RULES: () */ 
+298   	 009D	 B0840000		i0 = ymem[___X_BY_IOBUFFER_PTRS + 1]			# LN: 81 | 
+299   	 009E	 B0440000		xmem[_rightInput + 0] = i0			# LN: 81 | 
+300   	 009F				cline_81_0:			/* LN: 83 | CYCLE: 0 | RULES: () */ 
+301   	 009F	 88040000		a0 = xmem[_leftInput + 0]			# LN: 83 | 
+302   	 00A0	 88440000		xmem[_input_distortion + 0] = a0			# LN: 83 | 
+303   	 00A1				cline_83_0:			/* LN: 84 | CYCLE: 0 | RULES: () */ 
+304   	 00A1	 88040000		a0 = xmem[_lsOutput + 0]			# LN: 84 | 
+305   	 00A2	 88440000		xmem[_output_distortion + 0] = a0			# LN: 84 | 
+306   	 00A3				cline_84_0:			/* LN: 85 | CYCLE: 0 | RULES: () */ 
+307   	 00A3	 80880000		call (_distortion)			# LN: 85 | 
+308   	 00A4				cline_85_0:			/* LN: 87 | CYCLE: 0 | RULES: () */ 
+309   	 00A4	 88040000		a0 = xmem[_rightInput + 0]			# LN: 87 | 
+310   	 00A5	 88440000		xmem[_input_distortion + 0] = a0			# LN: 87 | 
+311   	 00A6				cline_87_0:			/* LN: 88 | CYCLE: 0 | RULES: () */ 
+312   	 00A6	 88040000		a0 = xmem[_rsOutput + 0]			# LN: 88 | 
+313   	 00A7	 88440000		xmem[_output_distortion + 0] = a0			# LN: 88 | 
+314   	 00A8				cline_88_0:			/* LN: 89 | CYCLE: 0 | RULES: () */ 
+315   	 00A8	 80880000		call (_distortion)			# LN: 89 | 
+316   	 00A9				cline_89_0:			/* LN: 91 | CYCLE: 0 | RULES: () */ 
+317   	 00A9	 90750001		i0 = i7 - (0x1)			# LN: 91 | 
+318   	 00AA	 00004DC0		a0 = 0			# LN: 91 | 
+319   	 00AB	 98540000		xmem[i0] = a0h			# LN: 91 | 
+320   	 00AC	 810000C6		do (0x10), label_end_95			# LN: 91 | 
+321   	 00AD				cline_91_0:			/* LN: 93 | CYCLE: 0 | RULES: () */ 
+322   	 00AD				label_begin_95:			/* LN: 91 | CYCLE: 0 | RULES: () */ 
+323   	 00AD	 B0040000		i0 = xmem[_lsOutput + 0]			# LN: 93 | 
+324   	 00AE	 B1040000		i1 = xmem[_rsOutput + 0]			# LN: 93 | 
+325   	 00AF	 88940000		a0 = ymem[i0]			# LN: 93 | 
+326   	 00B0	 89940001		a1 = ymem[i1]			# LN: 93 | 
+327   	 00B1	 A0050000		i0 = (0) + (_lfeOutput)			# LN: 93 | 
+328   	 00B2	 B0140000		i0 = xmem[i0]			# LN: 93 | 
+329   	 00B3	 00004408		a0 = a0 + a1			# LN: 93 | 
+330   	 00B4	 88D40000		ymem[i0] = a0			# LN: 93 | 
+331   	 00B5				cline_93_0:			/* LN: 94 | CYCLE: 0 | RULES: () */ 
+332   	 00B5	 B0040000		i0 = xmem[_lfeOutput + 0]			# LN: 94 | 
+333   	 00B6	 00007FFF		nop #empty cycle
+334   	 00B7	 02087FFF		i0 += 1			# LN: 94 | 
+335   	 00B8	 B0440000		xmem[_lfeOutput + 0] = i0			# LN: 94 | 
+336   	 00B9				cline_94_0:			/* LN: 95 | CYCLE: 0 | RULES: () */ 
+337   	 00B9	 B0040000		i0 = xmem[_lsOutput + 0]			# LN: 95 | 
+338   	 00BA	 00007FFF		nop #empty cycle
+339   	 00BB	 02087FFF		i0 += 1			# LN: 95 | 
+340   	 00BC	 B0440000		xmem[_lsOutput + 0] = i0			# LN: 95 | 
+341   	 00BD				cline_95_0:			/* LN: 96 | CYCLE: 0 | RULES: () */ 
+342   	 00BD	 B0040000		i0 = xmem[_rsOutput + 0]			# LN: 96 | 
+343   	 00BE	 00007FFF		nop #empty cycle
+344   	 00BF	 02087FFF		i0 += 1			# LN: 96 | 
+345   	 00C0	 B0440000		xmem[_rsOutput + 0] = i0			# LN: 96 | 
+346   	 00C1				cline_96_0:			/* LN: 91 | CYCLE: 0 | RULES: () */ 
+347   	 00C1				init_latch_label_3:			/* LN: 98 | CYCLE: 0 | RULES: () */ 
+348   	 00C1	 90750001		i0 = i7 - (0x1)			# LN: 91 | 
+349   	 00C2	 88140000		a0 = xmem[i0]			# LN: 91 | 
+350   	 00C3	 894A0001		uhalfword(a1) = (0x1)			# LN: 91 | 
+351   	 00C4	 00004408		a0 = a0 + a1			# LN: 91 | 
+352   	 00C5	 90750001		i0 = i7 - (0x1)			# LN: 91 | 
+353   	 00C6				label_end_95:			# LN: 91 | CYCLE: 5 | RULES: ()
+354   	 00C6	 98540000		xmem[i0] = a0h			# LN: 91 | 
+355   	 00C7				cline_91_1:			/* LN: 100 | CYCLE: 0 | RULES: () */ 
+356   	 00C7				for_end_3:			/* LN: 91 | CYCLE: 0 | RULES: () */ 
+357   	 00C7	 800800C8		jmp (switch_end_0)			# LN: 100 | 
+358   	 00C8				cline_100_0:			/* LN: 103 | CYCLE: 0 | RULES: () */ 
+359   	 00C8				switch_end_0:			/* LN: 26 | CYCLE: 0 | RULES: () */ 
+360   	 00C8	 800800C9		jmp (__epilogue_180)			# LN: 103 | 
+361   	 00C9				cline_103_0:			/* LN: 104 | CYCLE: 0 | RULES: () */ 
+362   	 00C9				__epilogue_180:			/* LN: 104 | CYCLE: 0 | RULES: () */ 
+363   	 00C9	 97750001		i7 = i7 - (0x1)			# LN: 104 | 
+364   	 00CA	 02177FFF		i7 -= 1			# LN: 104 | 
+365   	 00CB	 81880000		ret			# LN: 104 | 
+366   						(null)
+				 SYMBOL TABLE 
+
+    Name                                                                                    Type                  Value 
+
+_COMMON_INC_PATH_                                                               					 Define                 "C:/CirrusDSP/crystal32/common/inc/"
+_DSP_                                                                           			  Unused Variable		        0 (0H)
+_LOCAL_INC_PATH_                                                                					 Define                 "inc/"
+_LOCAL_SRC_PATH_                                                                					 Define                 "src/"
+_ROUTER_INC_PATH_                                                               					 Define                 "rom_inc/"
+__CASM_VER__                                                                    			  Unused Variable		        0 (701H)
+___C_STACK_BG                                                                   					 External   
+___C_STACK_FG                                                                   					 External   
+___X_BL_TEMPBUFF                                                                					 External   
+___X_BL_TEMPBUFF0                                                               					 External   
+___X_BL_TEMPBUFF1                                                               					 External   
+___X_BL_TEMPBUFF10                                                              					 External   
+___X_BL_TEMPBUFF11                                                              					 External   
+___X_BL_TEMPBUFF12                                                              					 External   
+___X_BL_TEMPBUFF13                                                              					 External   
+___X_BL_TEMPBUFF14                                                              					 External   
+___X_BL_TEMPBUFF15                                                              					 External   
+___X_BL_TEMPBUFF2                                                               					 External   
+___X_BL_TEMPBUFF3                                                               					 External   
+___X_BL_TEMPBUFF4                                                               					 External   
+___X_BL_TEMPBUFF5                                                               					 External   
+___X_BL_TEMPBUFF6                                                               					 External   
+___X_BL_TEMPBUFF7                                                               					 External   
+___X_BL_TEMPBUFF8                                                               					 External   
+___X_BL_TEMPBUFF9                                                               					 External   
+___X_BX_TEMPBUFF                                                                					 External   
+___X_BX_TEMPBUFF0                                                               					 External   
+___X_BX_TEMPBUFF1                                                               					 External   
+___X_BX_TEMPBUFF10                                                              					 External   
+___X_BX_TEMPBUFF11                                                              					 External   
+___X_BX_TEMPBUFF12                                                              					 External   
+___X_BX_TEMPBUFF13                                                              					 External   
+___X_BX_TEMPBUFF14                                                              					 External   
+___X_BX_TEMPBUFF15                                                              					 External   
+___X_BX_TEMPBUFF2                                                               					 External   
+___X_BX_TEMPBUFF3                                                               					 External   
+___X_BX_TEMPBUFF4                                                               					 External   
+___X_BX_TEMPBUFF5                                                               					 External   
+___X_BX_TEMPBUFF6                                                               					 External   
+___X_BX_TEMPBUFF7                                                               					 External   
+___X_BX_TEMPBUFF8                                                               					 External   
+___X_BX_TEMPBUFF9                                                               					 External   
+___X_BY_IOBUFFER_PTRS                                                           					 External   
+___X_BY_TEMPBUFF                                                                					 External   
+___X_BY_TEMPBUFF0                                                               					 External   
+___X_BY_TEMPBUFF1                                                               					 External   
+___X_BY_TEMPBUFF10                                                              					 External   
+___X_BY_TEMPBUFF11                                                              					 External   
+___X_BY_TEMPBUFF12                                                              					 External   
+___X_BY_TEMPBUFF13                                                              					 External   
+___X_BY_TEMPBUFF14                                                              					 External   
+___X_BY_TEMPBUFF15                                                              					 External   
+___X_BY_TEMPBUFF2                                                               					 External   
+___X_BY_TEMPBUFF3                                                               					 External   
+___X_BY_TEMPBUFF4                                                               					 External   
+___X_BY_TEMPBUFF5                                                               					 External   
+___X_BY_TEMPBUFF6                                                               					 External   
+___X_BY_TEMPBUFF7                                                               					 External   
+___X_BY_TEMPBUFF8                                                               					 External   
+___X_BY_TEMPBUFF9                                                               					 External   
+___X_VX_NEXTFRM_REINIT_REQ                                                      					 External   
+___X_VX_PPM_INPUTMODE                                                           					 External   
+___X_VX_PPM_INPUT_CHANNELS                                                      					 External   
+___X_VX_PPM_OUTPUTMODE                                                          					 External   
+___X_VX_PPM_OUTPUT_CHANNELS                                                     					 External   
+___X_VX_PPM_SAMPLERATE                                                          					 External   
+___X_VX_PPM_VALID_CHANNELS                                                      					 External   
+___X_VX_REINIT                                                                  					 External   
+___X_VX_UNDERFLOW                                                               					 External   
+__epilogue_180                                                                  			         Relocatable         processing_GEN_0000:00C9H
+_centralOutput                                                                  					 External   
+_distortion                                                                     					 External   
+_frame_mcv                                                                      					 External   
+_frame_mcv_HOST                                                                 					 External   
+_frame_mif                                                                      					 External   
+_input_distortion                                                               					 External   
+_leftInput                                                                      					 External   
+_lfeOutput                                                                      					 External   
+_lsOutput                                                                       					 External   
+_numGain                                                                        					 External   
+_outputMode                                                                     					 External   
+_output_distortion                                                              					 External   
+_processing                                                                     			  Public Relocatable       processing_GEN_0000:0000H
+_rightInput                                                                     					 External   
+_rsOutput                                                                       					 External   
+case_0                                                                          			         Relocatable         processing_GEN_0000:0013H
+case_1                                                                          			         Relocatable         processing_GEN_0000:0034H
+case_2                                                                          			         Relocatable         processing_GEN_0000:0067H
+cline_100_0                                                                     			  Unused Relocatable        processing_GEN_0000:00C8H
+cline_103_0                                                                     			  Unused Relocatable        processing_GEN_0000:00C9H
+cline_19_0                                                                      			  Unused Relocatable        processing_GEN_0000:0003H
+cline_23_0                                                                      			  Unused Relocatable        processing_GEN_0000:0005H
+cline_24_0                                                                      			  Unused Relocatable        processing_GEN_0000:0007H
+cline_26_0                                                                      			  Unused Relocatable        processing_GEN_0000:0013H
+cline_29_0                                                                      			  Unused Relocatable        processing_GEN_0000:0017H
+cline_29_1                                                                      			  Unused Relocatable        processing_GEN_0000:0033H
+cline_31_0                                                                      			  Unused Relocatable        processing_GEN_0000:001EH
+cline_32_0                                                                      			  Unused Relocatable        processing_GEN_0000:0025H
+cline_33_0                                                                      			  Unused Relocatable        processing_GEN_0000:0029H
+cline_34_0                                                                      			  Unused Relocatable        processing_GEN_0000:002DH
+cline_36_0                                                                      			  Unused Relocatable        processing_GEN_0000:0034H
+cline_39_0                                                                      			  Unused Relocatable        processing_GEN_0000:0036H
+cline_40_0                                                                      			  Unused Relocatable        processing_GEN_0000:0038H
+cline_42_0                                                                      			  Unused Relocatable        processing_GEN_0000:003CH
+cline_42_1                                                                      			  Unused Relocatable        processing_GEN_0000:0058H
+cline_44_0                                                                      			  Unused Relocatable        processing_GEN_0000:0043H
+cline_45_0                                                                      			  Unused Relocatable        processing_GEN_0000:004AH
+cline_46_0                                                                      			  Unused Relocatable        processing_GEN_0000:004EH
+cline_47_0                                                                      			  Unused Relocatable        processing_GEN_0000:0052H
+cline_50_0                                                                      			  Unused Relocatable        processing_GEN_0000:005AH
+cline_51_0                                                                      			  Unused Relocatable        processing_GEN_0000:005CH
+cline_53_0                                                                      			  Unused Relocatable        processing_GEN_0000:005EH
+cline_54_0                                                                      			  Unused Relocatable        processing_GEN_0000:0060H
+cline_55_0                                                                      			  Unused Relocatable        processing_GEN_0000:0061H
+cline_57_0                                                                      			  Unused Relocatable        processing_GEN_0000:0063H
+cline_58_0                                                                      			  Unused Relocatable        processing_GEN_0000:0065H
+cline_59_0                                                                      			  Unused Relocatable        processing_GEN_0000:0066H
+cline_61_0                                                                      			  Unused Relocatable        processing_GEN_0000:0067H
+cline_64_0                                                                      			  Unused Relocatable        processing_GEN_0000:0069H
+cline_65_0                                                                      			  Unused Relocatable        processing_GEN_0000:006BH
+cline_66_0                                                                      			  Unused Relocatable        processing_GEN_0000:006DH
+cline_67_0                                                                      			  Unused Relocatable        processing_GEN_0000:006FH
+cline_69_0                                                                      			  Unused Relocatable        processing_GEN_0000:0073H
+cline_69_1                                                                      			  Unused Relocatable        processing_GEN_0000:009BH
+cline_71_0                                                                      			  Unused Relocatable        processing_GEN_0000:007AH
+cline_72_0                                                                      			  Unused Relocatable        processing_GEN_0000:0081H
+cline_73_0                                                                      			  Unused Relocatable        processing_GEN_0000:0089H
+cline_74_0                                                                      			  Unused Relocatable        processing_GEN_0000:008DH
+cline_75_0                                                                      			  Unused Relocatable        processing_GEN_0000:0091H
+cline_76_0                                                                      			  Unused Relocatable        processing_GEN_0000:0095H
+cline_80_0                                                                      			  Unused Relocatable        processing_GEN_0000:009DH
+cline_81_0                                                                      			  Unused Relocatable        processing_GEN_0000:009FH
+cline_83_0                                                                      			  Unused Relocatable        processing_GEN_0000:00A1H
+cline_84_0                                                                      			  Unused Relocatable        processing_GEN_0000:00A3H
+cline_85_0                                                                      			  Unused Relocatable        processing_GEN_0000:00A4H
+cline_87_0                                                                      			  Unused Relocatable        processing_GEN_0000:00A6H
+cline_88_0                                                                      			  Unused Relocatable        processing_GEN_0000:00A8H
+cline_89_0                                                                      			  Unused Relocatable        processing_GEN_0000:00A9H
+cline_91_0                                                                      			  Unused Relocatable        processing_GEN_0000:00ADH
+cline_91_1                                                                      			  Unused Relocatable        processing_GEN_0000:00C7H
+cline_93_0                                                                      			  Unused Relocatable        processing_GEN_0000:00B5H
+cline_94_0                                                                      			  Unused Relocatable        processing_GEN_0000:00B9H
+cline_95_0                                                                      			  Unused Relocatable        processing_GEN_0000:00BDH
+cline_96_0                                                                      			  Unused Relocatable        processing_GEN_0000:00C1H
+for_end_0                                                                       			  Unused Relocatable        processing_GEN_0000:0033H
+for_end_1                                                                       			  Unused Relocatable        processing_GEN_0000:0058H
+for_end_2                                                                       			  Unused Relocatable        processing_GEN_0000:009BH
+for_end_3                                                                       			  Unused Relocatable        processing_GEN_0000:00C7H
+init_latch_label_0                                                              			  Unused Relocatable        processing_GEN_0000:002DH
+init_latch_label_1                                                              			  Unused Relocatable        processing_GEN_0000:0052H
+init_latch_label_2                                                              			  Unused Relocatable        processing_GEN_0000:0095H
+init_latch_label_3                                                              			  Unused Relocatable        processing_GEN_0000:00C1H
+label_begin_92                                                                  			  Unused Relocatable        processing_GEN_0000:0017H
+label_begin_93                                                                  			  Unused Relocatable        processing_GEN_0000:003CH
+label_begin_94                                                                  			  Unused Relocatable        processing_GEN_0000:0073H
+label_begin_95                                                                  			  Unused Relocatable        processing_GEN_0000:00ADH
+label_end_92                                                                    			         Relocatable         processing_GEN_0000:0032H
+label_end_93                                                                    			         Relocatable         processing_GEN_0000:0057H
+label_end_94                                                                    			         Relocatable         processing_GEN_0000:009AH
+label_end_95                                                                    			         Relocatable         processing_GEN_0000:00C6H
+switch_0                                                                        			  Unused Relocatable        processing_GEN_0000:0007H
+switch_end_0                                                                    			         Relocatable         processing_GEN_0000:00C8H
+
+	       SEGMENTS:
+
+Size			  Name										 Class
+0000H	 __INIT                                  			 CODE                                    
+00CCH	 processing_GEN_0000                     			 CODE_OVLY                               

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<settings built="true" last_build_time="1520608926653">
+	<dependencies>
+		<source_file last_build_time="1520608926228" path="src/distortion.c">
+			<dependency>../inc/distortion.h</dependency>
+			<dependency>../inc/common.h</dependency>
+			<dependency>../inc/stdfix_emu.h</dependency>
+			<dependency>../../../CirrusDSP/include/stdfix.h</dependency>
+			<dependency>../../../CirrusDSP/include/scaling_coeff.h</dependency>
+		</source_file>
+		<source_file last_build_time="1520608925703" path="src/frame_main.c">
+			<dependency>../inc/frame_impl.h</dependency>
+			<dependency>../../../CirrusDSP/include/stdfix.h</dependency>
+			<dependency>../../../CirrusDSP/include/scaling_coeff.h</dependency>
+			<dependency>../../../CirrusDSP/include/dsplib/cl_os.h</dependency>
+			<dependency>../../../CirrusDSP/include/dsplib/platform_support.h</dependency>
+			<dependency>../../../CirrusDSP/include/stdbool.h</dependency>
+			<dependency>../gen/inc/frame_mcv.h</dependency>
+			<dependency>../../../CirrusDSP/include/dsplib/meter.h</dependency>
+			<dependency>../../../CirrusDSP/include/dsplib/response.h</dependency>
+			<dependency>../gen/inc/frame_module.h</dependency>
+			<dependency>../inc/processing.h</dependency>
+			<dependency>../inc/common.h</dependency>
+			<dependency>../inc/stdfix_emu.h</dependency>
+			<dependency>../../../CirrusDSP/include/circbuff.h</dependency>
+			<dependency>../inc/distortion.h</dependency>
+		</source_file>
+		<source_file last_build_time="1520608925141" path="src/frame_os_interface.c">
+			<dependency>../inc/frame_impl.h</dependency>
+			<dependency>../../../CirrusDSP/include/stdfix.h</dependency>
+			<dependency>../../../CirrusDSP/include/scaling_coeff.h</dependency>
+			<dependency>../../../CirrusDSP/include/dsplib/cl_os.h</dependency>
+			<dependency>../../../CirrusDSP/include/dsplib/platform_support.h</dependency>
+			<dependency>../../../CirrusDSP/include/stdbool.h</dependency>
+			<dependency>../gen/inc/frame_mcv.h</dependency>
+			<dependency>../../../CirrusDSP/include/dsplib/meter.h</dependency>
+			<dependency>../../../CirrusDSP/include/dsplib/response.h</dependency>
+			<dependency>../gen/inc/frame_module.h</dependency>
+		</source_file>
+		<source_file last_build_time="1520608924660" path="src/processing.c">
+			<dependency>../inc/distortion.h</dependency>
+			<dependency>../inc/common.h</dependency>
+			<dependency>../inc/stdfix_emu.h</dependency>
+			<dependency>../../../CirrusDSP/include/stdfix.h</dependency>
+			<dependency>../../../CirrusDSP/include/scaling_coeff.h</dependency>
+			<dependency>../inc/processing.h</dependency>
+			<dependency>../../../CirrusDSP/include/circbuff.h</dependency>
+			<dependency>../inc/frame_impl.h</dependency>
+			<dependency>../../../CirrusDSP/include/dsplib/cl_os.h</dependency>
+			<dependency>../../../CirrusDSP/include/dsplib/platform_support.h</dependency>
+			<dependency>../../../CirrusDSP/include/stdbool.h</dependency>
+			<dependency>../gen/inc/frame_mcv.h</dependency>
+			<dependency>../../../CirrusDSP/include/dsplib/meter.h</dependency>
+			<dependency>../../../CirrusDSP/include/dsplib/response.h</dependency>
+			<dependency>../gen/inc/frame_module.h</dependency>
+		</source_file>
+	</dependencies>
+</settings>
